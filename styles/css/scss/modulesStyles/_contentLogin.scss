@@ -1,0 +1,210 @@
+$logoSize: 40px;
+$FFprimary: "Roboto";
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  font-family: sans-serif;
+  background: rgb(13, 136, 109);
+}
+
+.container {
+  padding: 2rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+::-webkit-input-placeholder {
+  color: white;
+  font-size: 20px;
+  font-family: "Poppins", sans-serif;
+}
+h1 {
+  display: flex;
+  font-size: 55px;
+  margin-top: 60px;
+  margin-bottom: 60px;
+  color: whitesmoke;
+  justify-content: center;
+}
+
+h1 img {
+  width: 15px;
+  height: 71px;
+  margin: 0 0.3rem;
+  font-family: $FFprimary;
+}
+h1 span {
+  color: rgb(229, 144, 65);
+}
+
+.sectionSubTitle {
+  display: flex;
+  align-items: center;
+  padding-bottom: 2rem;
+  justify-content: space-around;
+}
+.sectionSubTitle a {
+  font-size: 15px;
+  color: whitesmoke;
+  text-decoration: none;
+  font-family: $FFprimary;
+}
+.sectionSubTitle h2 {
+  font-size: 30px;
+  color: whitesmoke;
+  font-family: $FFprimary;
+}
+
+.item {
+  color: #fff;
+  display: flex;
+  font-size: 1.5rem;
+  margin-top: -1.7px;
+  position: relative;
+  align-items: center;
+  border: 1px solid #fff;
+  text-transform: uppercase;
+}
+
+.item:first-child::after {
+  content: "";
+  top: -0.9px;
+  width: 100vh;
+  right: 1.5rem;
+  position: absolute;
+  border-top: 1px solid #fff;
+}
+
+.item:last-child::after {
+  content: "";
+  width: 100vh;
+  left: 1.5rem;
+  bottom: -0.9px;
+  position: absolute;
+  border-top: 1px solid #fff;
+}
+
+.item:nth-child(odd) {
+  // toma impares
+  border-radius: 0 3rem 3rem 0;
+  border-left: 1px solid transparent;
+  margin-left: calc(1rem + #{$logoSize});
+}
+
+.item:nth-child(even) {
+  // toma pares
+  border-radius: 3rem 0 0 3rem;
+  border-right: 1px solid transparent;
+  margin-right: calc(
+    0.6rem + #{$logoSize}
+  ); // hace un calculo entre dos medidas rem con pixeles y el #{$} es la sintaxis para llamar la variable dentro de un calc (interpolacion en sass)
+}
+.item input {
+  background-color: transparent;
+  padding: 1rem;
+  outline: none;
+  border: none;
+}
+.item img {
+  height: $logoSize;
+  width: $logoSize;
+  border-radius: 50%;
+  margin: 0.4rem;
+}
+.signIn {
+  color: whitesmoke;
+  font-size: 15px;
+  display: flex;
+  justify-content: center;
+  font-family: $FFprimary;
+  margin-top: 50px;
+}
+.sectionNetworks {
+  display: flex;
+  justify-content: center;
+}
+
+.sectionNetworks img {
+  height: 60px;
+  width: 60px;
+  margin: 20px 0px 40px;
+  border-radius: 50%;
+  margin: 1.5rem;
+  padding: 20p;
+}
+p {
+  color: whitesmoke;
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  font-family: $FFprimary;
+  margin-top: 72px;
+}
+p span {
+  margin-left: 5px;
+  color: rgb(229, 144, 65);
+  font-weight: bold;
+  font-size: 16px;
+}
+
+// rectangulo
+.rectangule {
+  height: 50px;
+  width: 153px;
+  position: absolute;
+  right: 31%;
+  border: 10px solid rgba(0, 0, 0, 0.15);
+  box-sizing: border-box;
+  border-radius: 50px;
+}
+.rectangule button {
+  width: 100%;
+  height: 100%;
+  border-radius: 55px;
+  outline: none;
+  border: none;
+  font-family: Roboto;
+  font-weight: bolder;
+  font-size: 15px;
+  letter-spacing: 3px;
+  text-align: center;
+  color: #fffdfd;
+  background: linear-gradient(82.14deg, #ec9443 -3.88%, #c85032 64.89%);
+}
+// .triangule:before {
+// }
+
+.rectangule:after,
+.rectangule:before {
+  bottom: 100%;
+  left: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+}
+
+.rectangule:after {
+  border-bottom-color: #ec9443;
+  background: linear-gradient(82.14deg, #ec9443 -3.88%, #c85032 64.89%);
+  border-width: 20px;
+  margin-left: -20px;
+}
+.rectangule:before {
+  border-bottom-color: rgba(128, 128, 128, 0.445);
+  border-width: 36px;
+  margin-left: -36px;
+  border-radius: 22px;
+}
