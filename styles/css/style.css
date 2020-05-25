@@ -1,24 +1,11 @@
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-
-body {
-  width: 100%;
-  height: 100vh;
-  font-family: sans-serif;
-  background: #0d886d;
-}
-
 .container {
-  padding: 2rem;
   width: 100%;
+  padding: 2rem;
   display: flex;
+  overflow: hidden;
+  align-items: center;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  overflow: hidden;
 }
 
 ::-webkit-input-placeholder {
@@ -30,8 +17,8 @@ body {
 h1 {
   display: flex;
   font-size: 55px;
-  margin-top: 60px;
-  margin-bottom: 60px;
+  padding-top: 40px;
+  margin-bottom: 35px;
   color: whitesmoke;
   justify-content: center;
 }
@@ -50,7 +37,7 @@ h1 span {
 .sectionSubTitle {
   display: flex;
   align-items: center;
-  padding-bottom: 2rem;
+  padding-bottom: 1rem;
   justify-content: space-around;
 }
 
@@ -65,17 +52,18 @@ h1 span {
   font-size: 30px;
   color: whitesmoke;
   font-family: "Roboto";
+  letter-spacing: 2px;
 }
 
 .item {
-  color: #fff;
   display: flex;
   font-size: 1.5rem;
+  color: whitesmoke;
   margin-top: -1.7px;
   position: relative;
   align-items: center;
-  border: 1px solid #fff;
   text-transform: uppercase;
+  border: 1px solid whitesmoke;
 }
 
 .item:first-child::after {
@@ -84,7 +72,7 @@ h1 span {
   width: 100vh;
   right: 1.5rem;
   position: absolute;
-  border-top: 1px solid #fff;
+  border-top: 1px solid whitesmoke;
 }
 
 .item:last-child::after {
@@ -93,7 +81,16 @@ h1 span {
   left: 1.5rem;
   bottom: -0.9px;
   position: absolute;
-  border-top: 1px solid #fff;
+  border-top: 1px solid whitesmoke;
+}
+
+#lastItem:last-child::after {
+  content: "";
+  width: 100vh;
+  left: 1.5rem;
+  bottom: -0.9px;
+  position: absolute;
+  border-top: 1px solid whitesmoke;
 }
 
 .item:nth-child(odd) {
@@ -103,32 +100,32 @@ h1 span {
 }
 
 .item:nth-child(even) {
+  margin-right: calc( 0.6rem + 40px);
   border-radius: 3rem 0 0 3rem;
   border-right: 1px solid transparent;
-  margin-right: calc( 0.6rem + 40px);
 }
 
 .item input {
-  background-color: transparent;
+  border: none;
   padding: 1rem;
   outline: none;
-  border: none;
+  background-color: transparent;
 }
 
 .item img {
-  height: 40px;
-  width: 40px;
-  border-radius: 50%;
   margin: 0.4rem;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
 }
 
 .signIn {
   color: whitesmoke;
-  font-size: 15px;
   display: flex;
+  font-size: 15px;
+  margin-top: 18px;
   justify-content: center;
   font-family: "Roboto";
-  margin-top: 50px;
 }
 
 .sectionNetworks {
@@ -137,77 +134,99 @@ h1 span {
 }
 
 .sectionNetworks img {
-  height: 60px;
   width: 60px;
-  margin: 20px 0px 40px;
+  height: 60px;
   border-radius: 50%;
-  margin: 1.5rem;
-  padding: 20p;
+  margin: 20px 20px 30px 20px;
+  box-shadow: 7px 25px 32px -5px rgba(0, 0, 0, 0.38);
 }
 
 p {
-  color: whitesmoke;
-  font-size: 16px;
   display: flex;
+  font-size: 16px;
+  margin-top: 72px;
+  color: whitesmoke;
   justify-content: center;
   font-family: "Roboto";
-  margin-top: 72px;
 }
 
 p span {
-  margin-left: 5px;
-  color: #e59041;
-  font-weight: bold;
   font-size: 16px;
+  margin-left: 5px;
+  font-weight: bold;
+  color: #e59041;
+}
+
+.fatherButton {
+  display: flex;
+  justify-content: center;
 }
 
 .rectangule {
   height: 50px;
   width: 153px;
   position: absolute;
-  right: 31%;
-  border: 10px solid rgba(0, 0, 0, 0.15);
-  box-sizing: border-box;
   border-radius: 50px;
+  box-sizing: border-box;
+  border: 10px solid rgba(0, 0, 0, 0.15);
 }
 
 .rectangule button {
   width: 100%;
   height: 100%;
-  border-radius: 55px;
-  outline: none;
   border: none;
-  font-family: Roboto;
-  font-weight: bolder;
-  font-size: 15px;
-  letter-spacing: 3px;
+  outline: none;
   text-align: center;
-  color: #fffdfd;
+  color: whitesmoke;
+  border-radius: 55px;
+  font: bolder 15px Roboto;
+  letter-spacing: 3px;
   background: linear-gradient(82.14deg, #ec9443 -3.88%, #c85032 64.89%);
 }
 
 .rectangule:after,
 .rectangule:before {
-  bottom: 100%;
-  left: 50%;
-  border: solid transparent;
-  content: " ";
-  height: 0;
   width: 0;
+  left: 50%;
+  height: 0;
+  bottom: 100%;
+  content: " ";
   position: absolute;
   pointer-events: none;
+  border: solid transparent;
 }
 
 .rectangule:after {
-  border-bottom-color: #ec9443;
-  background: linear-gradient(82.14deg, #ec9443 -3.88%, #c85032 64.89%);
   border-width: 20px;
   margin-left: -20px;
+  border-bottom-color: pink;
 }
 
 .rectangule:before {
-  border-bottom-color: rgba(128, 128, 128, 0.445);
   border-width: 36px;
   margin-left: -36px;
   border-radius: 22px;
+  border-bottom-color: rgba(0, 0, 0, 0.15);
+}
+
+.sectionFather {
+  display: flex;
+  justify-content: center;
+}
+
+.sectionSon {
+  border: 1px solid black;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  font-family: "Poppins", sans-serif;
+  background: #ec405d;
 }
