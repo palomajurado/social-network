@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .container {
   width: 100%;
   padding: 2rem;
@@ -221,12 +222,22 @@ p span {
 * {
   margin: 0;
   padding: 0;
+=======
+* {
+  padding: 0;
+  margin: 0;
+>>>>>>> master
   box-sizing: border-box;
 }
 
 body {
   width: 100%;
+<<<<<<< HEAD
   height: 100vh;
   font-family: "Poppins", sans-serif;
   background: #ec405d;
+=======
+  min-height: 100vh;
+  font-family: sans-serif;
+>>>>>>> master
 }
