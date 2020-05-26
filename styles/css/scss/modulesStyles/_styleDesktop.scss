@@ -1,0 +1,57 @@
+@media (min-width: 1024px) and (min-height: 800px) and (max-height: 960px) {
+
+body {
+  margin: 0px;
+  background-image: url(../../../../assets/capital-back.png);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  z-index: 3;
+}
+
+$logoSize: 40px;
+$FFprimary: "Roboto";
+$colorWhite: whitesmoke;
+$FFsecondary: "Poppins", sans-serif;
+
+header {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  flex-grow: 1;
+  align-items: center;
+  background-color: rgb(0, 0, 0, 0.88);
+  padding: 0.7rem 2rem 0.7rem 2rem;
+  justify-content: space-between;
+  .logo-icon {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    width: 30px;
+    img {
+      width: 130%;
+      height: 85%;
+    }
+  }
+  .logo-principal {
+    display: flex;
+    justify-content: center;
+    img {
+      width: 60%;
+    }
+  }
+    .content-about {
+      border: 3px solid #fff;
+      display: flex;
+      align-items: center;
+      padding: 0rem 1rem;
+      text-align: center;
+      height: 50px;
+      p {
+        font-family: $FFsecondary;
+        color: #fff;
+        font-size: 0.9rem;
+        margin: 0px;
+      }
+    }
+}
+}
