@@ -1,27 +1,18 @@
-<<<<<<< HEAD
-.container {
-  width: 100%;
-  padding: 2rem;
-  display: flex;
-  overflow: hidden;
-  align-items: center;
-  flex-direction: column;
+.All-sections {
   justify-content: center;
 }
 
-::-webkit-input-placeholder {
-  color: white;
-  font-size: 20px;
-  font-family: "Poppins", sans-serif;
+.All-sections .sectionFather {
+  background-color: orange;
 }
 
 h1 {
   display: flex;
-  font-size: 55px;
-  padding-top: 40px;
-  margin-bottom: 35px;
   color: whitesmoke;
+  padding-top: 2.5rem;
+  font-size: 3.4375rem;
   justify-content: center;
+  margin-bottom: 2.1875rem;
 }
 
 h1 img {
@@ -31,40 +22,79 @@ h1 img {
   font-family: "Roboto";
 }
 
-h1 span {
+h1 img span {
   color: #e59041;
 }
 
 .sectionSubTitle {
   display: flex;
   align-items: center;
-  padding-bottom: 1rem;
+  padding-bottom: 2rem;
   justify-content: space-around;
 }
 
 .sectionSubTitle a {
-  font-size: 15px;
   color: whitesmoke;
+  font-size: 0.9375rem;
   text-decoration: none;
   font-family: "Roboto";
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.sectionSubTitle a:hover {
+  color: #ce5c35;
+  font-weight: bolder;
+  text-decoration: underline;
 }
 
 .sectionSubTitle h2 {
-  font-size: 30px;
   color: whitesmoke;
+  font-size: 1.875rem;
   font-family: "Roboto";
-  letter-spacing: 2px;
+  letter-spacing: 0.125rem;
 }
 
-.item {
+.container {
+  width: 100%;
+  display: flex;
+  overflow: hidden;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem 3rem;
+}
+
+.container .item {
   display: flex;
   font-size: 1.5rem;
   color: whitesmoke;
-  margin-top: -1.7px;
   position: relative;
   align-items: center;
+  margin-top: -0.1062rem;
   text-transform: uppercase;
-  border: 1px solid whitesmoke;
+  border: 0.0625rem solid whitesmoke;
+}
+
+.container .item img {
+  margin: 0.4rem;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.container .item input {
+  border: none;
+  outline: none;
+  font-size: 1.25rem;
+  color: whitesmoke;
+  font-family: "Poppins", sans-serif;
+  background-color: transparent;
+}
+
+::-webkit-input-placeholder {
+  color: whitesmoke;
+  font-size: 1.25rem;
+  font-family: "Poppins", sans-serif;
 }
 
 .item:first-child::after {
@@ -73,58 +103,35 @@ h1 span {
   width: 100vh;
   right: 1.5rem;
   position: absolute;
-  border-top: 1px solid whitesmoke;
+  border-top: 0.0625rem solid whitesmoke;
 }
 
 .item:last-child::after {
   content: "";
   width: 100vh;
   left: 1.5rem;
-  bottom: -0.9px;
+  bottom: -0.0563rem;
   position: absolute;
-  border-top: 1px solid whitesmoke;
-}
-
-#lastItem:last-child::after {
-  content: "";
-  width: 100vh;
-  left: 1.5rem;
-  bottom: -0.9px;
-  position: absolute;
-  border-top: 1px solid whitesmoke;
+  border-top: 0.0625rem solid whitesmoke;
 }
 
 .item:nth-child(odd) {
   border-radius: 0 3rem 3rem 0;
-  border-left: 1px solid transparent;
   margin-left: calc(1rem + 40px);
+  border-left: 0.0625rem solid transparent;
 }
 
 .item:nth-child(even) {
-  margin-right: calc( 0.6rem + 40px);
   border-radius: 3rem 0 0 3rem;
-  border-right: 1px solid transparent;
-}
-
-.item input {
-  border: none;
-  padding: 1rem;
-  outline: none;
-  background-color: transparent;
-}
-
-.item img {
-  margin: 0.4rem;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
+  margin-right: calc(0.6rem + 40px);
+  border-right: 0.0625rem solid transparent;
 }
 
 .signIn {
-  color: whitesmoke;
   display: flex;
-  font-size: 15px;
-  margin-top: 18px;
+  color: whitesmoke;
+  font-size: 0.9375rem;
+  margin-top: 1.125rem;
   justify-content: center;
   font-family: "Roboto";
 }
@@ -137,107 +144,109 @@ h1 span {
 .sectionNetworks img {
   width: 60px;
   height: 60px;
+  cursor: pointer;
   border-radius: 50%;
-  margin: 20px 20px 30px 20px;
-  box-shadow: 7px 25px 32px -5px rgba(0, 0, 0, 0.38);
+  margin: 1.25rem 1.25rem 1.875rem 1.25rem;
+  box-shadow: 0.4375rem 1.5625rem 2rem -0.3125rem rgba(0, 0, 0, 0.38);
 }
 
-p {
-  display: flex;
-  font-size: 16px;
-  margin-top: 72px;
-  color: whitesmoke;
-  justify-content: center;
-  font-family: "Roboto";
+.sectionNetworks img:hover {
+  padding: 0.625rem;
+  border: transparent;
+  background: radial-gradient(circle, #f4b37e 2%, #ec9443 56%, #c85032 88%);
+  border: 0.3125rem solid #c85032ab;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
-p span {
-  font-size: 16px;
-  margin-left: 5px;
-  font-weight: bold;
-  color: #e59041;
-}
-
-.fatherButton {
+.loginButton {
   display: flex;
   justify-content: center;
 }
 
-.rectangule {
+.loginButton .loginButtonSon {
   height: 50px;
   width: 153px;
   position: absolute;
-  border-radius: 50px;
   box-sizing: border-box;
-  border: 10px solid rgba(0, 0, 0, 0.15);
+  border-radius: 3.125rem;
+  border: 0.625rem solid rgba(0, 0, 0, 0.15);
 }
 
-.rectangule button {
+.loginButton button {
   width: 100%;
   height: 100%;
   border: none;
   outline: none;
-  text-align: center;
   color: whitesmoke;
-  border-radius: 55px;
-  font: bolder 15px Roboto;
-  letter-spacing: 3px;
+  text-align: center;
+  border-radius: 3.4375rem;
+  letter-spacing: 0.1875rem;
+  font: bolder 0.9375rem Roboto;
   background: linear-gradient(82.14deg, #ec9443 -3.88%, #c85032 64.89%);
 }
 
-.rectangule:after,
-.rectangule:before {
+.loginButton button:hover {
+  background: linear-gradient(141deg, #c85032 33%, #ec9443 64%);
+}
+
+.loginButtonSon:after,
+.loginButtonSon:before {
   width: 0;
   left: 50%;
   height: 0;
-  bottom: 100%;
   content: " ";
+  bottom: 100%;
   position: absolute;
   pointer-events: none;
   border: solid transparent;
 }
 
-.rectangule:after {
-  border-width: 20px;
-  margin-left: -20px;
-  border-bottom-color: pink;
+.loginButtonSon:after {
+  border-width: 1.25rem;
+  margin-left: -1.25rem;
+  border-bottom-color: #ce5c35;
 }
 
-.rectangule:before {
-  border-width: 36px;
-  margin-left: -36px;
-  border-radius: 22px;
+.loginButtonSon:before {
+  border-width: 2.25rem;
+  margin-left: -2.25rem;
+  border-radius: 1.375rem;
   border-bottom-color: rgba(0, 0, 0, 0.15);
 }
 
-.sectionFather {
+p {
   display: flex;
+  color: grey;
+  font-size: 1rem;
+  margin-top: 4.5rem;
   justify-content: center;
+  font-family: "Roboto";
 }
 
-.sectionSon {
-  border: 1px solid black;
+p span a {
+  font-size: 1rem;
+  color: #ce5c35;
+  font-weight: bold;
+  text-decoration: none;
+  margin-left: 0.3125rem;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+p span a:hover {
+  color: grey;
+  font-weight: bolder;
+  text-shadow: 0.625rem;
+  text-decoration: underline;
 }
 
 * {
   margin: 0;
   padding: 0;
-=======
-* {
-  padding: 0;
-  margin: 0;
->>>>>>> master
   box-sizing: border-box;
 }
 
 body {
   width: 100%;
-<<<<<<< HEAD
-  height: 100vh;
   font-family: "Poppins", sans-serif;
-  background: #ec405d;
-=======
-  min-height: 100vh;
-  font-family: sans-serif;
->>>>>>> master
+  background: #ecb7b7;
 }
