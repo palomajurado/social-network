@@ -139,7 +139,7 @@ p {
   display: flex;
   font-size: 16px;
   margin-top: 72px;
-  color: $colorWhite;
+  color: $colorGray;
   justify-content: center;
   font-family: $FFprimary;
 }
@@ -202,8 +202,37 @@ p span {
 }
 .sectionFather {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
 }
 .sectionSon {
-  border: 1px solid black;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
 }
+#circle1{
+  width: 180vw; 
+  height: 180vw; 
+  position: absolute;
+  top: -15%;
+  left: -40%;
+  z-index: -5;
+  border-radius: 50%;
+  background-image: linear-gradient(180deg, 
+  rgba(19, 19, 19, 0.8) 19.79%, 
+  rgba(204, 83, 51, 0.8) 53.13%, 
+  rgba(200, 80, 50, 0.8) 82.29%, 
+  rgba(194, 141, 125, 0.8) 100%), 
+  url('/assets/burbuja.png');
+  background-size: contain;
+}
+#circle2{
+  width: 180vw;
+  height: 190vw;
+  border-radius: 0 0 50% 50%;
+  position: absolute;
+  top: -8%;
+  right: -30%;
+  z-index: -10;
+  background: radial-gradient(50% 50% at 50% 50%, #6C4237 76.04%, #C03510 100%);
+}
+
