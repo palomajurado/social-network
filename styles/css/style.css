@@ -3,6 +3,11 @@
   justify-content: center;
 }
 
+.logo-principalMobile {
+  text-align: center;
+  margin-top: 2rem;
+}
+
 h1 {
   display: flex;
   color: whitesmoke;
@@ -268,7 +273,7 @@ p span a:hover {
   background: radial-gradient(50% 50% at 50% 50%, #6C4237 76.04%, #C03510 100%);
 }
 
-@media (min-width: 1024px) and (min-height: 625px) {
+@media (min-width: 1024px) and (min-height: 625px) and (max-height: 1024px) {
   body {
     margin: 0px;
     background-image: url("https://storage.googleapis.com/md-links/capital-back.png");
@@ -405,11 +410,6 @@ p span a:hover {
     background: radial-gradient(50% 50% at 43.9% 53.82%, #6c4237 40.62%, #c03510 100%);
     transform: rotate(-0.78deg);
     border-radius: 50%;
-  }
-  footer {
-    margin-top: 30.5%;
-    margin-left: 72%;
-    position: absolute;
   }
 }
 

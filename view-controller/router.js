@@ -12,6 +12,9 @@ const changeViewLog = (route) => {
     case '#/signUp': {
       return containerLogIn.appendChild(components.signUp());
     }
+    case '#/profile': {
+      return containerLogIn.appendChild(components.profile());
+    }
     default:
       break;
   }
