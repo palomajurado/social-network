@@ -1,9 +1,6 @@
 .All-sections {
+  min-height: 100vh;
   justify-content: center;
-}
-
-.All-sections .sectionFather {
-  background-color: orange;
 }
 
 h1 {
@@ -61,11 +58,12 @@ h1 img span {
   align-items: center;
   flex-direction: column;
   justify-content: center;
-  padding: 2rem 3rem;
+  padding: 2rem 1rem;
 }
 
 .container .item {
   display: flex;
+  max-width: 100%;
   font-size: 1.5rem;
   color: whitesmoke;
   position: relative;
@@ -78,12 +76,14 @@ h1 img span {
 .container .item img {
   margin: 0.4rem;
   width: 40px;
+  min-width: 40px;
   height: 40px;
   border-radius: 50%;
 }
 
 .container .item input {
   border: none;
+  width: 100%;
   outline: none;
   font-size: 1.25rem;
   color: whitesmoke;
@@ -237,6 +237,35 @@ p span a:hover {
   font-weight: bolder;
   text-shadow: 0.625rem;
   text-decoration: underline;
+}
+
+.sectionSon {
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+}
+
+#circle1 {
+  width: 180vw;
+  height: 180vw;
+  position: absolute;
+  top: -15%;
+  left: -40%;
+  z-index: -5;
+  border-radius: 50%;
+  background-image: linear-gradient(180deg, rgba(19, 19, 19, 0.8) 19.79%, rgba(204, 83, 51, 0.8) 53.13%, rgba(200, 80, 50, 0.8) 82.29%, rgba(194, 141, 125, 0.8) 100%), url("/assets/burbuja.png");
+  background-size: contain;
+}
+
+#circle2 {
+  width: 180vw;
+  height: 190vw;
+  border-radius: 0 0 50% 50%;
+  position: absolute;
+  top: -8%;
+  right: -30%;
+  z-index: -10;
+  background: radial-gradient(50% 50% at 50% 50%, #6C4237 76.04%, #C03510 100%);
 }
 
 @media (min-width: 1024px) and (min-height: 625px) {
