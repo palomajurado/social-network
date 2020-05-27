@@ -1,0 +1,396 @@
+.All-sections {
+  justify-content: center;
+}
+
+.All-sections .sectionFather {
+  background-color: orange;
+}
+
+h1 {
+  display: flex;
+  color: whitesmoke;
+  padding-top: 2.5rem;
+  font-size: 3.4375rem;
+  justify-content: center;
+  margin-bottom: 2.1875rem;
+}
+
+h1 img {
+  width: 15px;
+  height: 71px;
+  margin: 0 0.3rem;
+  font-family: "Roboto";
+}
+
+h1 img span {
+  color: #e59041;
+}
+
+.sectionSubTitle {
+  display: flex;
+  align-items: center;
+  padding-bottom: 2rem;
+  justify-content: space-around;
+}
+
+.sectionSubTitle a {
+  color: whitesmoke;
+  font-size: 0.9375rem;
+  text-decoration: none;
+  font-family: "Roboto";
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.sectionSubTitle a:hover {
+  color: #ce5c35;
+  font-weight: bolder;
+  text-decoration: underline;
+}
+
+.sectionSubTitle h2 {
+  color: whitesmoke;
+  font-size: 1.875rem;
+  font-family: "Roboto";
+  letter-spacing: 0.125rem;
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  overflow: hidden;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem 3rem;
+}
+
+.container .item {
+  display: flex;
+  font-size: 1.5rem;
+  color: whitesmoke;
+  position: relative;
+  align-items: center;
+  margin-top: -0.1062rem;
+  text-transform: uppercase;
+  border: 0.0625rem solid whitesmoke;
+}
+
+.container .item img {
+  margin: 0.4rem;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.container .item input {
+  border: none;
+  outline: none;
+  font-size: 1.25rem;
+  color: whitesmoke;
+  font-family: "Poppins", sans-serif;
+  background-color: transparent;
+}
+
+::-webkit-input-placeholder {
+  color: whitesmoke;
+  font-size: 1.25rem;
+  font-family: "Poppins", sans-serif;
+}
+
+.item:first-child::after {
+  content: "";
+  top: -0.9px;
+  width: 100vh;
+  right: 1.5rem;
+  position: absolute;
+  border-top: 0.0625rem solid whitesmoke;
+}
+
+.item:last-child::after {
+  content: "";
+  width: 100vh;
+  left: 1.5rem;
+  bottom: -0.0563rem;
+  position: absolute;
+  border-top: 0.0625rem solid whitesmoke;
+}
+
+.item:nth-child(odd) {
+  border-radius: 0 3rem 3rem 0;
+  margin-left: calc(1rem + 40px);
+  border-left: 0.0625rem solid transparent;
+}
+
+.item:nth-child(even) {
+  border-radius: 3rem 0 0 3rem;
+  margin-right: calc(0.6rem + 40px);
+  border-right: 0.0625rem solid transparent;
+}
+
+.signIn {
+  display: flex;
+  color: whitesmoke;
+  font-size: 0.9375rem;
+  margin-top: 1.125rem;
+  justify-content: center;
+  font-family: "Roboto";
+}
+
+.sectionNetworks {
+  display: flex;
+  justify-content: center;
+}
+
+.sectionNetworks img {
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  border-radius: 50%;
+  margin: 1.25rem 1.25rem 1.875rem 1.25rem;
+  box-shadow: 0.4375rem 1.5625rem 2rem -0.3125rem rgba(0, 0, 0, 0.38);
+}
+
+.sectionNetworks img:hover {
+  padding: 0.625rem;
+  border: transparent;
+  background: radial-gradient(circle, #f4b37e 2%, #ec9443 56%, #c85032 88%);
+  border: 0.3125rem solid #c85032ab;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.loginButton {
+  display: flex;
+  justify-content: center;
+}
+
+.loginButton .loginButtonSon {
+  height: 50px;
+  width: 153px;
+  position: absolute;
+  box-sizing: border-box;
+  border-radius: 3.125rem;
+  border: 0.625rem solid rgba(0, 0, 0, 0.15);
+}
+
+.loginButton button {
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  color: whitesmoke;
+  text-align: center;
+  border-radius: 3.4375rem;
+  letter-spacing: 0.1875rem;
+  font: bolder 0.9375rem Roboto;
+  background: linear-gradient(82.14deg, #ec9443 -3.88%, #c85032 64.89%);
+}
+
+.loginButton button:hover {
+  background: linear-gradient(141deg, #c85032 33%, #ec9443 64%);
+}
+
+.loginButtonSon:after,
+.loginButtonSon:before {
+  width: 0;
+  left: 50%;
+  height: 0;
+  content: " ";
+  bottom: 100%;
+  position: absolute;
+  pointer-events: none;
+  border: solid transparent;
+}
+
+.loginButtonSon:after {
+  border-width: 1.25rem;
+  margin-left: -1.25rem;
+  border-bottom-color: #ce5c35;
+}
+
+.loginButtonSon:before {
+  border-width: 2.25rem;
+  margin-left: -2.25rem;
+  border-radius: 1.375rem;
+  border-bottom-color: rgba(0, 0, 0, 0.15);
+}
+
+p {
+  display: flex;
+  color: grey;
+  font-size: 1rem;
+  margin-top: 4.5rem;
+  justify-content: center;
+  font-family: "Roboto";
+}
+
+p span a {
+  font-size: 1rem;
+  color: #ce5c35;
+  font-weight: bold;
+  text-decoration: none;
+  margin-left: 0.3125rem;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+p span a:hover {
+  color: grey;
+  font-weight: bolder;
+  text-shadow: 0.625rem;
+  text-decoration: underline;
+}
+
+@media (min-width: 1024px) and (min-height: 625px) {
+  body {
+    margin: 0px;
+    background-image: url("https://storage.googleapis.com/md-links/capital-back.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: none;
+  }
+  body:before {
+    content: "";
+    background-color: #000;
+    opacity: 0.88;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 40.1%, #000000 97.4%), linear-gradient(0deg, rgba(0, 0, 0, 0.08), rgba(0, 0, 0, 0.08));
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+  }
+  header {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    align-items: center;
+    background-color: #000000e0;
+    padding: 0.7rem 2rem 0.7rem 2rem;
+    justify-content: space-between;
+  }
+  header .logo-icon {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    width: 30px;
+  }
+  header .logo-icon img {
+    width: 130%;
+    height: 85%;
+  }
+  header .logo-principal {
+    display: flex;
+    justify-content: center;
+  }
+  header .logo-principal img {
+    width: 60%;
+  }
+  header .content-about {
+    border: 3px solid #fff;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    padding: 0rem 1rem;
+    height: 45px;
+  }
+  header .content-about p {
+    font-family: "Poppins", sans-serif;
+    color: #fff;
+    font-size: 0.9rem;
+    margin: 0px;
+  }
+  header .content-about:hover {
+    background-color: #fff;
+  }
+  header .content-about:hover p {
+    color: #883a24;
+    font-weight: bolder;
+  }
+  .all-contain {
+    display: flex;
+    padding: 2.3% 4% 0% 0%;
+    justify-content: flex-end;
+  }
+  .all-contain .sectionFather {
+    position: fixed;
+    margin-right: 0px;
+    margin-top: 0px;
+    width: 30%;
+    padding: 4% 0px 6.5%;
+    border: 0px;
+    border-radius: 50%;
+    background: linear-gradient(180deg, #b0492e 0.01%, #131313 0.02%, #cc5333 47.4%, #c85032 82.29%, #c28d7d 95.31%), #4bb1fb;
+  }
+  .all-contain .sectionFather .sectionSon {
+    text-align: center;
+    border: 0px;
+  }
+  .all-contain .sectionFather .sectionSon .container {
+    padding: 2rem 2rem 1.56rem;
+  }
+  .all-contain .sectionFather .sectionSon .container .item:nth-child(odd) {
+    height: 46px;
+  }
+  .all-contain .sectionFather .sectionSon .container .item:nth-child(even) {
+    height: 46px;
+  }
+  .all-contain .sectionFather .sectionSon .container .item img {
+    height: 36px;
+  }
+  .all-contain .sectionFather .sectionSon .sectionNetworks img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 23px;
+  }
+  .all-contain .sectionFather .sectionSon h1 {
+    display: flex;
+    margin: 0% auto 4%;
+    padding: 0px;
+    color: whitesmoke;
+    justify-content: center;
+    font-size: 210%;
+    font-family: "Roboto";
+    font-weight: bold;
+  }
+  .all-contain .sectionFather .sectionSon .sectionSubTitle {
+    padding: 0px;
+  }
+  .all-contain .sectionFather .sectionSon .sectionSubTitle h2 {
+    font-size: 24px;
+    font-weight: lighter;
+    letter-spacing: 0px;
+  }
+  .all-contain .sectionFather .sectionSon .signIn {
+    margin: 0px;
+  }
+  .all-contain .sectionFather .sectionSon a {
+    font-size: 13px;
+  }
+  .all-contain .circle-back {
+    content: "";
+    margin-top: 2%;
+    width: 32%;
+    height: 32rem;
+    position: fixed;
+    background: radial-gradient(50% 50% at 43.9% 53.82%, #6c4237 40.62%, #c03510 100%);
+    transform: rotate(-0.78deg);
+    border-radius: 50%;
+  }
+  footer {
+    margin-top: 30.5%;
+    margin-left: 72%;
+    position: absolute;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  font-family: "Poppins", sans-serif;
+}

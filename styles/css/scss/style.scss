@@ -1,13 +1,12 @@
-
-@use "modulesStyles/contentLogin";
-@use "modulesStyles/desktopLogin";
-
 $logoSize: 40px;
 $FFprimary: "Roboto";
 $colorWhite: whitesmoke;
 $colorOrng: #ce5c35;
 $FFsecondary: "Poppins",
 sans-serif;
+
+@import "modulesStyles/contentLogin";
+@import "modulesStyles/desktopLogin";
 
 * {
   margin: 0;
@@ -18,6 +17,4 @@ sans-serif;
 body {
   width: 100%;
   font-family: $FFsecondary;
-  background: rgb(236, 183, 183);
 }
-
