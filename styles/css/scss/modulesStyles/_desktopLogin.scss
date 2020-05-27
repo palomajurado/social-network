@@ -1,0 +1,203 @@
+@media (min-width: 1024px) and (min-height: 625px) {
+  @mixin align-items() {
+    display: flex;
+    align-items: center;
+    text-align: center;
+  }
+
+  $logoSize: 40px;
+  $FFprimary: "Roboto";
+  $colorWhite: whitesmoke;
+  $FFsecondary: "Poppins",
+  sans-serif;
+
+  %rectangule-style {
+    width: 0;
+    left: 50%;
+    height: 0;
+    bottom: 100%;
+    content: " ";
+    position: absolute;
+    pointer-events: none;
+    border: solid transparent;
+  }
+
+  body {
+    margin: 0px;
+    background-image: url("https://storage.googleapis.com/md-links/capital-back.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: none;
+  }
+
+  body:before {
+    content: "";
+    background-color: #000;
+    opacity: 0.88;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 40.1%, #000000 97.4%),
+      linear-gradient(0deg, rgba(0, 0, 0, 0.08), rgba(0, 0, 0, 0.08));
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+  }
+
+  header {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    align-items: center;
+    background-color: #000000e0;
+    padding: 0.7rem 2rem 0.7rem 2rem;
+    justify-content: space-between;
+
+    .logo-icon {
+      @include align-items();
+      width: 30px;
+
+      img {
+        width: 130%;
+        height: 85%;
+      }
+    }
+
+    .logo-principal {
+      display: flex;
+      justify-content: center;
+
+      img {
+        width: 60%;
+      }
+    }
+
+    .content-about {
+      border: 3px solid #fff;
+      background-color: transparent;
+      @include align-items();
+      padding: 0rem 1rem;
+      height: 45px;
+
+      p {
+        font-family: $FFsecondary;
+        color: #fff;
+        font-size: 0.9rem;
+        margin: 0px;
+      }
+    }
+
+    .content-about:hover {
+      background-color: #fff;
+
+      p {
+        color: #883a24;
+        font-weight: bolder;
+      }
+    }
+  }
+
+  //De aqui para abajo es la pantalla de login netamente
+
+  .all-contain {
+    display: flex;
+    padding: 2.3% 4% 0% 0%;
+    justify-content: flex-end;
+
+    .sectionFather {
+      position: fixed;
+      margin-right: 0px;
+      margin-top: 0px;
+      width: 30%;
+      padding: 4% 0px 6.5%;
+      border: 0px;
+      border-radius: 50%;
+      background: linear-gradient(180deg,
+          #b0492e 0.01%,
+          #131313 0.02%,
+          #cc5333 47.4%,
+          #c85032 82.29%,
+          #c28d7d 95.31%),
+        #4bb1fb;
+
+      .sectionSon {
+        text-align: center;
+        border: 0px;
+
+        .container {
+          padding: 2rem 2rem 1.56rem;
+
+          .item:nth-child(odd) {
+            height: 46px;
+          }
+
+          .item:nth-child(even) {
+            height: 46px;
+          }
+
+          .item {
+            img {
+              height: 36px;
+            }
+          }
+        }
+
+        .sectionNetworks {
+          img {
+            width: 50px;
+            height: 50px;
+            margin-bottom: 23px;
+          }
+        }
+
+        h1 {
+          display: flex;
+          margin: 0% auto 4%;
+          padding: 0px;
+          color: whitesmoke;
+          justify-content: center;
+          font-size: 210%;
+          font-family: $FFprimary;
+          font-weight: bold;
+        }
+
+        .sectionSubTitle {
+          padding: 0px;
+
+          h2 {
+            font-size: 24px;
+            font-weight: lighter;
+            letter-spacing: 0px;
+          }
+        }
+
+        .signIn {
+          margin: 0px;
+        }
+
+        a {
+          font-size: 13px;
+        }
+      }
+    }
+
+    .circle-back {
+      content: "";
+      margin-top: 2%;
+      width: 32%;
+      height: 32rem;
+      position: fixed;
+      background: radial-gradient(50% 50% at 43.9% 53.82%,
+          #6c4237 40.62%,
+          #c03510 100%);
+      transform: rotate(-0.78deg);
+      border-radius: 50%;
+    }
+  }
+
+  footer {
+    margin-top: 30.5%;
+    margin-left: 72%;
+    position: absolute;
+  }
+}

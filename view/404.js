@@ -1,3 +1,4 @@
+/* eslint-disable quotes */
 export default () => {
   const viewDifferent = `
             <h2>404</h2>

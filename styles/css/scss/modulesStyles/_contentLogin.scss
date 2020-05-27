@@ -1,64 +1,104 @@
-.container {
-  width: 100%;
-  padding: 2rem;
-  display: flex;
-  overflow: hidden;
-  align-items: center;
-  flex-direction: column;
+// ------------------------ CONTAINERS
+.All-sections {
+
   justify-content: center;
-}
-::-webkit-input-placeholder {
-  color: white;
-  font-size: 20px;
-  font-family: $FFsecondary;
-}
-h1 {
-  display: flex;
-  font-size: 55px;
-  padding-top: 40px;
-  margin-bottom: 35px;
-  color: whitesmoke;
-  justify-content: center;
+
+  .sectionFather {
+    background-color: orange; // borrar al agregar bakcground
+  }
 }
 
-h1 img {
-  width: 15px;
-  height: 71px;
-  margin: 0 0.3rem;
-  font-family: $FFprimary;
-}
-h1 span {
-  color: rgb(229, 144, 65);
+// ------------------------ TITULO Y SUBTITULO
+h1 {
+  display: flex;
+  color: $colorWhite;
+  padding-top: 2.5rem;
+  font-size: 3.4375rem;
+  justify-content: center;
+  margin-bottom: 2.1875rem;
+
+  img {
+    width: 15px;
+    height: 71px;
+    margin: 0 0.3rem;
+    font-family: $FFprimary;
+
+    span {
+      color: rgb(229, 144, 65);
+    }
+  }
 }
 
 .sectionSubTitle {
   display: flex;
   align-items: center;
-  padding-bottom: 1rem;
+  padding-bottom: 2rem;
   justify-content: space-around;
-}
-.sectionSubTitle a {
-  font-size: 15px;
-  color: $colorWhite;
-  text-decoration: none;
-  font-family: $FFprimary;
-}
-.sectionSubTitle h2 {
-  font-size: 30px;
-  color: $colorWhite;
-  font-family: $FFprimary;
-  letter-spacing: 2px;
+
+  a {
+    color: $colorWhite;
+    font-size: 0.9375rem;
+    text-decoration: none;
+    font-family: $FFprimary;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  }
+
+  a:hover {
+    color: $colorOrng;
+    font-weight: bolder;
+    text-decoration: underline;
+  }
+
+  h2 {
+    color: $colorWhite;
+    font-size: 1.875rem;
+    font-family: $FFprimary;
+    letter-spacing: 0.125rem;
+  }
 }
 
-.item {
+// ------------------------ Inputs (culebras)
+.container {
+  width: 100%;
   display: flex;
-  font-size: 1.5rem;
-  color: $colorWhite;
-  margin-top: -1.7px;
-  position: relative;
+  overflow: hidden;
   align-items: center;
-  text-transform: uppercase;
-  border: 1px solid $colorWhite;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem 3rem;
+
+  .item {
+    display: flex;
+    font-size: 1.5rem;
+    color: $colorWhite;
+    position: relative;
+    align-items: center;
+    margin-top: -0.1062rem;
+    text-transform: uppercase;
+    border: 0.0625rem solid $colorWhite;
+
+    img {
+      margin: 0.4rem;
+      width: $logoSize;
+      height: $logoSize;
+      border-radius: 50%;
+    }
+
+    input {
+      border: none;
+      outline: none;
+      font-size: 1.25rem;
+      color: $colorWhite;
+      font-family: $FFsecondary;
+      background-color: transparent;
+    }
+  }
+}
+
+::-webkit-input-placeholder {
+  color: $colorWhite;
+  font-size: 1.25rem;
+  font-family: $FFsecondary;
 }
 
 .item:first-child::after {
@@ -67,172 +107,151 @@ h1 span {
   width: 100vh;
   right: 1.5rem;
   position: absolute;
-  border-top: 1px solid $colorWhite;
+  border-top: 0.0625rem solid $colorWhite;
 }
 
 .item:last-child::after {
   content: "";
   width: 100vh;
   left: 1.5rem;
-  bottom: -0.9px;
+  bottom: -0.0563rem;
   position: absolute;
-  border-top: 1px solid $colorWhite;
-}
-
-#lastItem:last-child::after {
-  content: "";
-  width: 100vh;
-  left: 1.5rem;
-  bottom: -0.9px;
-  position: absolute;
-  border-top: 1px solid $colorWhite;
+  border-top: 0.0625rem solid $colorWhite;
 }
 
 .item:nth-child(odd) {
   // toma impares
   border-radius: 0 3rem 3rem 0;
-  border-left: 1px solid transparent;
   margin-left: calc(1rem + #{$logoSize});
+  border-left: 0.0625rem solid transparent;
 }
 
 .item:nth-child(even) {
   // toma pares
-  margin-right: calc(
-    0.6rem + #{$logoSize}
-  ); // hace un calculo entre dos medidas rem con pixeles y el #{$} es la sintaxis para llamar la variable dentro de un calc (interpolacion en sass)
   border-radius: 3rem 0 0 3rem;
-  border-right: 1px solid transparent;
+  margin-right: calc(0.6rem + #{$logoSize});
+  border-right: 0.0625rem solid transparent;
 }
-.item input {
-  border: none;
-  padding: 1rem;
-  outline: none;
-  background-color: transparent;
-}
-.item img {
-  margin: 0.4rem;
-  width: $logoSize;
-  height: $logoSize;
-  border-radius: 50%;
-}
+
+// ------------------------ TEXTO antes DE GOOGLE Y FB
 .signIn {
-  color: $colorWhite;
   display: flex;
-  font-size: 15px;
-  margin-top: 18px;
+  color: $colorWhite;
+  font-size: 0.9375rem;
+  margin-top: 1.125rem;
   justify-content: center;
   font-family: $FFprimary;
 }
+
+// ------------------------ Buttons DE GOOGLE Y FB
+
 .sectionNetworks {
   display: flex;
   justify-content: center;
+
+  img {
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    border-radius: 50%;
+    margin: 1.25rem 1.25rem 1.875rem 1.25rem;
+    box-shadow: 0.4375rem 1.5625rem 2rem -0.3125rem rgba(0, 0, 0, 0.38);
+  }
+
+  img:hover {
+    padding: 0.625rem;
+    border: transparent;
+    background: radial-gradient(circle,
+        rgba(244, 179, 126, 1) 2%,
+        rgba(236, 148, 67, 1) 56%,
+        rgba(200, 80, 50, 1) 88%);
+    border: 0.3125rem solid #c85032ab;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  }
 }
 
-.sectionNetworks img {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  margin: 20px 20px 30px 20px;
-  box-shadow: 7px 25px 32px -5px rgba(0, 0, 0, 0.38);
-}
-p {
-  display: flex;
-  font-size: 16px;
-  margin-top: 72px;
-  color: $colorGray;
-  justify-content: center;
-  font-family: $FFprimary;
-}
-p span {
-  font-size: 16px;
-  margin-left: 5px;
-  font-weight: bold;
-  color: rgb(229, 144, 65);
-}
-
-// rectangulo
-.fatherButton {
+// ------------------------ BUTTON LOGIN & SIGN UP
+.loginButton {
   display: flex;
   justify-content: center;
+
+  .loginButtonSon {
+    height: 50px;
+    width: 153px;
+    position: absolute;
+    box-sizing: border-box;
+    border-radius: 3.125rem;
+    border: 0.625rem solid rgba(0, 0, 0, 0.15);
+
+  }
+
+  button {
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    color: $colorWhite;
+    text-align: center;
+    border-radius: 3.4375rem;
+    letter-spacing: 0.1875rem;
+    font: bolder 0.9375rem Roboto;
+    background: linear-gradient(82.14deg, #ec9443 -3.88%, #c85032 64.89%);
+  }
+
+  button:hover {
+    background: linear-gradient(141deg, #c85032 33%, #ec9443 64%);
+  }
 }
 
-.rectangule {
-  height: 50px;
-  width: 153px;
-  position: absolute;
-  border-radius: 50px;
-  box-sizing: border-box;
-  border: 10px solid rgba(0, 0, 0, 0.15);
-}
-.rectangule button {
-  width: 100%;
-  height: 100%;
-  border: none;
-  outline: none;
-  text-align: center;
-  color: $colorWhite;
-  border-radius: 55px;
-  font: bolder 15px Roboto;
-  letter-spacing: 3px;
-  background: linear-gradient(82.14deg, #ec9443 -3.88%, #c85032 64.89%);
-}
-
-.rectangule:after,
-.rectangule:before {
+.loginButtonSon:after,
+.loginButtonSon:before {
   width: 0;
   left: 50%;
   height: 0;
-  bottom: 100%;
   content: " ";
+  bottom: 100%;
   position: absolute;
   pointer-events: none;
   border: solid transparent;
 }
 
-.rectangule:after {
-  border-width: 20px;
-  margin-left: -20px;
-  border-bottom-color: pink;
-}
-.rectangule:before {
-  border-width: 36px;
-  margin-left: -36px;
-  border-radius: 22px;
-  border-bottom-color: rgba(0, 0, 0, 0.15);
-}
-.sectionFather {
-  display: flex;
-  justify-content: flex-end;
-}
-.sectionSon {
-  justify-content: center;
-  overflow: hidden;
-  position: relative;
-}
-#circle1{
-  width: 180vw; 
-  height: 180vw; 
-  position: absolute;
-  top: -15%;
-  left: -40%;
-  z-index: -5;
-  border-radius: 50%;
-  background-image: linear-gradient(180deg, 
-  rgba(19, 19, 19, 0.8) 19.79%, 
-  rgba(204, 83, 51, 0.8) 53.13%, 
-  rgba(200, 80, 50, 0.8) 82.29%, 
-  rgba(194, 141, 125, 0.8) 100%), 
-  url('/assets/burbuja.png');
-  background-size: contain;
-}
-#circle2{
-  width: 180vw;
-  height: 190vw;
-  border-radius: 0 0 50% 50%;
-  position: absolute;
-  top: -8%;
-  right: -30%;
-  z-index: -10;
-  background: radial-gradient(50% 50% at 50% 50%, #6C4237 76.04%, #C03510 100%);
+
+.loginButtonSon:after {
+  // Triangulo del button
+  border-width: 1.25rem;
+  margin-left: -1.25rem;
+  border-bottom-color: $colorOrng;
 }
 
+.loginButtonSon:before {
+  border-width: 2.25rem;
+  margin-left: -2.25rem;
+  border-radius: 1.375rem;
+  border-bottom-color: rgba(0, 0, 0, 0.15);
+}
+
+// ------------------------ TEXTO de enlace al SIGN up
+p {
+  display: flex;
+  color: grey;
+  font-size: 1rem;
+  margin-top: 4.5rem;
+  justify-content: center;
+  font-family: $FFprimary;
+
+  span a {
+    font-size: 1rem;
+    color: $colorOrng;
+    font-weight: bold;
+    text-decoration: none;
+    margin-left: 0.3125rem;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  }
+
+  span a:hover {
+    color: grey;
+    font-weight: bolder;
+    text-shadow: 0.625rem;
+    text-decoration: underline;
+  }
+}
