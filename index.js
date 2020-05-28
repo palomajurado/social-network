@@ -1,38 +1,12 @@
-/* eslint-disable no-useless-escape */
 /* eslint-disable no-unused-vars */
-/* eslint-disable consistent-return */
 /* eslint-disable quotes */
-import logIn from "./view/logIn.js";
-import signUp from "./view/signUp.js";
-import notFound from "./view/404.js";
+import { changeView } from "./router.js";
 
 const init = () => {
-  const content = document.querySelector("#content");
-  content.appendChild(logIn());
-
+  changeView(window.location.hash);
   window.addEventListener("hashchange", () => {
-    // console.log(window.location.hash);
-
-    content.innerHTML = "";
-    switch (window.location.hash) {
-      case "#/": {
-        content.appendChild(logIn());
-        return;
-      }
-      case "#/signUp":
-        return content.appendChild(signUp());
-      default:
-        content.appendChild(notFound);
-        break;
-    }
+    changeView(window.location.hash);
   });
 };
 
 window.addEventListener("load", init);
-
-// para validar que ingrese un email de acuerdo a su sintaxis
-
-function validateEmail(email) {
-  const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-  return re.test(String(email).toLowerCase());
-}

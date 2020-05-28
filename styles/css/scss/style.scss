@@ -4,9 +4,13 @@ $colorWhite: whitesmoke;
 $colorOrng: #ce5c35;
 $FFsecondary: "Poppins",
 sans-serif;
+$borderContent: 10px;
 
-@import "modulesStyles/desktopLogin";
 @import "modulesStyles/contentLogin";
+@import "modulesStyles/desktopLogin";
+@import "modulesStyles/contentProfile";
+@import "modulesStyles/desktopProfile";
+
 
 * {
   margin: 0;
@@ -17,5 +21,4 @@ sans-serif;
 body {
   width: 100%;
   font-family: $FFsecondary;
-  background: rgb(236, 183, 183);
 }

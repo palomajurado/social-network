@@ -1,6 +1,10 @@
-/* eslint-disable object-shorthand */
 /* eslint-disable quotes */
-import logIn from "./logIn.js";
-import signUp from "./signUp.js";
+import LogIn from "./logIn.view.js";
+import SignUp from "./signUp.view.js";
+import Profile from "./profile.view.js";
 
-export const components = { logIn: logIn, signUp: signUp };
+export const views = {
+  logIn: LogIn,
+  signUp: SignUp,
+  profile: Profile,
+};
