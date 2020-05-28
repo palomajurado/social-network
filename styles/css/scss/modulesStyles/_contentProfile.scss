@@ -1,0 +1,105 @@
+.container-Publications-Profile{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+
+    .sectionProfile{
+        .coverPage{
+            width: 100%;
+            height: 10em;
+            background: $colorOrng;
+            border-radius: $borderContent;
+            img{
+                width: 100%;
+                height: 100%;
+                border-radius: $borderContent;
+            }
+        }
+    
+        .profilePicture{        
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: -3rem;
+            img {
+                width: 8rem;
+                height: 8rem;
+                position: relative;
+                top: -4rem;
+                border-radius: 50%;
+                border: solid rgb(61, 59, 59) ;
+            }
+        }
+    }
+    
+    .sectionPublications{
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        flex-direction: column;
+
+        .containerNewPublications{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            
+            textarea{
+                width: 100%;
+                height: 5rem;
+                background: rgba(228, 192, 139, 0.8);
+                border-radius: $borderContent;
+                border: solid 1px rgb(61, 59, 59);
+                padding: 1rem;
+            }
+            .btnToPost{
+                width: 30%;
+                height: 100%;
+                border: none;
+                outline: none;
+                color: $colorWhite;
+                text-align: center;
+                border-radius: 3.4375rem;
+                font: bolder 0.9375rem Roboto;
+                background: linear-gradient(82.14deg, #ec9443 -3.88%, #c85032 64.89%);
+                margin-bottom: 0.5rem;
+                margin-top: 0.5rem;
+            }
+        }
+        
+        .stories{
+            .authorPublication{
+                width: 100%;
+                height: 3rem;
+                background: radial-gradient(50% 50% at 50% 50%, 
+                rgba(108, 66, 55, 0.808) 76.04%, 
+                rgba(192, 54, 16, 0.808) 100%);
+                padding: 0.5rem;
+            }
+            .content{
+                width: 100%;
+                height: 10rem;
+                background: rgba(228, 192, 139, 0.8);
+                padding: 0.5rem;
+            }
+            .interactions{
+                width: 100%;
+                height: 3rem;
+                background: radial-gradient(50% 50% at 50% 50%, 
+                rgba(108, 66, 55, 0.808) 76.04%, 
+                rgba(192, 54, 16, 0.808) 100%);
+                display: flex;
+                align-items: center;
+                padding: 0 10px 0 10px;
+
+                img{
+                    width: 30px;
+                    height: 30px;
+                    cursor: pointer;
+                    
+                }
+            }
+        }
+
+    }
+}

@@ -1,0 +1,61 @@
+@media (min-width: 700px) {
+    .container-Publications-Profile{    
+        display: flex;
+        justify-content: space-around;
+        align-content: center;
+        flex-direction: row;
+        flex-basis: 20%;
+
+        .sectionProfile{
+            margin: 3rem 3rem 3rem 5rem;
+            .coverPage{
+                width: 100%;
+                height: 8rem;
+                background: $colorOrng;
+                img{
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        
+            .profilePicture{        
+                img {
+                    width: 8rem;
+                    height: 8rem;
+                    top: -4rem;
+                }
+            }
+        }
+        
+        .sectionPublications{
+            flex-grow: 2;
+            margin: 3rem 3rem 0rem 0rem;
+            .containerNewPublications{
+                textarea{
+                    height: 8rem;
+                }
+                .btnToPost{
+                    border-radius: 4rem;
+                    line-height: 2;
+                    margin-bottom: 0.8rem;
+                }
+            }
+            
+            .stories{
+                .authorPublication{
+                    border-radius: 5% 5% 0 0;
+                    
+                }
+                .content{
+                    width: 100%;
+                    height: 10rem;
+                    background: rgba(228, 192, 139, 0.842);
+                }
+                .interactions{
+                    width: 100%;
+                    background: radial-gradient(50% 50% at 50% 50%, #6C4237 76.04%, #C03510 100%);
+                }
+            }
+        }
+    }
+}
