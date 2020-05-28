@@ -1,10 +1,12 @@
-import { changeViewLog } from './view-controller/router.js';
+/* eslint-disable no-unused-vars */
+/* eslint-disable quotes */
+import { changeView } from "./router.js";
 
 const init = () => {
-  changeViewLog(window.location.hash);
-  window.addEventListener('hashchange', () => {
-    changeViewLog(window.location.hash);
+  changeView(window.location.hash);
+  window.addEventListener("hashchange", () => {
+    changeView(window.location.hash);
   });
 };
 
-window.addEventListener('load', init);
+window.addEventListener("load", init);

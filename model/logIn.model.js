@@ -1,27 +1,14 @@
+/* eslint-disable implicit-arrow-linebreak */
 /* eslint-disable no-unused-vars */
 /* eslint-disable no-console */
 /* eslint-disable quotes */
 /* eslint-disable no-undef */
+
+// en el modelo se
 import { auth } from "../firebase.js";
 
-export const authEmailPassword = (email, password) => {
-  auth // llamar la autenticacion , va enviar la contrasenia e email a firebase
-    .signInWithEmailAndPassword(email, password)
-    .then((result) => {
-      console.log({ result });
-      window.location.hash = "#/profile";
-    })
-    .catch((error) => {
-      let message = "";
-      if (error.code === "auth/invalid-email") {
-        message = "Contraseña o correo inválido";
-      } else if (error.code === "auth/user-not-found") {
-        message = "usario no extiste";
-      }
-      const logInForm = divElement.querySelector("#logInForm"); // estoy creando un elemento al finalizar el form para que se muestre el mensaje
-      logInForm.outerHTML += `<span class="signIn">${message}</span>`;
-    });
-};
+export const authEmailPassword = (email, password) =>
+  auth.signInWithEmailAndPassword(email, password);
 
 export const authGmail = () => {
   const provider = new firebase.auth.GoogleAuthProvider();
@@ -32,8 +19,7 @@ export const authGmail = () => {
       const token = result.credential.accessToken;
       // The signed-in user info.
       const user = result.user;
-      console.log(token, user);
-      window.location.hash = "#/profile";
+      window.location.hash = "#/profile"; // por quitar
     })
     .catch((error) => {
       // Handle Errors here.
@@ -55,8 +41,7 @@ export const authFacebook = () => {
       const token = result.credential.accessToken;
       // The signed-in user info.
       const user = result.user;
-      console.log(token, user);
-      window.location.hash = "#/profile";
+      window.location.hash = "#/profile"; // por quitar
     })
     .catch((error) => {
       // Handle Errors here.

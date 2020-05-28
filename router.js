@@ -1,20 +1,24 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable quotes */
-import { components } from "./view/index.js";
+import logInController from "./controllers/logIn.controller.js";
+import signUpController from "./controllers/signUp.controller.js";
+import profileController from "./controllers/profile.controller.js";
 
-const changeViewLog = (route) => {
-  const containerLogIn = document.getElementById("containerLogIn");
-  containerLogIn.innerHTML = "";
+const changeView = (route) => {
+  const container = document.querySelector("#container");
+  container.innerHTML = "";
+
   switch (route) {
     case "":
     case "#/logIn":
     case "#/": {
-      return containerLogIn.appendChild(components.logIn());
+      return container.appendChild(logInController());
     }
     case "#/signUp": {
-      return containerLogIn.appendChild(components.signUp());
+      return container.appendChild(signUpController());
     }
     case "#/profile": {
-      return containerLogIn.appendChild(components.profile());
+      return container.appendChild(profileController());
     }
     default:
       break;
@@ -22,4 +26,4 @@ const changeViewLog = (route) => {
   return true;
 };
 
-export { changeViewLog };
+export { changeView };
