@@ -1,3 +1,4 @@
+
 /* eslint-disable no-tabs */
 export default () => {
 	const viewLogIn = `

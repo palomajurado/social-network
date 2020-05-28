@@ -62,13 +62,8 @@ export default () => {
 			</section>
 		</section>
 		<footer></footer>`;
-
 	const divElement = document.createElement('div');
 	divElement.innerHTML = viewSignUp;
-	const buttonSignUp = divElement.querySelector('.SignUp-button');
-	buttonSignUp.addEventListener('click', (event) => {
-		event.preventDefault();
-		console.log('hola mundo');
-	});
 	return divElement;
-};
+}
+  
