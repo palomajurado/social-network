@@ -1,7 +1,8 @@
 export default () => {
   const viewLogIn = `
+<h1>Log In</h1>
     <section class="sectionSubTitle">
-      <h2 for="Log in">Log in</h2>
+      <h2 class="LogIn">Log in</h2>
       <a href="#">Forgot your password?</a>
     </section>
     <form class="container">

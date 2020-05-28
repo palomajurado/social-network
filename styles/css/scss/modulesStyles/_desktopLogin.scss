@@ -1,5 +1,4 @@
-@media (min-width: 1024px) and (min-height: 625px) and (max-height: 1024px)
-{
+@media (min-width: 1024px) and (min-height: 625px) and (max-height: 1024px) {
   @mixin align-items() {
     display: flex;
     align-items: center;
@@ -9,8 +8,7 @@
   $logoSize: 40px;
   $FFprimary: "Roboto";
   $colorWhite: whitesmoke;
-  $FFsecondary: "Poppins",
-  sans-serif;
+  $FFsecondary: "Poppins", sans-serif;
 
   %rectangule-style {
     width: 0;
@@ -30,12 +28,13 @@
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-color: none;
+    overflow: hidden;
   }
 
   body:before {
     content: "";
     background-color: #000;
-    opacity: 0.88;
+    opacity: 1;
     background: linear-gradient(180deg, rgba(0, 0, 0, 0) 40.1%, #000000 97.4%),
       linear-gradient(0deg, rgba(0, 0, 0, 0.08), rgba(0, 0, 0, 0.08));
     width: 100%;
@@ -97,102 +96,75 @@
       }
     }
   }
-
-  //De aqui para abajo es la pantalla de login netamente
-
-  .all-contain {
-    display: flex;
-    padding: 2.3% 4% 0% 0%;
-    justify-content: flex-end;
-
+  .All-sections {
+    min-height: 87vh;
     .sectionFather {
-      position: fixed;
-      margin-right: 0px;
-      margin-top: 0px;
-      width: 30%;
-      padding: 4% 0px 6.5%;
-      border: 0px;
-      border-radius: 50%;
-      background: linear-gradient(180deg,
-          #b0492e 0.01%,
-          #131313 0.02%,
-          #cc5333 47.4%,
-          #c85032 82.29%,
-          #c28d7d 95.31%),
-        #4bb1fb;
-
       .sectionSon {
-        text-align: center;
-        border: 0px;
-
-        .container {
-          padding: 2rem 2rem 1.56rem;
-
-          .item:nth-child(odd) {
-            height: 46px;
+        padding: 4.5% 0% 6.5%;
+        .logo-principalMobile {
+          margin: 0px;
+          img {
+            display: none;
           }
-
-          .item:nth-child(even) {
-            height: 46px;
-          }
-
-          .item {
-            img {
-              height: 36px;
+        }
+        #circle1 {
+          width: 32vw;
+          height: 37vw;
+          top: 3%;
+          left: 62.5%;
+        }
+        #circle2 {
+          width: 36vw;
+          height: 42vw;
+          border-radius: 50%;
+          top: 2%;
+          right: 5%;
+        }
+        #containerLogIn {
+          margin: 0% 67.6% 0%;
+          width: 22%;
+          div {
+            h1 {
+              display: block;
+              margin: 0% 32% 6%;
+              padding: 0px;
+              font-size: 226%;
+              font-family: Roboto;
+              font-weight: bold;
+            }
+            .sectionSubTitle {
+              padding-bottom: 1rem;
+              .LogIn {
+                font-size: 1.2rem;
+              }
+              .SignUp {
+                font-size: 2rem;
+              }
+              a {
+                font-size: 0.85rem;
+              }
+            }
+            .sectionNetworks {
+              img {
+                width: 50px;
+                height: 50px;
+              }
+            }
+            .container {
+              padding: 1rem 1rem 2rem;
+              width: 107%;
+            }
+            .signIn {
+              margin-top: 0px;
+            }
+            p {
+              color: whitesmoke;
             }
           }
         }
-
-        .sectionNetworks {
-          img {
-            width: 50px;
-            height: 50px;
-            margin-bottom: 23px;
-          }
-        }
-
-        h1 {
-          display: flex;
-          margin: 0% auto 4%;
-          padding: 0px;
-          color: whitesmoke;
-          justify-content: center;
-          font-size: 210%;
-          font-family: $FFprimary;
-          font-weight: bold;
-        }
-
-        .sectionSubTitle {
-          padding: 0px;
-
-          h2 {
-            font-size: 24px;
-            font-weight: lighter;
-            letter-spacing: 0px;
-          }
-        }
-
-        .signIn {
-          margin: 0px;
-        }
-
-        a {
-          font-size: 13px;
-        }
       }
     }
-
-    .circle-back {
-      content: "";
-      margin-top: 2%;
-      width: 32%;
-      height: 32rem;
-      position: fixed;
-      background: radial-gradient(50% 50% at 43.9% 53.82%,
-          #6c4237 40.62%,
-          #c03510 100%);
-      transform: rotate(-0.78deg);
-      border-radius: 50%;
-    }
   }
+
+  //De aqui para abajo es la pantalla de login netamente
 }
