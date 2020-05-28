@@ -1,6 +1,7 @@
 .All-sections {
   min-height: 100vh;
   justify-content: center;
+  padding: 0 15px 0 15px;
 }
 
 .logo-principalMobile {
@@ -410,6 +411,159 @@ p span a:hover {
     background: radial-gradient(50% 50% at 43.9% 53.82%, #6c4237 40.62%, #c03510 100%);
     transform: rotate(-0.78deg);
     border-radius: 50%;
+  }
+}
+
+.container-Publications-Profile {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+}
+
+.container-Publications-Profile .sectionProfile .coverPage {
+  width: 100%;
+  height: 10em;
+  background: #ce5c35;
+  border-radius: 10px;
+}
+
+.container-Publications-Profile .sectionProfile .coverPage img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+.container-Publications-Profile .sectionProfile .profilePicture {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: -3rem;
+}
+
+.container-Publications-Profile .sectionProfile .profilePicture img {
+  width: 8rem;
+  height: 8rem;
+  position: relative;
+  top: -4rem;
+  border-radius: 50%;
+  border: solid #3d3b3b;
+}
+
+.container-Publications-Profile .sectionPublications {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+}
+
+.container-Publications-Profile .sectionPublications .containerNewPublications {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.container-Publications-Profile .sectionPublications .containerNewPublications textarea {
+  width: 100%;
+  height: 5rem;
+  background: rgba(228, 192, 139, 0.8);
+  border-radius: 10px;
+  border: solid 2px #3d3b3b;
+  padding: 1rem;
+}
+
+.container-Publications-Profile .sectionPublications .containerNewPublications .btnToPost {
+  width: 30%;
+  height: 100%;
+  border: none;
+  outline: none;
+  color: whitesmoke;
+  text-align: center;
+  border-radius: 3.4375rem;
+  font: bolder 0.9375rem Roboto;
+  background: linear-gradient(82.14deg, #494541 -3.88%, #c85032 64.89%);
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.container-Publications-Profile .sectionPublications .stories .authorPublication {
+  width: 100%;
+  height: 3rem;
+  background: rgba(192, 54, 16, 0.808);
+  padding: 0.5rem;
+  border-radius: 20px 20px 0 0;
+  border: solid 2px #3d3b3b;
+}
+
+.container-Publications-Profile .sectionPublications .stories .content {
+  width: 100%;
+  height: 10rem;
+  background: rgba(228, 192, 139, 0.8);
+  padding: 0.5rem;
+  border: solid 2px #3d3b3b;
+}
+
+.container-Publications-Profile .sectionPublications .stories .interactions {
+  width: 100%;
+  height: 3rem;
+  background: rgba(192, 54, 16, 0.808);
+  display: flex;
+  align-items: center;
+  padding: 0 10px 0 10px;
+  border-radius: 0 0 10px 10px;
+  border: solid 2px #3d3b3b;
+}
+
+.container-Publications-Profile .sectionPublications .stories .interactions img {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+@media (min-width: 1024px) {
+  .container-Publications-Profile {
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    flex-direction: row;
+    flex-basis: 20%;
+  }
+  .container-Publications-Profile .sectionProfile {
+    margin: 3rem 0rem 3rem 8rem;
+  }
+  .container-Publications-Profile .sectionProfile .coverPage {
+    width: 100%;
+    height: 8rem;
+    background: #ce5c35;
+  }
+  .container-Publications-Profile .sectionProfile .coverPage img {
+    width: 100%;
+    height: 100%;
+  }
+  .container-Publications-Profile .sectionProfile .profilePicture img {
+    width: 8rem;
+    height: 8rem;
+    top: -4rem;
+  }
+  .container-Publications-Profile .sectionPublications {
+    flex-grow: 2;
+    margin: 3rem 8rem 0rem 5rem;
+  }
+  .container-Publications-Profile .sectionPublications .containerNewPublications textarea {
+    height: 8rem;
+  }
+  .container-Publications-Profile .sectionPublications .containerNewPublications .btnToPost {
+    border-radius: 4rem;
+    line-height: 2;
+    margin-bottom: 0.8rem;
+  }
+  .container-Publications-Profile .sectionPublications .stories .content {
+    width: 100%;
+    height: 10rem;
+    background: rgba(228, 192, 139, 0.842);
+  }
+  .container-Publications-Profile .sectionPublications .stories .interactions {
+    width: 100%;
   }
 }
 
