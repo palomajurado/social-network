@@ -287,7 +287,7 @@ p span a:hover {
     z-index: -1;
   }
 
-  #allBody header {
+  #allBody .log_sign-header {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -297,24 +297,24 @@ p span a:hover {
     padding: 0.7rem 2rem 0.7rem 2rem;
     justify-content: space-between;
   }
-  #allBody header .logo-icon {
+  #allBody .log_sign-header .logo-icon {
     display: flex;
     align-items: center;
     text-align: center;
     width: 30px;
   }
-  #allBody header .logo-icon img {
+  #allBody .log_sign-header .logo-icon img {
     width: 130%;
     height: 85%;
   }
-  #allBody header .logo-principal {
+  #allBody .log_sign-header .logo-principal {
     display: flex;
     justify-content: center;
   }
-  #allBody header .logo-principal img {
+  #allBody .log_sign-header .logo-principal img {
     width: 60%;
   }
-  #allBody header .content-about {
+  #allBody .log_sign-header .content-about {
     border: 3px solid #fff;
     background-color: transparent;
     display: flex;
@@ -323,18 +323,35 @@ p span a:hover {
     padding: 0rem 1rem;
     height: 45px;
   }
-  #allBody header .content-about p {
+  #allBody .log_sign-header .content-about p {
     font-family: "Poppins", sans-serif;
     color: #fff;
     font-size: 0.9rem;
     margin: 0px;
   }
-  #allBody header .content-about:hover {
+  #allBody .log_sign-header .content-about:hover {
     background-color: #fff;
   }
-  #allBody header .content-about:hover p {
+  #allBody .log_sign-header .content-about:hover p {
     color: #883a24;
     font-weight: bolder;
+  }
+  #allBody .profile-header {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    align-items: center;
+    background-color: #883a24;
+    padding: 0.7rem 2rem 0.7rem 2rem;
+    justify-content: center;
+  }
+  #allBody .profile-header .logo-principal {
+    display: flex;
+    justify-content: center;
+  }
+  #allBody .profile-header .logo-principal img {
+    width: 60%;
   }
   #allBody .All-sections {
     min-height: 87vh;

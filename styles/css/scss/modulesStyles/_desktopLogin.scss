@@ -43,7 +43,7 @@
     z-index: -1;
   }
   #allBody {
-    header {
+    .log_sign-header {
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
@@ -93,6 +93,24 @@
         p {
           color: #883a24;
           font-weight: bolder;
+        }
+      }
+    }
+    .profile-header {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      flex-grow: 1;
+      align-items: center;
+      background-color: #883a24;
+      padding: 0.7rem 2rem 0.7rem 2rem;
+      justify-content: center;
+
+      .logo-principal {
+        display: flex;
+        justify-content: center;
+        img {
+          width: 60%;
         }
       }
     }
