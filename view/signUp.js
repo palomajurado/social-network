@@ -35,7 +35,7 @@ export default () => {
     </section>
     <section class="loginButton">
       <section class="loginButtonSon">
-        <button type="submit">Sign up</button>
+        <button type="submit" class="SignUp">Sign up</button>
       </section>
     </section>
     <p>Already have an account? <span><a href="#/">Log in</a></span></p>
@@ -45,6 +45,12 @@ export default () => {
 
   const divElement = document.createElement('div');
   divElement.innerHTML = viewSignUp;
+
+  const buttonSignUp = divElement.querySelector('.SignUp');
+  buttonSignUp.addEventListener('click', (event) => {
+	event.preventDefault();
+  console.log('hola mundo');
+  });
 
   return divElement;
 };

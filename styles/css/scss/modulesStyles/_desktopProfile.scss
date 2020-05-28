@@ -1,5 +1,5 @@
-@media (min-width: 700px) {
-    .container-Publications-Profile{    
+@media (min-width: 1024px) {
+      .container-Publications-Profile{    
         display: flex;
         justify-content: space-around;
         align-content: center;
@@ -7,7 +7,7 @@
         flex-basis: 20%;
 
         .sectionProfile{
-            margin: 3rem 3rem 3rem 5rem;
+            margin: 3rem 0rem 3rem 8rem;
             .coverPage{
                 width: 100%;
                 height: 8rem;
@@ -29,7 +29,7 @@
         
         .sectionPublications{
             flex-grow: 2;
-            margin: 3rem 3rem 0rem 0rem;
+            margin: 3rem 8rem 0rem 5rem;
             .containerNewPublications{
                 textarea{
                     height: 8rem;
@@ -42,10 +42,7 @@
             }
             
             .stories{
-                .authorPublication{
-                    border-radius: 5% 5% 0 0;
-                    
-                }
+
                 .content{
                     width: 100%;
                     height: 10rem;
@@ -53,7 +50,6 @@
                 }
                 .interactions{
                     width: 100%;
-                    background: radial-gradient(50% 50% at 50% 50%, #6C4237 76.04%, #C03510 100%);
                 }
             }
         }
