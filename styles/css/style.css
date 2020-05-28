@@ -238,7 +238,7 @@ p span a:hover {
   overflow: hidden;
   position: relative;
 }
-.sectionSon #containerLogIn div h1 {
+.sectionSon #containerLogIn h1 {
   display: none;
 }
 
@@ -287,7 +287,7 @@ p span a:hover {
     z-index: -1;
   }
 
-  header {
+  #allBody header {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -297,24 +297,24 @@ p span a:hover {
     padding: 0.7rem 2rem 0.7rem 2rem;
     justify-content: space-between;
   }
-  header .logo-icon {
+  #allBody header .logo-icon {
     display: flex;
     align-items: center;
     text-align: center;
     width: 30px;
   }
-  header .logo-icon img {
+  #allBody header .logo-icon img {
     width: 130%;
     height: 85%;
   }
-  header .logo-principal {
+  #allBody header .logo-principal {
     display: flex;
     justify-content: center;
   }
-  header .logo-principal img {
+  #allBody header .logo-principal img {
     width: 60%;
   }
-  header .content-about {
+  #allBody header .content-about {
     border: 3px solid #fff;
     background-color: transparent;
     display: flex;
@@ -323,50 +323,49 @@ p span a:hover {
     padding: 0rem 1rem;
     height: 45px;
   }
-  header .content-about p {
+  #allBody header .content-about p {
     font-family: "Poppins", sans-serif;
     color: #fff;
     font-size: 0.9rem;
     margin: 0px;
   }
-  header .content-about:hover {
+  #allBody header .content-about:hover {
     background-color: #fff;
   }
-  header .content-about:hover p {
+  #allBody header .content-about:hover p {
     color: #883a24;
     font-weight: bolder;
   }
-
-  .All-sections {
+  #allBody .All-sections {
     min-height: 87vh;
   }
-  .All-sections .sectionFather .sectionSon {
+  #allBody .All-sections .sectionFather .sectionSon {
     padding: 4.5% 0% 6.5%;
   }
-  .All-sections .sectionFather .sectionSon .logo-principalMobile {
+  #allBody .All-sections .sectionFather .sectionSon .logo-principalMobile {
     margin: 0px;
   }
-  .All-sections .sectionFather .sectionSon .logo-principalMobile img {
+  #allBody .All-sections .sectionFather .sectionSon .logo-principalMobile img {
     display: none;
   }
-  .All-sections .sectionFather .sectionSon #circle1 {
+  #allBody .All-sections .sectionFather .sectionSon #circle1 {
     width: 32vw;
     height: 37vw;
     top: 3%;
     left: 62.5%;
   }
-  .All-sections .sectionFather .sectionSon #circle2 {
+  #allBody .All-sections .sectionFather .sectionSon #circle2 {
     width: 36vw;
     height: 42vw;
     border-radius: 50%;
     top: 2%;
     right: 5%;
   }
-  .All-sections .sectionFather .sectionSon #containerLogIn {
+  #allBody .All-sections .sectionFather .sectionSon #containerLogIn {
     margin: 0% 67.6% 0%;
     width: 22%;
   }
-  .All-sections .sectionFather .sectionSon #containerLogIn div h1 {
+  #allBody .All-sections .sectionFather .sectionSon #containerLogIn h1 {
     display: block;
     margin: 0% 32% 6%;
     padding: 0px;
@@ -374,30 +373,30 @@ p span a:hover {
     font-family: Roboto;
     font-weight: bold;
   }
-  .All-sections .sectionFather .sectionSon #containerLogIn div .sectionSubTitle {
+  #allBody .All-sections .sectionFather .sectionSon #containerLogIn .sectionSubTitle {
     padding-bottom: 1rem;
   }
-  .All-sections .sectionFather .sectionSon #containerLogIn div .sectionSubTitle .LogIn {
+  #allBody .All-sections .sectionFather .sectionSon #containerLogIn .sectionSubTitle .LogIn {
     font-size: 1.2rem;
   }
-  .All-sections .sectionFather .sectionSon #containerLogIn div .sectionSubTitle .SignUp {
+  #allBody .All-sections .sectionFather .sectionSon #containerLogIn .sectionSubTitle .SignUp {
     font-size: 2rem;
   }
-  .All-sections .sectionFather .sectionSon #containerLogIn div .sectionSubTitle a {
+  #allBody .All-sections .sectionFather .sectionSon #containerLogIn .sectionSubTitle a {
     font-size: 0.85rem;
   }
-  .All-sections .sectionFather .sectionSon #containerLogIn div .sectionNetworks img {
+  #allBody .All-sections .sectionFather .sectionSon #containerLogIn .sectionNetworks img {
     width: 50px;
     height: 50px;
   }
-  .All-sections .sectionFather .sectionSon #containerLogIn div .container {
+  #allBody .All-sections .sectionFather .sectionSon #containerLogIn .container {
     padding: 1rem 1rem 2rem;
     width: 107%;
   }
-  .All-sections .sectionFather .sectionSon #containerLogIn div .signIn {
+  #allBody .All-sections .sectionFather .sectionSon #containerLogIn .signIn {
     margin-top: 0px;
   }
-  .All-sections .sectionFather .sectionSon #containerLogIn div p {
+  #allBody .All-sections .sectionFather .sectionSon #containerLogIn p {
     color: whitesmoke;
   }
 }
