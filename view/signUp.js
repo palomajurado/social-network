@@ -1,5 +1,12 @@
 export default () => {
   const viewSignUp = `
+  <section class="sectionFather">
+  <section class="sectionSon">
+    <div id="circle1"></div>
+    <div id="circle2"></div>
+    <div class="logo-principalMobile">
+      <img src="./assets/logo-limatopia.png" />
+    </div>
     <section class="sectionSubTitle">
       <h2 for="Log in">Sign up</h2>
       <a href="#" style="color: transparent;">Forgot your password?</a>
@@ -28,14 +35,22 @@ export default () => {
     </section>
     <section class="loginButton">
       <section class="loginButtonSon">
-        <button type="submit">Sign up</button>
+        <button type="submit" class="SignUp">Sign up</button>
       </section>
     </section>
     <p>Already have an account? <span><a href="#/">Log in</a></span></p>
+  </section>
+  </section>
   `;
 
   const divElement = document.createElement('div');
   divElement.innerHTML = viewSignUp;
+
+  const buttonSignUp = divElement.querySelector('.SignUp');
+  buttonSignUp.addEventListener('click', (event) => {
+	event.preventDefault();
+  console.log('hola mundo');
+  });
 
   return divElement;
 };
