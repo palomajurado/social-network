@@ -1,7 +1,6 @@
-/* eslint-disable no-tabs */
-/* eslint-disable quotes */
 export default () => {
-  const viewSignUp = `<header class="log_sign-header">
+  const viewSignUp = `
+		<header class="log_sign-header">
 			<div class="logo-icon">
 				<img src="./assets/logoDesktop.png" />
 			</div>
@@ -62,9 +61,7 @@ export default () => {
 	<a href="#/profile">Perfil</a>
 			</section>
 		</section>
-		<footer></footer>
-  `;
-
+		<footer></footer>`;
   const divElement = document.createElement("div");
   divElement.innerHTML = viewSignUp;
   return divElement;
