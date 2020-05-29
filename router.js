@@ -1,8 +1,8 @@
-/* eslint-disable no-unused-vars */
-/* eslint-disable quotes */
+// llamamos a los controller por que tienen las vistas y modelos en uno solo
 import logInController from "./controllers/logIn.controller.js";
 import signUpController from "./controllers/signUp.controller.js";
 import profileController from "./controllers/profile.controller.js";
+import { views } from "./view/index.js";
 
 const changeView = (route) => {
   const container = document.querySelector("#container");
@@ -20,10 +20,10 @@ const changeView = (route) => {
     case "#/profile": {
       return container.appendChild(profileController());
     }
-    default:
-      break;
+    default: {
+      return container.appendChild(views.notFound()); // ponerle un set interval
+    }
   }
-  return true;
 };
 
 export { changeView };

@@ -1,10 +1,3 @@
-/* eslint-disable implicit-arrow-linebreak */
-/* eslint-disable no-unused-vars */
-/* eslint-disable no-console */
-/* eslint-disable quotes */
-/* eslint-disable no-undef */
-
-// en el modelo se
 import { auth } from "../firebase.js";
 
 export const authEmailPassword = (email, password) =>
@@ -19,7 +12,7 @@ export const authGmail = () => {
       const token = result.credential.accessToken;
       // The signed-in user info.
       const user = result.user;
-      window.location.hash = "#/profile"; // por quitar
+      window.location.hash = "#/profile"; // esto se debe quitar
     })
     .catch((error) => {
       // Handle Errors here.
@@ -41,7 +34,7 @@ export const authFacebook = () => {
       const token = result.credential.accessToken;
       // The signed-in user info.
       const user = result.user;
-      window.location.hash = "#/profile"; // por quitar
+      window.location.hash = "#/profile"; // esto se debe por quitar
     })
     .catch((error) => {
       // Handle Errors here.

@@ -1,7 +1,3 @@
-/* eslint-disable import/no-named-as-default-member */
-/* eslint-disable quotes */
-/* eslint-disable import/no-duplicates */
-/* eslint-disable no-unused-vars */
 import { views } from "../view/index.js";
 import { validateEmail } from "../utils/validator.js";
 import {
@@ -11,7 +7,7 @@ import {
 } from "../model/logIn.model.js";
 
 export default () => {
-  const view = views.logIn();
+  const view = views.logIn(); // del objeto view de index.js quiero udar el logIn tb podria ser el signUp por que ya lo importamos en la linea 1
   const authEmailWithPassword = () => {
     const email = view.querySelector("#email").value;
     const password = view.querySelector("#password").value;
@@ -20,14 +16,14 @@ export default () => {
     if (!correctEmail) {
       const logInForm = view.querySelector("#logInForm");
       logInForm.outerHTML += `<span class="signIn">Email mal escrito</span>`;
-      return;
+      return; // ponerle un settime interval
     }
     authEmailPassword(email, password)
       .then(() => {
         window.location.hash = "#/profile";
       })
       .catch((error) => {
-        let message = "";
+        let message = ""; // limpiador de mensaje
         if (error.code === "auth/invalid-email") {
           message = "Contraseña o correo inválido";
         } else if (error.code === "auth/user-not-found") {

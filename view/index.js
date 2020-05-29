@@ -1,10 +1,18 @@
 /* eslint-disable quotes */
-import LogIn from "./logIn.view.js";
-import SignUp from "./signUp.view.js";
-import Profile from "./profile.view.js";
+import logIn from "./logIn.view.js";
+import signUp from "./signUp.view.js";
+import profile from "./profile.view.js";
+import notFound from "./404.js";
+import publications from "./publications.view.js";
+import recoveryPass from "./recoveryPass.view.js";
 
+// este index sirve para exportar todas las vistas cuando necesitemos manipular
+// todas las vistas en un mismo archivo al llamar a la importacion
 export const views = {
-  logIn: LogIn,
-  signUp: SignUp,
-  profile: Profile,
+  logIn,
+  signUp,
+  profile,
+  notFound,
+  publications,
+  recoveryPass,
 };

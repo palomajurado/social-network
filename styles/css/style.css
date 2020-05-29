@@ -5,7 +5,6 @@ header {
 .All-sections {
   min-height: 100vh;
   justify-content: center;
-  padding: 0 15px 0 15px;
 }
 
 .logo-principalMobile {
@@ -302,7 +301,7 @@ p span a:hover {
     position: absolute;
     z-index: -1;
   }
-  #allBody .log_sign-header {
+  #container div .log_sign-header {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -312,24 +311,24 @@ p span a:hover {
     padding: 0.7rem 2rem 0.7rem 2rem;
     justify-content: space-between;
   }
-  #allBody .log_sign-header .logo-icon {
+  #container div .log_sign-header .logo-icon {
     display: flex;
     align-items: center;
     text-align: center;
     width: 30px;
   }
-  #allBody .log_sign-header .logo-icon img {
+  #container div .log_sign-header .logo-icon img {
     width: 130%;
     height: 85%;
   }
-  #allBody .log_sign-header .logo-principal {
+  #container div .log_sign-header .logo-principal {
     display: flex;
     justify-content: center;
   }
-  #allBody .log_sign-header .logo-principal img {
+  #container div .log_sign-header .logo-principal img {
     width: 60%;
   }
-  #allBody .log_sign-header .content-about {
+  #container div .log_sign-header .content-about {
     border: 3px solid #fff;
     background-color: transparent;
     display: flex;
@@ -338,20 +337,20 @@ p span a:hover {
     padding: 0rem 1rem;
     height: 45px;
   }
-  #allBody .log_sign-header .content-about p {
+  #container div .log_sign-header .content-about p {
     font-family: "Poppins", sans-serif;
     color: #fff;
     font-size: 0.9rem;
     margin: 0px;
   }
-  #allBody .log_sign-header .content-about:hover {
+  #container div .log_sign-header .content-about:hover {
     background-color: #fff;
   }
-  #allBody .log_sign-header .content-about:hover p {
+  #container div .log_sign-header .content-about:hover p {
     color: #883a24;
     font-weight: bolder;
   }
-  #allBody .profile-header {
+  #container div .profile-header {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -361,43 +360,43 @@ p span a:hover {
     padding: 0.7rem 2rem 0.7rem 2rem;
     justify-content: center;
   }
-  #allBody .profile-header .logo-principal {
+  #container div .profile-header .logo-principal {
     display: flex;
     justify-content: center;
   }
-  #allBody .profile-header .logo-principal img {
+  #container div .profile-header .logo-principal img {
     width: 60%;
   }
-  #allBody .All-sections {
+  #container div .All-sections {
     min-height: 87vh;
   }
-  #allBody .All-sections .sectionFather .sectionSon {
+  #container div .All-sections .sectionFather .sectionSon {
     padding: 4.5% 0% 6.5%;
   }
-  #allBody .All-sections .sectionFather .sectionSon .logo-principalMobile {
+  #container div .All-sections .sectionFather .sectionSon .logo-principalMobile {
     margin: 0px;
   }
-  #allBody .All-sections .sectionFather .sectionSon .logo-principalMobile img {
+  #container div .All-sections .sectionFather .sectionSon .logo-principalMobile img {
     display: none;
   }
-  #allBody .All-sections .sectionFather .sectionSon #circle1 {
+  #container div .All-sections .sectionFather .sectionSon #circle1 {
     width: 32vw;
     height: 37vw;
     top: 3%;
     left: 62.5%;
   }
-  #allBody .All-sections .sectionFather .sectionSon #circle2 {
+  #container div .All-sections .sectionFather .sectionSon #circle2 {
     width: 36vw;
     height: 42vw;
     border-radius: 50%;
     top: 2%;
     right: 5%;
   }
-  #allBody .All-sections .sectionFather .sectionSon #containerLogIn {
+  #container div .All-sections .sectionFather .sectionSon #containerLogIn {
     margin: 0% 67.6% 0%;
     width: 22%;
   }
-  #allBody .All-sections .sectionFather .sectionSon #containerLogIn h1 {
+  #container div .All-sections .sectionFather .sectionSon #containerLogIn h1 {
     display: block;
     margin: 0% 32% 6%;
     padding: 0px;
@@ -405,30 +404,30 @@ p span a:hover {
     font-family: Roboto;
     font-weight: bold;
   }
-  #allBody .All-sections .sectionFather .sectionSon #containerLogIn .sectionSubTitle {
+  #container div .All-sections .sectionFather .sectionSon #containerLogIn .sectionSubTitle {
     padding-bottom: 1rem;
   }
-  #allBody .All-sections .sectionFather .sectionSon #containerLogIn .sectionSubTitle .LogIn {
+  #container div .All-sections .sectionFather .sectionSon #containerLogIn .sectionSubTitle .LogIn {
     font-size: 1.2rem;
   }
-  #allBody .All-sections .sectionFather .sectionSon #containerLogIn .sectionSubTitle .SignUp {
+  #container div .All-sections .sectionFather .sectionSon #containerLogIn .sectionSubTitle .SignUp {
     font-size: 2rem;
   }
-  #allBody .All-sections .sectionFather .sectionSon #containerLogIn .sectionSubTitle a {
+  #container div .All-sections .sectionFather .sectionSon #containerLogIn .sectionSubTitle a {
     font-size: 0.85rem;
   }
-  #allBody .All-sections .sectionFather .sectionSon #containerLogIn .sectionNetworks img {
+  #container div .All-sections .sectionFather .sectionSon #containerLogIn .sectionNetworks img {
     width: 50px;
     height: 50px;
   }
-  #allBody .All-sections .sectionFather .sectionSon #containerLogIn .container {
+  #container div .All-sections .sectionFather .sectionSon #containerLogIn .container {
     padding: 1rem 1rem 2rem;
     width: 107%;
   }
-  #allBody .All-sections .sectionFather .sectionSon #containerLogIn .signIn {
+  #container div .All-sections .sectionFather .sectionSon #containerLogIn .signIn {
     margin-top: 0px;
   }
-  #allBody .All-sections .sectionFather .sectionSon #containerLogIn p {
+  #container div .All-sections .sectionFather .sectionSon #containerLogIn p {
     color: whitesmoke;
   }
 }
@@ -537,6 +536,25 @@ p span a:hover {
   width: 30px;
   height: 30px;
   cursor: pointer;
+}
+
+.logOut {
+  width: 80px;
+  margin: auto;
+  height: 40px;
+  display: flex;
+  outline: none;
+  color: white;
+  font-size: 12px;
+  text-align: center;
+  align-items: center;
+  font-weight: bolder;
+  border-radius: 12px;
+  justify-content: center;
+  font-family: "Poppins", sans-serif;
+  border: 5px solid rgba(0, 0, 0, 0.322);
+  box-shadow: 10px 10px 16px -1px rgba(0, 0, 0, 0.75);
+  background: linear-gradient(82.14deg, #ec9443 -3.88%, #c85032 64.89%);
 }
 
 @media (min-width: 1024px) {

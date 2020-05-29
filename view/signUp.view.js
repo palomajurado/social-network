@@ -42,7 +42,7 @@ export default () => {
 						</form>
 						<span class="signIn">Sign up with...</span>
 						<section class="sectionNetworks">
-							<img src="./assets/g.jpg" alt="Gmail" /><img src="./assets/fb.jpg" alt="Facebook" />
+							<img src="./assets/g.jpg" alt="Gmail" id="gmail"/><img src="./assets/fb.jpg" alt="Facebook" id="facebook" />
 						</section>
 						<section class="loginButton">
 							<section class="loginButtonSon">
@@ -53,12 +53,7 @@ export default () => {
 					</section>
 				</section>
 			</section>
-			<!-- Vista para ser mostrada al ingresar login, es solo una estrutura -->
-	<section class="container-Publications-Profile">
-				<!-- En realidad solo esta para probar, esta vita ingresara cuando se haga el click para
-	ingresar al login, cuando se haga la validacion en el button de ingreso de sesion que se encuentra
-	en los template de las otras vistas -->
-	<a href="#/profile">Perfil</a>
+	
 			</section>
 		</section>
 		<footer></footer>`;

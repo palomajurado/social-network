@@ -107,6 +107,24 @@
                 }
             }
         }
-
     }
+}
+
+.logOut {
+    width: 80px;
+    margin: auto;
+    height: 40px;
+    display: flex;
+    outline: none;
+    color: white;
+    font-size: 12px;
+    text-align: center;
+    align-items: center;
+    font-weight: bolder;
+    border-radius: 12px;
+    justify-content: center;
+    font-family: $FFsecondary;
+    border: 5px solid rgba(0, 0, 0, 0.322);
+    box-shadow: 10px 10px 16px -1px rgba(0, 0, 0, 0.75);
+    background: linear-gradient(82.14deg, #ec9443 -3.88%, #c85032 64.89%);
 }

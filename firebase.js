@@ -1,8 +1,3 @@
-/* eslint-disable max-len */
-/* eslint-disable no-unused-vars */
-/* eslint-disable quotes */
-// Your web app's Firebase configuration
-
 // Objeto de credenciales
 const firebaseConfig = {
   apiKey: "AIzaSyAZi1Sk7_FpqO0dMwurK0lxAJP0qbpmsQM", // credencial para consultar la BD
@@ -15,11 +10,7 @@ const firebaseConfig = {
   measurementId: "G-T5XZ91CCHV", // para firebase analitics
 };
 
-// Voy a empezar a utilizarte : toma los credenciales de acceso de uso
 firebase.initializeApp(firebaseConfig);
-
-// no es tan importante para que funcione la app
 firebase.analytics();
 
-// dandole un alias a firebase.auth que me ayudara a utilizar sus metodos de autenticacion de singinwithemailpasswrod  y signinwithgmail
-export const auth = firebase.auth(); // lo importaremos en logIn y singUp
+export const auth = firebase.auth();

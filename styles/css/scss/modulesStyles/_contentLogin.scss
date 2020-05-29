@@ -1,11 +1,12 @@
 header {
-	display: none;
+  display: none;
 }
+
 // ------------------------ CONTAINERS
 .All-sections {
   min-height: 100vh;
   justify-content: center;
-  padding: 0 15px 0 15px;
+  // padding: 0 15px 0 15px;
 }
 
 .logo-principalMobile {
@@ -169,12 +170,10 @@ h1 {
   img:hover {
     padding: 0.625rem;
     border: transparent;
-    background: radial-gradient(
-      circle,
-      rgba(244, 179, 126, 1) 2%,
-      rgba(236, 148, 67, 1) 56%,
-      rgba(200, 80, 50, 1) 88%
-    );
+    background: radial-gradient(circle,
+        rgba(244, 179, 126, 1) 2%,
+        rgba(236, 148, 67, 1) 56%,
+        rgba(200, 80, 50, 1) 88%);
     border: 0.3125rem solid #c85032ab;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   }
@@ -268,12 +267,14 @@ p {
   justify-content: center;
   overflow: hidden;
   position: relative;
+
   #containerLogIn {
-      h1 {
-        display: none;
-      }
+    h1 {
+      display: none;
+    }
   }
 }
+
 #circle1 {
   width: 180vw;
   height: 180vw;
@@ -282,16 +283,15 @@ p {
   left: -40%;
   z-index: -5;
   border-radius: 50%;
-  background-image: linear-gradient(
-      180deg,
+  background-image: linear-gradient(180deg,
       rgba(19, 19, 19, 0.8) 19.79%,
       rgba(204, 83, 51, 0.8) 53.13%,
       rgba(200, 80, 50, 0.8) 82.29%,
-      rgba(194, 141, 125, 0.8) 100%
-    ),
+      rgba(194, 141, 125, 0.8) 100%),
     url("/assets/burbuja.png");
   background-size: contain;
 }
+
 #circle2 {
   width: 180vw;
   height: 190vw;

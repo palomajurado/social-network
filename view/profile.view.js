@@ -18,17 +18,23 @@ export default () => {
 					</section>
 				</section>
 			</section>
-			<!-- Vista para ser mostrada al ingresar login, es solo una estrutura -->
     <section class="container-Publications-Profile">
-				<!-- En realidad solo esta para probar, esta vita ingresara cuando se haga el click para
-        ingresar al login, cuando se haga la validacion en el button de ingreso de sesion que se encuentra
-      en los template de las otras vistas -->
-      <a href="#/profile">Perfil</a>
-			</section>
+      <section class="sectionProfile">
+        <div class="coverPage"> portad</div>
+        <div class="profilePicture">foto de Perfil</div>
+      </section>
+      <section class="sectionPublications" >
+        <div>
+          <input type="text">
+          <button class="publicar">publicar</button>
+        </div>
+        <div class="stories"> Historia de publicaciones</div>
+      </section>
 		</section>
+    <br>
+    <button class="logOut">Login out</button>
 		<footer></footer>`;
   const divElement = document.createElement("div");
   divElement.innerHTML = viewProfile;
-
   return divElement;
 };

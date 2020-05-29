@@ -1,8 +1,3 @@
-/* eslint-disable no-tabs */
-/* eslint-disable no-unused-vars */
-/* eslint-disable no-undef */
-/* eslint-disable no-console */
-/* eslint-disable quotes */
 export default () => {
   const viewLogIn = `
    <header class="log_sign-header">
@@ -29,7 +24,7 @@ export default () => {
 							<h2 class="LogIn">Log in</h2>
 							<a href="#">Forgot your password?</a>
 						</section>
-						<form class="container">
+						<form class="container" id="logInForm">
 							<div class="item">
 								<input type="email" id="email" placeholder="Email" />
 								<img src="./assets/email.jpg" alt="email" />
@@ -57,11 +52,10 @@ export default () => {
 				</section>
 			</section>
 			<!-- Vista para ser mostrada al ingresar login, es solo una estrutura -->
-    <section class="container-Publications-Profile">
+      <section class="container-Publications-Profile">
 				<!-- En realidad solo esta para probar, esta vita ingresara cuando se haga el click para
         ingresar al login, cuando se haga la validacion en el button de ingreso de sesion que se encuentra
       en los template de las otras vistas -->
-      <a href="#/profile">Perfil</a>
 			</section>
 		</section>
 		<footer></footer>`;
