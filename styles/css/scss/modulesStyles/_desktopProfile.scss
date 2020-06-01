@@ -1,16 +1,26 @@
 @media (min-width: 1024px) {
-      .container-Publications-Profile{    
+    body {
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-color: none;
+        overflow: hidden;
+    }
+    
+    .container-Publications-Profile{    
         display: flex;
         justify-content: space-around;
         align-content: center;
         flex-direction: row;
         flex-basis: 20%;
+        padding: 0 5rem 0 5rem;
 
         .sectionProfile{
+            height: 16rem;
             margin: 3rem 0rem 3rem 8rem;
             .coverPage{
                 width: 100%;
-                height: 8rem;
+                height: 10rem;
                 background: $colorOrng;
                 img{
                     width: 100%;
@@ -30,26 +40,47 @@
         .sectionPublications{
             flex-grow: 2;
             margin: 3rem 8rem 0rem 5rem;
+            padding: 0;
             .containerNewPublications{
-                textarea{
-                    height: 8rem;
+                .commentary{
+                    padding: 0 0 0 3rem;
                 }
-                .btnToPost{
-                    border-radius: 4rem;
-                    line-height: 2;
-                    margin-bottom: 0.8rem;
+                textarea{
+                    height: 10rem;
+                }
+                .optionsToPost{
+                    padding: 0 0 0 3.5rem;
+                    img{
+                        
+                    }
+                    .btnToPost{
+                        border-radius: 4rem;
+                        line-height: 2;
+                        margin: 1rem 0 3rem 0;
+                        padding: 6px;
+                        margin: 0.5rem 0 0.5rem 39rem
+                    }
                 }
             }
             
             .stories{
-
+                .authorPublication{
+                    padding: 0 3rem 0 3rem;
+                    .detailsAuthor{
+                        img{
+                            width: 3rem;
+                            height: 3rem;
+                        }
+                        h5{
+                            padding: 0 0 0 1rem;
+                        }
+                    }
+                }
                 .content{
-                    width: 100%;
                     height: 10rem;
-                    background: rgba(228, 192, 139, 0.842);
+                    background: #FFF6EF;
                 }
                 .interactions{
-                    width: 100%;
                 }
             }
         }
