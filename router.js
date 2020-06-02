@@ -1,29 +1,48 @@
-// llamamos a los controller por que tienen las vistas y modelos en uno solo
-import logInController from "./controllers/logIn.controller.js";
-import signUpController from "./controllers/signUp.controller.js";
-import profileController from "./controllers/profile.controller.js";
-import { views } from "./view/index.js";
+import { controllers } from "./controllers/index.controller.js";
+import { auth } from "./firebase.js";
 
 const changeView = (route) => {
   const container = document.querySelector("#container");
   container.innerHTML = "";
 
+  const routesWithoutAuth = ["#/login", "#/register"]; // estamos especificando las rutas que NO necesitan login abajo onAuthStateChange evitara esto
+  let next; //
   switch (route) {
     case "":
     case "#/logIn":
     case "#/": {
-      return container.appendChild(logInController());
+      next = controllers.logInController;
+      break;
     }
     case "#/signUp": {
-      return container.appendChild(signUpController());
+      next = controllers.signUpController;
+      break;
     }
     case "#/profile": {
-      return container.appendChild(profileController());
+      next = controllers.profileController;
+      break;
+    }
+    case "#/recovery-pass": {
+      next = controllers.recoveryPassController;
+      break;
     }
     default: {
-      return container.appendChild(views.notFound()); // ponerle un set interval
+      next = controllers.notFound;
     }
   }
+
+  // Midleware: Es una capa intermedia
+  auth.onAuthStateChanged((user) => {
+    const noAuthNedeed = routesWithoutAuth.find((route) => route === route);
+    if (user) {
+      // if (noAuthNedeed) window.location.hash = "#/logIn";
+      container.appendChild(next());
+    } else if (noAuthNedeed) {
+      container.appendChild(next());
+    } else {
+      window.location.hash = "#/logIn";
+    }
+  });
 };
 
 export { changeView };

@@ -110,7 +110,8 @@
     }
 }
 
-.logOut {
+.logOut,
+.sendEmail {
     width: 80px;
     margin: auto;
     height: 40px;
@@ -123,8 +124,31 @@
     font-weight: bolder;
     border-radius: 12px;
     justify-content: center;
+    cursor: pointer;
     font-family: $FFsecondary;
     border: 5px solid rgba(0, 0, 0, 0.322);
     box-shadow: 10px 10px 16px -1px rgba(0, 0, 0, 0.75);
     background: linear-gradient(82.14deg, #ec9443 -3.88%, #c85032 64.89%);
+}
+
+.sendEmail:hover {
+    background: linear-gradient(141deg, #c85032 33%, #ec9443 64%);
+}
+
+.logOutl:hover {
+    background: linear-gradient(141deg, #c85032 33%, #ec9443 64%);
+}
+
+.displayUserName {
+    padding: 20px;
+    display: flex;
+    font-size: 20px;
+    font-weight: bolder;
+    color: $colorOrng;
+    text-transform: capitalize;
+    text-decoration-line: underline;
+}
+
+#name {
+    text-transform: capitalize;
 }

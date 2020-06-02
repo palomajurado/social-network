@@ -24,29 +24,29 @@ export default () => {
 						</section>
 						<form class="container">
 							<div class="item">
-								<input type="text" id="name" placeholder="Name" />
+								<input type="text" id="name" placeholder="Name" spellcheck="false" />
 								<img src="./assets/user.jpg" alt="User" />
 							</div>
 							<div class="item">
 								<img src="./assets/email.jpg" alt="email" />
-								<input type="email" id="email" placeholder="Email" />
+								<input type="email" id="email" placeholder="Email" spellcheck="false" />
 							</div>
 							<div class="item">
-								<input type="password" id="password" placeholder="Password" id="lastItem" />
+								<input type="password" id="password" class="passwordAuth" placeholder="Password" id="lastItem" spellcheck="false"/>
 								<img src="./assets/passw.jpg" alt="password" />
 							</div>
 							<div class="item">
 								<img src="./assets/passw.jpg" alt="" />
-								<input type="text" id="confirmPassword" placeholder="Confirm Password" />
+								<input type="password" id="confirmPassword" placeholder="Confirm Password" spellcheck="false"/>
 							</div>
 						</form>
-						<span class="signIn">Sign up with...</span>
+						<span class="signIn" id="messageResult">Sign up con...</span>
 						<section class="sectionNetworks">
 							<img src="./assets/g.jpg" alt="Gmail" id="gmail"/><img src="./assets/fb.jpg" alt="Facebook" id="facebook" />
 						</section>
-						<section class="loginButton">
+						<section class="loginButton disabled-button">
 							<section class="loginButtonSon">
-								<button type="submit" class="SignUp-button">Sign up</button>
+								<button type="submit" id="btnSignUp" class="SignUp-button">Sign up</button>
 							</section>
 						</section>
 						<p>Already have an account? <span><a href="#/">Log in</a></span></p>

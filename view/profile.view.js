@@ -1,5 +1,3 @@
-/* eslint-disable quotes */
-/* eslint-disable semi */
 export default () => {
   const viewProfile = `
 		<header class=profile-header>
@@ -18,6 +16,7 @@ export default () => {
 					</section>
 				</section>
 			</section>
+      <span class="displayUserName">Hola</span>
     <section class="container-Publications-Profile">
       <section class="sectionProfile">
         <div class="coverPage"> portad</div>
@@ -25,7 +24,7 @@ export default () => {
       </section>
       <section class="sectionPublications" >
         <div>
-          <input type="text">
+          <input type="text" spellcheck="false">
           <button class="publicar">publicar</button>
         </div>
         <div class="stories"> Historia de publicaciones</div>

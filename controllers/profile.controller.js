@@ -1,15 +1,17 @@
-// el index.js de la caprte views sirve para importar todas las vistas y las llamamos views.profile o views.logIn
 import { views } from "../view/index.js";
-import loginOut from "../model/profile.model.js";
+import { models } from "../model/index.model.js";
 
 export default () => {
-  const view = views.profile(); // llamando la views.pofile
+  const view = views.profile();
   const postViews = views.publications();
   const storiesPublication = view.querySelector(".stories");
-  storiesPublication.appendChild(postViews);
+  const userDisplayName = view.querySelector(".displayUserName");
+  const user = models.profileModel.getCurrentNameUser();
+  if (user) userDisplayName.innerHTML += ` ${user.displayName}!`;
 
   const logOut = view.querySelector(".logOut");
-  logOut.addEventListener("click", loginOut);
-
+  logOut.addEventListener("click", () =>
+    models.profileModel.signOut().then(() => (window.location.hash = "#/logIn"))
+  );
   return view;
 };

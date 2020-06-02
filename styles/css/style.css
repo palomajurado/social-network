@@ -60,7 +60,12 @@ h1 img span {
   letter-spacing: 0.125rem;
 }
 
-.container {
+.forgotPass {
+  background: grey;
+}
+
+.container,
+.forgotPass {
   width: 100%;
   display: flex;
   overflow: hidden;
@@ -70,7 +75,8 @@ h1 img span {
   padding: 2rem 1rem;
 }
 
-.container .item {
+.container .item,
+.forgotPass .item {
   display: flex;
   max-width: 100%;
   font-size: 1.5rem;
@@ -82,7 +88,8 @@ h1 img span {
   border: 0.0625rem solid whitesmoke;
 }
 
-.container .item img {
+.container .item img,
+.forgotPass .item img {
   margin: 0.4rem;
   width: 40px;
   min-width: 40px;
@@ -90,7 +97,8 @@ h1 img span {
   border-radius: 50%;
 }
 
-.container .item input {
+.container .item input,
+.forgotPass .item input {
   border: none;
   width: 100%;
   outline: none;
@@ -281,6 +289,114 @@ p span a:hover {
   background: radial-gradient(50% 50% at 50% 50%, #6c4237 76.04%, #c03510 100%);
 }
 
+.disabled-button {
+  pointer-events: none;
+  opacity: 0.4;
+}
+
+.forgotPass {
+  height: 99.9vh;
+  color: white;
+  text-align: center;
+}
+
+.forgotPass h1 {
+  position: absolute;
+}
+
+.forgotPass button {
+  width: 40vw;
+  height: 50px;
+  outline: none;
+  cursor: pointer;
+  color: whitesmoke;
+  text-align: center;
+  border-radius: 1.5rem;
+  letter-spacing: 0.1875rem;
+  font: bolder 1.3rem Roboto;
+  border: 0.625rem solid rgba(0, 0, 0, 0.336);
+  background: linear-gradient(82.14deg, #ec9443 -3.88%, #c85032 64.89%);
+}
+
+.forgotPass button:hover {
+  color: yellow;
+  background: linear-gradient(141deg, #c85032 33%, #ec9443 64%);
+}
+
+#forgotPass {
+  height: 95vh;
+  height: 100vh;
+  padding-top: 0px;
+  border-radius: 0.9375rem;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.key {
+  height: 200px;
+  position: absolute;
+  margin-top: -169px;
+  border-radius: 50%;
+  box-shadow: 3.3125rem 3.5625rem 3.125rem -1.4375rem rgba(0, 0, 0, 0.29);
+}
+
+.notFound {
+  color: white;
+  padding: 1.25rem;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  margin: 5rem 1.875rem 3.125rem 1.875rem;
+  background: rgba(244, 179, 126, 0.267);
+  box-shadow: 3.3125rem 3.5625rem 3.125rem -1.4375rem rgba(0, 0, 0, 0.29);
+}
+
+.notFound h1 {
+  text-shadow: 0.125rem 0.125rem 0.25rem #000000;
+}
+
+.notFound span {
+  color: yellow;
+  font-size: 6.25rem;
+  text-shadow: 0.125rem 0.125rem 0.25rem #000000;
+}
+
+.notFound video {
+  top: 50%;
+  left: 50%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  position: fixed;
+  min-width: 100%;
+  min-height: 100%;
+  pointer-events: none;
+  background-size: cover;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.notFound p {
+  color: white;
+  font-weight: bolder;
+}
+
+.notFound button {
+  width: 40vw;
+  height: 50px;
+  outline: none;
+  cursor: pointer;
+  color: whitesmoke;
+  text-align: center;
+  border-radius: 1.5rem;
+  letter-spacing: 0.1875rem;
+  font: bolder 1.3rem Roboto;
+  border: 0.625rem solid rgba(0, 0, 0, 0.336);
+  background: linear-gradient(82.14deg, #ec9443 -3.88%, #c85032 64.89%);
+}
+
+.notFound button:hover {
+  color: yellow;
+  background: linear-gradient(141deg, #c85032 33%, #ec9443 64%);
+}
+
 @media (min-width: 1024px) and (min-height: 625px) and (max-height: 1024px) {
   body {
     margin: 0px;
@@ -432,6 +548,10 @@ p span a:hover {
   }
 }
 
+#name {
+  text-transform: capitalize;
+}
+
 .container-Publications-Profile {
   display: flex;
   justify-content: center;
@@ -538,7 +658,8 @@ p span a:hover {
   cursor: pointer;
 }
 
-.logOut {
+.logOut,
+.sendEmail {
   width: 80px;
   margin: auto;
   height: 40px;
@@ -551,10 +672,33 @@ p span a:hover {
   font-weight: bolder;
   border-radius: 12px;
   justify-content: center;
+  cursor: pointer;
   font-family: "Poppins", sans-serif;
   border: 5px solid rgba(0, 0, 0, 0.322);
   box-shadow: 10px 10px 16px -1px rgba(0, 0, 0, 0.75);
   background: linear-gradient(82.14deg, #ec9443 -3.88%, #c85032 64.89%);
+}
+
+.sendEmail:hover {
+  background: linear-gradient(141deg, #c85032 33%, #ec9443 64%);
+}
+
+.logOutl:hover {
+  background: linear-gradient(141deg, #c85032 33%, #ec9443 64%);
+}
+
+.displayUserName {
+  padding: 20px;
+  display: flex;
+  font-size: 20px;
+  font-weight: bolder;
+  color: #ce5c35;
+  text-transform: capitalize;
+  text-decoration-line: underline;
+}
+
+#name {
+  text-transform: capitalize;
 }
 
 @media (min-width: 1024px) {

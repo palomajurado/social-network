@@ -64,7 +64,13 @@ h1 {
 }
 
 // ------------------------ Inputs (culebras)
-.container {
+
+.forgotPass {
+  background: grey;
+}
+
+.container,
+.forgotPass {
   width: 100%;
   display: flex;
   overflow: hidden;
@@ -301,4 +307,114 @@ p {
   right: -30%;
   z-index: -10;
   background: radial-gradient(50% 50% at 50% 50%, #6c4237 76.04%, #c03510 100%);
+}
+
+.disabled-button {
+  pointer-events: none;
+  opacity: 0.4;
+}
+
+.forgotPass {
+  height: 99.9vh;
+  color: white;
+  text-align: center;
+
+  h1 {
+    position: absolute;
+  }
+
+  button {
+    width: 40vw;
+    height: 50px;
+    outline: none;
+    cursor: pointer;
+    color: $colorWhite;
+    text-align: center;
+    border-radius: 1.5rem;
+    letter-spacing: 0.1875rem;
+    font: bolder 1.3rem Roboto;
+    border: 0.625rem solid rgba(0, 0, 0, 0.336);
+    background: linear-gradient(82.14deg, #ec9443 -3.88%, #c85032 64.89%)
+  }
+
+  button:hover {
+    color: yellow;
+    background: linear-gradient(141deg, #c85032 33%, #ec9443 64%);
+  }
+}
+
+#forgotPass {
+  height: 95vh;
+  height: 100vh;
+  padding-top: 0px;
+  border-radius: 0.9375rem;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.key {
+  height: 200px;
+  position: absolute;
+  margin-top: -169px;
+  border-radius: 50%;
+  box-shadow: 3.3125rem 3.5625rem 3.125rem -1.4375rem rgba(0, 0, 0, 0.29);
+}
+
+// --------------------------------- 404 notFound
+
+.notFound {
+  color: white;
+  padding: 1.25rem;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  margin: 5rem 1.875rem 3.125rem 1.875rem;
+  background: rgba(244, 179, 126, 0.267);
+  box-shadow: 3.3125rem 3.5625rem 3.125rem -1.4375rem rgba(0, 0, 0, 0.29);
+
+  h1 {
+    text-shadow: 0.125rem 0.125rem 0.25rem #000000;
+  }
+
+  span {
+    color: yellow;
+    font-size: 6.25rem;
+    text-shadow: 0.125rem 0.125rem 0.25rem #000000;
+  }
+
+  video {
+    top: 50%;
+    left: 50%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    position: fixed;
+    min-width: 100%;
+    min-height: 100%;
+    pointer-events: none;
+    background-size: cover;
+    transform: translateX(-50%) translateY(-50%);
+  }
+
+  p {
+    color: white;
+    font-weight: bolder;
+  }
+
+  button {
+    width: 40vw;
+    height: 50px;
+    outline: none;
+    cursor: pointer;
+    color: $colorWhite;
+    text-align: center;
+    border-radius: 1.5rem;
+    letter-spacing: 0.1875rem;
+    font: bolder 1.3rem Roboto;
+    border: 0.625rem solid rgba(0, 0, 0, 0.336);
+    background: linear-gradient(82.14deg, #ec9443 -3.88%, #c85032 64.89%)
+  }
+
+  button:hover {
+    color: yellow;
+    background: linear-gradient(141deg, #c85032 33%, #ec9443 64%);
+  }
 }

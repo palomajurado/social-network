@@ -22,19 +22,19 @@ export default () => {
 						<h1>Log In</h1>
 						<section class="sectionSubTitle">
 							<h2 class="LogIn">Log in</h2>
-							<a href="#">Forgot your password?</a>
+							<a href="#/recovery-pass">Forgot your password?</a>
 						</section>
 						<form class="container" id="logInForm">
 							<div class="item">
-								<input type="email" id="email" placeholder="Email" />
+								<input type="email" id="email" placeholder="Email" spellcheck="false"/>
 								<img src="./assets/email.jpg" alt="email" />
 							</div>
 							<div class="item">
 								<img src="./assets/passw.jpg" alt="password" />
-								<input type="password" id="password" placeholder="Password" />
+								<input type="password" id="password" placeholder="Password" spellcheck="false"/>
 							</div>
 						</form>
-						<span class="signIn">Sign in with...</span>
+						<span class="signIn" id="signInSpan">Log in con...</span>
 						<section class="sectionNetworks">
 							<img src="./assets/g.jpg" alt="Gmail" id="gmail" />
 							<img src="./assets/fb.jpg" alt="Facebook" id="facebook" />

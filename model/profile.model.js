@@ -1,7 +1,11 @@
 import { auth } from "../firebase.js";
 
-export default () => {
-  auth.signOut().then(() => {
-    window.location.hash = "#/"; // por quitar
-  });
+const signOut = () => {
+  return auth.signOut();
 };
+
+const getCurrentNameUser = () => {
+  return auth.currentUser;
+};
+
+export default { signOut, getCurrentNameUser };
