@@ -569,20 +569,20 @@ body {
 
 .container-Publications-Profile .sectionProfile {
   background: rgba(234, 226, 226, 0.473);
-  border-radius: 10px;
+  border-radius: 11px;
 }
 
 .container-Publications-Profile .sectionProfile .coverPage {
   width: 100%;
   height: 10em;
   background: #ce5c35;
-  border-radius: 10px;
+  border-radius: 11px;
 }
 
 .container-Publications-Profile .sectionProfile .coverPage img {
   width: 100%;
   height: 100%;
-  border-radius: 10px;
+  border-radius: 11px;
 }
 
 .container-Publications-Profile .sectionProfile .profilePicture {
@@ -680,7 +680,7 @@ body {
   align-content: center;
   flex-direction: column;
   background: rgba(234, 226, 226, 0.473);
-  border-radius: 10px;
+  border-radius: 11px;
 }
 
 .container-Publications-Profile .sectionPublications .stories .authorPublication {
@@ -716,7 +716,7 @@ body {
   background: #FFF6EF;
   padding: 0.5rem;
   margin: 0.5rem auto;
-  border-radius: 10px;
+  border-radius: 11px;
 }
 
 .container-Publications-Profile .sectionPublications .stories .interactions {
@@ -727,7 +727,7 @@ body {
   align-items: center;
   padding: 0 10px 0 10px;
   border-radius: 0 0 10px 10px;
-  border-radius: 10px;
+  border-radius: 11px;
   margin: 0.5rem auto;
 }
 
