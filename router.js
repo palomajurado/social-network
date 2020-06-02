@@ -2,6 +2,7 @@
 import logInController from "./controllers/logIn.controller.js";
 import signUpController from "./controllers/signUp.controller.js";
 import profileController from "./controllers/profile.controller.js";
+import publicationController from "./controllers/publication.controller.js"
 import { views } from "./view/index.js";
 
 const changeView = (route) => {
@@ -18,7 +19,9 @@ const changeView = (route) => {
       return container.appendChild(signUpController());
     }
     case "#/profile": {
-      return container.appendChild(profileController());
+      const profileViewDOM = profileController();
+      const publicationProfileView = publicationController(profileViewDOM);
+      return container.appendChild(publicationProfileView);
     }
     default: {
       return container.appendChild(views.notFound()); // ponerle un set interval

@@ -2,61 +2,51 @@ body {
     margin: 0px;
     background-image: url("../../../../assets/fodoProfile.png");
     background-attachment: fixed;
-    overflow: hidden;
+    overflow-y: scroll;
 }
 .container-Publications-Profile {
     display: flex;
     justify-content: center;
     align-content: center;
     flex-direction: column;
-    .sectionProfileCalendary{
-        .sectionProfile {
-            background: rgba(234, 226, 226, 0.473);
+    .sectionProfile {
+        background: rgba(234, 226, 226, 0.473);
+        border-radius: $borderContent;
+        .coverPage {
+            width: 100%;
+            height: 10em;
+            background: $colorOrng;
             border-radius: $borderContent;
-            .coverPage {
-                width: 100%;
-                height: 10em;
-                background: $colorOrng;
-                border-radius: $borderContent;
-    
-                img {
-                    width: 100%;
-                    height: 100%;
-                    border-radius: $borderContent;
-                }
-            }
-    
-            .profilePicture {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                flex-direction: column;
-                margin-bottom: -3rem;
-    
-                img {
-                    width: 8rem;
-                    height: 8rem;
-                    position: relative;
-                    top: -4rem;
-                    border-radius: 50%;
-                    border: solid #EAE2E2;
-                }
-                h5{
-                    position: relative;
-                    top: -3.5rem;
-                }
-            }
-        }
-        .sectionCalendary{
-            img{
-                width: 40px;
-                height: 300px;
-                margin-left: 8rem;
-                border-radius: $borderContent;
-            }
-        }
-    }
 
+            img {
+                width: 100%;
+                height: 100%;
+                border-radius: $borderContent;
+            }
+        }
+
+        .profilePicture {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin-bottom: -3rem;
+
+            img {
+                width: 8rem;
+                height: 8rem;
+                position: relative;
+                top: -4rem;
+                border-radius: 50%;
+                border: solid #EAE2E2;
+            }
+            h5{
+                position: relative;
+                top: -3.5rem;
+            }
+        }
+    
+    }
 
     .sectionPublications {
         display: flex;
@@ -72,6 +62,7 @@ body {
             margin-bottom: 0.5rem;
             .commentary{
                 width: 100%;
+                height: 2.3rem;
                 background: #EAE2E2;
                 border-radius: 10px 10px 0 0;
                 border: solid 2px rgba(255, 253, 253, 0.664);
@@ -95,9 +86,10 @@ body {
                 display: flex;
                 align-items: center;
                 background: #FFF6EF;
-                padding: 0 0 0 0.5rem;
+                padding: 0.2rem;
                 margin-bottom: 0.5rem;
                 border-radius: 0 0 10px 10px;
+                justify-content: space-between;
                 img{
                     width: 30px;
                     height: 30px;
@@ -115,7 +107,6 @@ body {
                     font: bolder 0.9375rem Roboto;
                     background: linear-gradient(82.14deg, #494541 -3.88%, #c85032 64.89%);
                     padding: 5px;
-                    margin: 0.5rem 0 0.5rem 10.5rem
                 }
             }
 

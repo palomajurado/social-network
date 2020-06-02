@@ -4,20 +4,20 @@
         background-repeat: no-repeat;
         background-attachment: fixed;
         background-color: none;
-        overflow: hidden;
+        overflow-y: scroll;
     }
     
     .container-Publications-Profile{    
         display: flex;
-        justify-content: space-around;
         align-content: center;
         flex-direction: row;
-        flex-basis: 20%;
-        padding: 0 5rem 0 5rem;
+        padding: 2rem 5rem 0 5rem;
 
         .sectionProfile{
+            width: 100%;
             height: 16rem;
-            margin: 3rem 0rem 3rem 8rem;
+            flex-basis: 30%;
+            // margin: 3rem 0rem 3rem 8rem;
             .coverPage{
                 width: 100%;
                 height: 10rem;
@@ -39,7 +39,7 @@
         
         .sectionPublications{
             flex-grow: 2;
-            margin: 3rem 8rem 0rem 5rem;
+            margin-left: 1rem;
             padding: 0;
             .containerNewPublications{
                 .commentary{
@@ -49,16 +49,14 @@
                     height: 10rem;
                 }
                 .optionsToPost{
-                    padding: 0 0 0 3.5rem;
+                    padding: 0.5rem;
                     img{
                         
                     }
                     .btnToPost{
                         border-radius: 4rem;
                         line-height: 2;
-                        margin: 1rem 0 3rem 0;
                         padding: 6px;
-                        margin: 0.5rem 0 0.5rem 39rem
                     }
                 }
             }

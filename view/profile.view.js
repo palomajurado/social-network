@@ -9,8 +9,7 @@ export default () => {
 		</header>
 		<section class="All-sections">
     <section class="container-Publications-Profile">
-      <section class="sectionProfileCalendary">
-        <section class="sectionProfile">
+      <section class="sectionProfile">
         <div class="coverPage">
           <img src="http://lorempixel.com/400/200/" alt=""/>
         </div>
@@ -18,7 +17,6 @@ export default () => {
           <img src="http://lorempixel.com/200/200/" alt=""/>
           <h5>Nombre </h5>
         </div>
-        </section>
       </section>
       <section class="sectionPublications" >
         <div class="containerNewPublications">
@@ -26,11 +24,11 @@ export default () => {
           <textarea name="newCommentary" id="textAreaComentary" class="textAreaPublication" placeholder="Escribe" autofocus></textarea>
           <div class="optionsToPost">
             <img src="./assets/iconImage.png" alt="subirImagen" />
-            <button class="btnToPost"> Share </button>
+            <button class="btnToPost" id="btnShare"> Share </button>
           </div>
         </div>
         <section id="containerStories" class="stories">
-          <a href="#/publications"></a>
+          <a href="#/profile"></a>
         </section>
       </section>
 		</section>

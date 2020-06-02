@@ -1,5 +1,5 @@
 /* eslint-disable quotes */
-export default () => {
+export default (post) => {
   const viewPublications = `
     <div class="authorPublication">
       <div class="detailsAuthor">
@@ -8,7 +8,7 @@ export default () => {
       </div>
       <div id="toogleMenu">&#9776;</div>
     </div>
-    <div class="content">contenido publicacion</div>
+    <div class="content">${post.content}</div>
     <div class="interactions"> 
       <img src="./assets/corazon.png" alt="meGusta" />
     </div> `;
