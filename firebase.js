@@ -1,4 +1,14 @@
 // Objeto de credenciales
+//DESCOMENTAR AL MOMENTO DE REALIZAR LOS TESTS -->>>>>>>
+/*import firebasemock from "firebase-mock";
+const mockauth = new firebasemock.MockAuthentication();
+mockauth.autoFlush();
+global.firebase = firebasemock.MockFirebaseSdk(
+  // use null if your code does not use RTDB
+ () => null,
+  () => mockauth
+);*/
+//<<<<<<<<<<<<<----------------
 const firebaseConfig = {
   apiKey: "AIzaSyAZi1Sk7_FpqO0dMwurK0lxAJP0qbpmsQM", // credencial para consultar la BD
   authDomain: "social-network-lima-topia.firebaseapp.com", // firebase autentifica
@@ -11,6 +21,6 @@ const firebaseConfig = {
 };
 
 firebase.initializeApp(firebaseConfig);
-firebase.analytics();
+// firebase.analytics();
 
 export const auth = firebase.auth();
