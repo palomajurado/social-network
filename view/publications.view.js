@@ -1,4 +1,3 @@
-/* eslint-disable quotes */
 export default (post) => {
   const viewPublications = `
     <div class="authorPublication">

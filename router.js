@@ -1,13 +1,12 @@
-import { controllers } from "./controllers/index.controller.js";
 import { auth } from "./firebase.js";
-
+import { controllers } from "./controllers/index.controller.js";
 
 const changeView = (route) => {
   const container = document.querySelector("#container");
   container.innerHTML = "";
+  const routesWithoutAuth = ["#/login", "#/register"];
 
-  const routesWithoutAuth = ["#/login", "#/register"]; // estamos especificando las rutas que NO necesitan login abajo onAuthStateChange evitara esto
-  let next; //
+  let next;
   switch (route) {
     case "":
     case "#/logIn":
@@ -20,18 +19,16 @@ const changeView = (route) => {
       break;
     }
     case "#/profile": {
-
-      next = controllers.profileController;
-      break;
+      next = controllers.profileController();
+      const profileViewDOM = next;
+      const publicationProfileView = controllers.publicationController(
+        profileViewDOM
+      );
+      return container.appendChild(publicationProfileView);
     }
     case "#/recovery-pass": {
       next = controllers.recoveryPassController;
       break;
-// pendiente
-      const profileViewDOM = profileController();
-      const publicationProfileView = publicationController(profileViewDOM);
-      return container.appendChild(publicationProfileView);
-
     }
     default: {
       next = controllers.notFound;
