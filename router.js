@@ -1,6 +1,7 @@
 import { controllers } from "./controllers/index.controller.js";
 import { auth } from "./firebase.js";
 
+
 const changeView = (route) => {
   const container = document.querySelector("#container");
   container.innerHTML = "";
@@ -19,12 +20,18 @@ const changeView = (route) => {
       break;
     }
     case "#/profile": {
+
       next = controllers.profileController;
       break;
     }
     case "#/recovery-pass": {
       next = controllers.recoveryPassController;
       break;
+// pendiente
+      const profileViewDOM = profileController();
+      const publicationProfileView = publicationController(profileViewDOM);
+      return container.appendChild(publicationProfileView);
+
     }
     default: {
       next = controllers.notFound;

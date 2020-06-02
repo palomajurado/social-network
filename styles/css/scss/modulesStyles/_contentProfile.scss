@@ -1,10 +1,17 @@
+body {
+    margin: 0px;
+    background-image: url("../../../../assets/fodoProfile.png");
+    background-attachment: fixed;
+    overflow-y: scroll;
+}
 .container-Publications-Profile {
     display: flex;
     justify-content: center;
     align-content: center;
     flex-direction: column;
-
     .sectionProfile {
+        background: rgba(234, 226, 226, 0.473);
+        border-radius: $borderContent;
         .coverPage {
             width: 100%;
             height: 10em;
@@ -22,6 +29,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            flex-direction: column;
             margin-bottom: -3rem;
 
             img {
@@ -30,74 +38,130 @@
                 position: relative;
                 top: -4rem;
                 border-radius: 50%;
-                border: solid rgb(61, 59, 59);
+                border: solid #EAE2E2;
+            }
+            h5{
+                position: relative;
+                top: -3.5rem;
             }
         }
+    
     }
-
 
     .sectionPublications {
         display: flex;
         justify-content: center;
         align-content: center;
         flex-direction: column;
+        padding: 0.5rem;
 
         .containerNewPublications {
             display: flex;
             flex-direction: column;
             align-items: flex-end;
-
+            margin-bottom: 0.5rem;
+            .commentary{
+                width: 100%;
+                height: 2.3rem;
+                background: #EAE2E2;
+                border-radius: 10px 10px 0 0;
+                border: solid 2px rgba(255, 253, 253, 0.664);
+            }
             textarea {
                 width: 100%;
                 height: 5rem;
-                background: rgba(228, 192, 139, 0.8);
-                border-radius: $borderContent;
-                border: solid 2px rgb(61, 59, 59);
-                padding: 1rem;
+                background: #FFF6EF;
+                border: solid 2px rgba(255, 253, 253, 0.664);
+                padding: 1rem;   
             }
 
-            .btnToPost {
-                width: 30%;
-                height: 100%;
-                border: none;
-                outline: none;
-                color: $colorWhite;
-                text-align: center;
-                border-radius: 3.4375rem;
-                font: bolder 0.9375rem Roboto;
-                background: linear-gradient(82.14deg, #494541 -3.88%, #c85032 64.89%);
-                margin-bottom: 0.5rem;
-                margin-top: 0.5rem;
+            #textAreaComentary::-webkit-input-placeholder {
+                color: gray;
+                font-size: 1em;
+                font-family: $FFsecondary;
             }
+
+            .optionsToPost{
+                width: 100%;
+                display: flex;
+                align-items: center;
+                background: #FFF6EF;
+                padding: 0.2rem;
+                margin-bottom: 0.5rem;
+                border-radius: 0 0 10px 10px;
+                justify-content: space-between;
+                img{
+                    width: 30px;
+                    height: 30px;
+                    cursor: pointer;
+                }
+
+                .btnToPost {
+                    width: 30%;
+                    height: 100%;
+                    border: none;
+                    outline: none;
+                    color: $colorWhite;
+                    text-align: center;
+                    border-radius: 3.4375rem;
+                    font: bolder 0.9375rem Roboto;
+                    background: linear-gradient(82.14deg, #494541 -3.88%, #c85032 64.89%);
+                    padding: 5px;
+                }
+            }
+
         }
 
         .stories {
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            flex-direction: column;
+            background: rgba(234, 226, 226, 0.473);
+            border-radius: $borderContent;
             .authorPublication {
+                display: flex;
+                align-items: center;
                 width: 100%;
                 height: 3rem;
-                background: rgba(192, 54, 16, 0.808);
+                background: #EAE2E2;
                 padding: 0.5rem;
-                border-radius: 20px 20px 0 0;
-                border: solid 2px rgb(61, 59, 59);
+                border-radius: 10px 10px 0 0;
+                justify-content: space-between;
+                .detailsAuthor{
+                    display: flex;
+                    align-items: center;
+                    img{
+                        width: 2rem;
+                        height: 2rem;
+                        border-radius: 50%;
+                        border: solid rgb(243, 234, 234);
+                    }
+                }
+                .toogleMenu{
+                    cursor: pointer;
+                }
             }
 
             .content {
-                width: 100%;
+                width: 90%;
                 height: 10rem;
-                background: rgba(228, 192, 139, 0.8);
+                background: #FFF6EF;
                 padding: 0.5rem;
-                border: solid 2px rgb(61, 59, 59);
+                margin: 0.5rem auto;
+                border-radius: $borderContent;
             }
 
             .interactions {
-                width: 100%;
+                width: 90%;
                 height: 3rem;
-                background: rgba(192, 54, 16, 0.808);
+                background: #FFFFFF;
                 display: flex;
                 align-items: center;
                 padding: 0 10px 0 10px;
                 border-radius: 0 0 10px 10px;
-                border: solid 2px rgb(61, 59, 59);
+                border-radius: $borderContent;
+                margin: 0.5rem auto;
 
                 img {
                     width: 30px;

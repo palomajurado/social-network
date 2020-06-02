@@ -12,13 +12,5 @@ const firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 firebase.analytics();
 export const auth = firebase.auth();
+export const db = firebase.firestore();
 
-// auth.onAuthStateChanged((user) => {
-//   if (user) {
-//     store.set("user", user);
-//     console.log("users signin");
-//   } else {
-//     store.set("user", "hola");
-//     console.log("userisnotlogIn");
-//   }
-// });
