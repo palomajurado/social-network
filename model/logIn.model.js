@@ -13,4 +13,5 @@ const authFacebook = () => {
   return auth.signInWithPopup(provider);
 };
 
+
 export default { authEmailPassword, authGmail, authFacebook };
