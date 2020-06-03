@@ -9,7 +9,7 @@ export default () => {
 			</div>
 			<button class="content-about"><p>ABOUT US</p></button>
 		</header>
-		<section class="All-sections">
+		<section class="All-sectionsb">
 			<section class="sectionFather">
 				<section class="sectionSon">
 					<div id="circle1"></div>
