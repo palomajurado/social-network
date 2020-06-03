@@ -447,7 +447,7 @@ p span a:hover {
     background-size: 100% 100%;
   }
   #container div .All-sectionsb .sectionFather .sectionSon {
-    padding: 4.5% 0% 6.5%;
+    padding: 10.5% 0% 6%;
     z-index: 2;
   }
   #container div .All-sectionsb .sectionFather .sectionSon .logo-principalMobile {
@@ -459,14 +459,14 @@ p span a:hover {
   #container div .All-sectionsb .sectionFather .sectionSon #circle1 {
     width: 32vw;
     height: 37vw;
-    top: 3%;
+    top: 14%;
     left: 62.5%;
   }
   #container div .All-sectionsb .sectionFather .sectionSon #circle2 {
     width: 36vw;
     height: 42vw;
     border-radius: 50%;
-    top: 2%;
+    top: 13%;
     right: 5%;
   }
   #container div .All-sectionsb .sectionFather .sectionSon #containerLogIn {
@@ -725,6 +725,12 @@ p span a:hover {
     overflow-y: auto;
   }
 
+  header {
+    position: fixed;
+    width: 100%;
+    z-index: 3;
+  }
+
   .All-sections {
     background-image: url("../../../../assets/fodoProfile.png");
     background-repeat: no-repeat;
@@ -744,6 +750,8 @@ p span a:hover {
     padding: 0%;
     height: 20rem;
     flex-basis: auto;
+    position: fixed;
+    margin-top: 4rem;
   }
   .container-Publications-Profile .sectionProfile .coverPage {
     width: 100%;
@@ -760,7 +768,8 @@ p span a:hover {
     top: -4rem;
   }
   .container-Publications-Profile .sectionPublications {
-    margin-left: 1rem;
+    margin-top: 4rem;
+    margin-left: 40rem;
     padding: 0;
     width: 55%;
     justify-content: unset;
