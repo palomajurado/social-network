@@ -4,13 +4,28 @@ export default (post) => {
     <div class="authorPublication">
       <div class="detailsAuthor">
         <img src="http://lorempixel.com/200/200/" alt=""/>
-        <h5>Nombre </h5>
+        <div class="dataProfile">
+          <h3>Nombre </h3>
+            <div>
+              <p></p>
+              <p>${post.privacyAction}</p>
+            </div>
+        </div>
       </div>
-      <div id="toogleMenu">&#9776;</div>
+      <div id="toogleMenu">
+      <span class="menuEdit"> &#9776; </span>
+      <select name="selectEdit" id="selectEditDelete">
+        <option value="Edit">Edit</option>
+        <option value="Delete">Delete</option>
+      </select>
+      </div>
     </div>
-    <div class="content">${post.content}</div>
+    <div class="content">
+      <p>${post.content}</p>
+      <img id="publishedImage" class="${typeof post.image !== 'undefined' && post.image !== null ? '' : 'clsImg'}" src="${typeof post.image !== 'undefined' && post.image !== null ? post.image : ''}" alt="imgShare" />
+    </div>
     <div class="interactions"> 
-      <img src="./assets/corazon.png" alt="meGusta" />
+      <img src="./assets/corazon.svg" alt="meGusta" />
     </div> `;
 
   const divElement = document.createElement("div");

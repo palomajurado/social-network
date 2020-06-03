@@ -2,7 +2,7 @@
 /* eslint-disable semi */
 export default () => {
   const viewProfile = `
-		<header class=profile-header>
+		<header class="profile-header">
 			<div class="logo-principal">
 				<img src="./assets/logo-limatopia.png" />
 			</div>
@@ -22,8 +22,18 @@ export default () => {
         <div class="containerNewPublications">
           <div class="commentary">¿Que quieres compartir?</div>
           <textarea name="newCommentary" id="textAreaComentary" class="textAreaPublication" placeholder="Escribe" autofocus></textarea>
+          <div class="displayImage">
+            <img id="loadedImage" src="http://placehold.it/180" alt="your image" />
+          </div>
           <div class="optionsToPost">
-            <img src="./assets/iconImage.png" alt="subirImagen" />
+            <div class="accionPublication">
+              <img id="iconCamera" src="./assets/iconImage.png" alt="subirImagen" />
+              <input type="file" id="addImg" name="addImg" accept="image/*">
+              <select name="selectPublicPrivate" id="optionPublicPrivate">
+                <option value="publico">Público</option>
+                <option value="privado">Privado</option>
+              </select>
+            </div>
             <button class="btnToPost" id="btnShare"> Share </button>
           </div>
         </div>

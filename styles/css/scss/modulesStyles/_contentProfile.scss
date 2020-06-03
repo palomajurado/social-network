@@ -81,6 +81,14 @@ body {
                 font-family: $FFsecondary;
             }
 
+            .displayImage{
+                img{
+                    width: 5%;
+                    height: 5%;
+                    cursor: pointer;
+                }
+            }
+
             .optionsToPost{
                 width: 100%;
                 display: flex;
@@ -94,6 +102,10 @@ body {
                     width: 30px;
                     height: 30px;
                     cursor: pointer;
+                }
+
+                #addImg{
+                    display: none;
                 }
 
                 .btnToPost {
@@ -123,7 +135,7 @@ body {
                 display: flex;
                 align-items: center;
                 width: 100%;
-                height: 3rem;
+                height: 5rem;
                 background: #EAE2E2;
                 padding: 0.5rem;
                 border-radius: 10px 10px 0 0;
@@ -132,10 +144,19 @@ body {
                     display: flex;
                     align-items: center;
                     img{
-                        width: 2rem;
-                        height: 2rem;
+                        width: 3rem;
+                        height: 3rem;
                         border-radius: 50%;
                         border: solid rgb(243, 234, 234);
+                    }
+                    .dataProfile{
+                        display: flex;
+                        align-items: center;
+                        flex-direction: column;
+                        padding: 0.5rem;
+                        p{
+                            margin-top: 0;
+                        }
                     }
                 }
                 .toogleMenu{
@@ -144,12 +165,23 @@ body {
             }
 
             .content {
+                display: flex;
+                align-items: center;
+                flex-direction: column;
                 width: 90%;
-                height: 10rem;
                 background: #FFF6EF;
                 padding: 0.5rem;
                 margin: 0.5rem auto;
                 border-radius: $borderContent;
+                p{
+                    margin-top: 0;
+                }
+                .clsImg{
+                    display: none;
+                }
+                img{
+                    max-width: 100%;
+                }
             }
 
             .interactions {

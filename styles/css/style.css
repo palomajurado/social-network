@@ -523,6 +523,12 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
+.container-Publications-Profile .sectionPublications .containerNewPublications .displayImage img {
+  width: 5%;
+  height: 5%;
+  cursor: pointer;
+}
+
 .container-Publications-Profile .sectionPublications .containerNewPublications .optionsToPost {
   width: 100%;
   display: flex;
@@ -538,6 +544,10 @@ body {
   width: 30px;
   height: 30px;
   cursor: pointer;
+}
+
+.container-Publications-Profile .sectionPublications .containerNewPublications .optionsToPost #addImg {
+  display: none;
 }
 
 .container-Publications-Profile .sectionPublications .containerNewPublications .optionsToPost .btnToPost {
@@ -566,7 +576,7 @@ body {
   display: flex;
   align-items: center;
   width: 100%;
-  height: 3rem;
+  height: 5rem;
   background: #EAE2E2;
   padding: 0.5rem;
   border-radius: 10px 10px 0 0;
@@ -579,10 +589,21 @@ body {
 }
 
 .container-Publications-Profile .sectionPublications .stories .authorPublication .detailsAuthor img {
-  width: 2rem;
-  height: 2rem;
+  width: 3rem;
+  height: 3rem;
   border-radius: 50%;
   border: solid #f3eaea;
+}
+
+.container-Publications-Profile .sectionPublications .stories .authorPublication .detailsAuthor .dataProfile {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 0.5rem;
+}
+
+.container-Publications-Profile .sectionPublications .stories .authorPublication .detailsAuthor .dataProfile p {
+  margin-top: 0;
 }
 
 .container-Publications-Profile .sectionPublications .stories .authorPublication .toogleMenu {
@@ -590,12 +611,26 @@ body {
 }
 
 .container-Publications-Profile .sectionPublications .stories .content {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
   width: 90%;
-  height: 10rem;
   background: #FFF6EF;
   padding: 0.5rem;
   margin: 0.5rem auto;
   border-radius: 10px;
+}
+
+.container-Publications-Profile .sectionPublications .stories .content p {
+  margin-top: 0;
+}
+
+.container-Publications-Profile .sectionPublications .stories .content .clsImg {
+  display: none;
+}
+
+.container-Publications-Profile .sectionPublications .stories .content img {
+  max-width: 100%;
 }
 
 .container-Publications-Profile .sectionPublications .stories .interactions {
@@ -698,7 +733,6 @@ body {
     padding: 0 0 0 1rem;
   }
   .container-Publications-Profile .sectionPublications .stories .content {
-    height: 10rem;
     background: #FFF6EF;
   }
 }
