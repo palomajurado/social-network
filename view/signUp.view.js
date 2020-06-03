@@ -53,7 +53,6 @@ export default () => {
 					</section>
 				</section>
 			</section>
-	
 			</section>
 		</section>
 		<footer></footer>`;

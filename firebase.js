@@ -1,10 +1,10 @@
-import firebasemock from "firebase-mock";
-const mockauth = new firebasemock.MockAuthentication();
-mockauth.autoFlush();
-global.firebase = firebasemock.MockFirebaseSdk(
-  () => null,
-  () => mockauth
-);
+// import firebasemock from "firebase-mock";
+// const mockauth = new firebasemock.MockAuthentication();
+// mockauth.autoFlush();
+// global.firebase = firebasemock.MockFirebaseSdk(
+//   () => null,
+//   () => mockauth
+// );
 
 const firebaseConfig = {
   measurementId: "G-T5XZ91CCHV",
@@ -19,4 +19,5 @@ const firebaseConfig = {
 
 firebase.initializeApp(firebaseConfig);
 export const auth = firebase.auth();
+export const storageRef = firebase.storage().ref();
 export const db = firebase.firestore();

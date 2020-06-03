@@ -1,24 +1,18 @@
-import { db } from "../firebase.js";
+import { db } from "../firebase.js"; // base de datos de firebase
+// nueva publicacion del view (publication)
+const createNewPublication = (newPublication) =>
+  db
+    .collection("publications") // utilizando db voy a interactuar con la coleccion publicacion, si no existe creare la coleccion si existe agregare
+    // mas datos
+    .add({
+      userId: newPublication.userId,
+      content: newPublication.content,
+      punctuation: newPublication.punctuation,
+      registrationDate: firebase.firestore.FieldValue.serverTimestamp(), // fecha de creacion, propiedad serverTimestamp
+    });
 
-const createNewPublication = (objectReceived) => {
-  return new Promise((resolve, reject) => {
-    db.collection("publications")
-      .add({
-        userId: objectReceived.userId,
-        content: objectReceived.content,
-        punctuation: objectReceived.punctuation,
-        registrationDate: firebase.firestore.FieldValue.serverTimestamp(),
-      })
-      .then((result) => {
-        resolve(result);
-      })
-      .catch((error) => {
-        reject(error);
-      });
-  });
-};
+// retorna las publicaciones desde la mas nueva hasta la mas antigua con fecha de regitro
+const getPublications = () =>
+  db.collection("publications").orderBy("registrationDate", "desc"); // no necesita return por que la funcion flecha sin llaves lo sobrentiende
 
-const getPublications = () => {
-  return db.collection("publications").orderBy("registrationDate", "desc");
-};
 export default { createNewPublication, getPublications };

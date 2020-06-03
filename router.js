@@ -4,9 +4,9 @@ import { controllers } from "./controllers/index.controller.js";
 const changeView = (route) => {
   const container = document.querySelector("#container");
   container.innerHTML = "";
-  const routesWithoutAuth = ["#/login", "#/register"];
+  const routesWithoutAuth = ["#/login", "#/register"]; // qu rutas no necesitan autorizacion las definimos aqui
 
-  let next;
+  let next; // guardaremos en un let a los controladores para ejecutarlos despues
   switch (route) {
     case "":
     case "#/logIn":
@@ -19,15 +19,15 @@ const changeView = (route) => {
       break;
     }
     case "#/profile": {
-      next = controllers.profileController();
-      const profileViewDOM = next;
-      const publicationProfileView = controllers.publicationController(
-        profileViewDOM
-      );
-      return container.appendChild(publicationProfileView);
+      next = controllers.profileController;
+      break;
     }
     case "#/recovery-pass": {
       next = controllers.recoveryPassController;
+      break;
+    }
+    case "#/user": {
+      next = controllers.user;
       break;
     }
     default: {

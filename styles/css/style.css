@@ -1,3 +1,166 @@
+#profile-container {
+  flex-flow: column;
+  background-size: cover;
+  background-attachment: fixed;
+  background-image: url("https://storage.googleapis.com/md-links/xtx.jpg");
+}
+
+#profile-container .profile-user-avatar .portada {
+  width: 100vw;
+  height: 200px;
+  display: flex;
+  margin-top: -2rem;
+  justify-content: center;
+  background-size: cover;
+  background-image: url("https://storage.googleapis.com/md-links/portada1.jpg");
+}
+
+#profile-container .profile-user-avatar .portada .user-img img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  margin-top: 100px;
+  border-radius: 50%;
+  object-position: center;
+  border: 0.9375rem solid rgba(70, 68, 68, 0.308);
+}
+
+#profile-container .profile-user-avatar .user-img-info {
+  text-align: center;
+  margin-top: 7.99rem;
+}
+
+#profile-container .profile-user-avatar .user-img-info progress#uploader {
+  width: 100%;
+}
+
+#profile-container .profile-user-avatar .user-img-info progress {
+  display: none;
+}
+
+#profile-container .profile-user-avatar .user-img-info #file {
+  width: 20vh;
+  outline: none;
+  cursor: pointer;
+  color: whitesmoke;
+  text-align: center;
+  border-radius: 1.5rem;
+  letter-spacing: 0.1875rem;
+  font-family: "Poppins", sans-serif;
+  border: 0.625rem solid rgba(0, 0, 0, 0.336);
+  background: #f078089f;
+}
+
+#profile-container .profile-user-avatar .user-img-info #changeBg {
+  width: 20vh;
+  height: 40px;
+  outline: none;
+  cursor: pointer;
+  text-align: center;
+  color: whitesmoke;
+  background: yellow;
+  border-radius: 1.5rem;
+  letter-spacing: 0.1875rem;
+  font-family: "Poppins", sans-serif;
+  border: 0.625rem solid rgba(0, 0, 0, 0.336);
+  background: rgba(255, 255, 0, 0.377);
+}
+
+#profile-container #profile-info {
+  padding: 30px;
+  margin-top: 30px;
+  color: whitesmoke;
+  border-radius: 15px;
+  background: rgba(0, 0, 0, 0.356);
+  box-shadow: 0.625rem 0.625rem 1.125rem 0.0625rem rgba(0, 0, 0, 0.75);
+}
+
+#profile-container #profile-info .profile-form-group {
+  display: flex;
+  align-items: center;
+}
+
+#profile-container #profile-info .profile-form-group .profile-inputs input {
+  height: 43px;
+  width: 10rem;
+  outline: 0rem;
+  cursor: pointer;
+  color: whitesmoke;
+  text-align: center;
+  border-radius: 1.25rem;
+  text-transform: capitalize;
+  font-family: "Poppins", sans-serif;
+  border: 0.125rem solid #e6e6e631;
+  padding: 0.5625rem 0 0.4375rem 0.5rem;
+  background: rgba(78, 77, 77, 0.267);
+}
+
+#profile-container #profile-info .profile-form-group .profile-inputs {
+  display: inline-flex;
+  margin: 0.4rem 1rem;
+}
+
+#profile-container #profile-info .profile-form-group .profile-inputs .inputName {
+  margin-left: 1.875rem;
+}
+
+#profile-container #profile-info .profile-form-group .profile-inputs #editInputName,
+#profile-container #profile-info .profile-form-group .profile-inputs #editInputPass {
+  height: 45px;
+  width: 45px;
+  border-radius: 50%;
+  border: 0.1px solid rgba(255, 255, 255, 0.171);
+  cursor: pointer;
+  background: rgba(0, 0, 0, 0.1);
+  margin-left: 7px;
+  padding: 5px;
+}
+
+#profile-container #profile-info .profile-form-group .profile-inputs #editInputName:hover,
+#profile-container #profile-info .profile-form-group .profile-inputs #editInputPass:hover {
+  background: #ce5b3573;
+}
+
+#profile-container #submit {
+  width: 20vh;
+  height: 8vh;
+  outline: none;
+  cursor: pointer;
+  text-align: center;
+  color: whitesmoke;
+  border-radius: 1.5rem;
+  margin: 2.5rem 4.375rem 0;
+  letter-spacing: 0.1875rem;
+  font-family: "Poppins", sans-serif;
+  border: 0.625rem solid rgba(0, 0, 0, 0.5);
+  background: linear-gradient(82.14deg, #ec9443 -3.88%, #c85032 64.89%);
+}
+
+#profile-container #submit #submit:hover {
+  color: whitesmoke;
+  background: linear-gradient(141deg, #c85032 33%, #ec9443 64%);
+}
+
+.regresar {
+  width: 20vh;
+  outline: none;
+  cursor: pointer;
+  margin-top: 60px;
+  text-align: center;
+  color: whitesmoke;
+  border-radius: 1.5rem;
+  background: #f078089f;
+  letter-spacing: 0.1875rem;
+  font-family: "Poppins", sans-serif;
+  border: 0.625rem solid rgba(0, 0, 0, 0.336);
+}
+
+#password:hover,
+.inputName:hover {
+  border: 1px solid #e05840;
+  box-shadow: 0rem -0.0063rem 0.4375rem -0.0063rem #e74f08;
+}
+
 header {
   display: none;
 }
@@ -466,6 +629,9 @@ p span a:hover {
     color: #883a24;
     font-weight: bolder;
   }
+  #container div .log_sign-header a {
+    text-decoration: none;
+  }
   #container div .profile-header {
     display: flex;
     flex-direction: row;
@@ -554,22 +720,22 @@ p span a:hover {
 }
 
 body {
-  margin: 0px;
-  background-image: url("../../../../assets/fodoProfile.png");
-  background-attachment: fixed;
+  margin: 0rem;
   overflow-y: scroll;
+  background-attachment: fixed;
+  background-image: url("../../../../assets/fodoProfile.png");
 }
 
 .container-Publications-Profile {
   display: flex;
-  justify-content: center;
   align-content: center;
   flex-direction: column;
+  justify-content: center;
 }
 
 .container-Publications-Profile .sectionProfile {
-  background: rgba(234, 226, 226, 0.473);
   border-radius: 11px;
+  background: rgba(234, 226, 226, 0.473);
 }
 
 .container-Publications-Profile .sectionProfile .coverPage {
@@ -585,41 +751,72 @@ body {
   border-radius: 11px;
 }
 
-.container-Publications-Profile .sectionProfile .profilePicture {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  margin-bottom: -3rem;
+.container-Publications-Profile .sectionProfile .coverPage .imgMenu {
+  width: 30px;
+  padding: 4px;
+  height: 30px;
+  margin-top: 4px;
+  border-radius: 50%;
+  margin-left: -35px;
+  position: absolute;
+  background: rgba(59, 58, 58, 0.575);
+  border-radius: 1px solid black;
+  box-shadow: 0.625rem 0.625rem 1rem -0.0625rem rgba(0, 0, 0, 0.75);
 }
 
-.container-Publications-Profile .sectionProfile .profilePicture img {
+.container-Publications-Profile .sectionProfile .coverPage .imgMenu:hover {
+  border: 1px solid #e05840;
+  box-shadow: 0rem -0.0063rem 0.4375rem -0.0063rem #e74f08;
+}
+
+.container-Publications-Profile .sectionProfile .profilePicture {
+  display: flex;
+  align-items: center;
+  margin-bottom: -3rem;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.container-Publications-Profile .sectionProfile .profilePicture a {
+  position: absolute;
+  z-index: 100;
+}
+
+.container-Publications-Profile .sectionProfile .profilePicture #userPhoto {
+  top: -4rem;
   width: 8rem;
   height: 8rem;
-  position: relative;
-  top: -4rem;
+  object-fit: cover;
   border-radius: 50%;
-  border: solid #EAE2E2;
+  position: relative;
+  object-position: center;
+  border: 0.9375rem solid rgba(126, 124, 124, 0.308);
+}
+
+.container-Publications-Profile .sectionProfile .profilePicture #userPhoto:hover {
+  background: #ec954379;
 }
 
 .container-Publications-Profile .sectionProfile .profilePicture h5 {
-  position: relative;
   top: -3.5rem;
+  position: relative;
+  font-weight: bolder;
+  text-transform: capitalize;
 }
 
 .container-Publications-Profile .sectionPublications {
   display: flex;
-  justify-content: center;
+  padding: 0.5rem;
   align-content: center;
   flex-direction: column;
-  padding: 0.5rem;
+  justify-content: center;
 }
 
 .container-Publications-Profile .sectionPublications .containerNewPublications {
   display: flex;
-  flex-direction: column;
   align-items: flex-end;
   margin-bottom: 0.5rem;
+  flex-direction: column;
 }
 
 .container-Publications-Profile .sectionPublications .containerNewPublications .commentary {
@@ -633,9 +830,11 @@ body {
 .container-Publications-Profile .sectionPublications .containerNewPublications textarea {
   width: 100%;
   height: 5rem;
-  background: #FFF6EF;
-  border: solid 2px rgba(255, 253, 253, 0.664);
   padding: 1rem;
+  background: #FFF6EF;
+  text-transform: capitalize;
+  font-family: "Poppins", sans-serif;
+  border: solid 0.125rem rgba(255, 253, 253, 0.664);
 }
 
 .container-Publications-Profile .sectionPublications .containerNewPublications #textAreaComentary::-webkit-input-placeholder {
@@ -647,12 +846,12 @@ body {
 .container-Publications-Profile .sectionPublications .containerNewPublications .optionsToPost {
   width: 100%;
   display: flex;
-  align-items: center;
-  background: #FFF6EF;
   padding: 0.2rem;
+  align-items: center;
   margin-bottom: 0.5rem;
-  border-radius: 0 0 10px 10px;
+  background: #FFF6EF;
   justify-content: space-between;
+  border-radius: 0 0 0.625rem 0.625rem;
 }
 
 .container-Publications-Profile .sectionPublications .containerNewPublications .optionsToPost img {
@@ -666,32 +865,39 @@ body {
   height: 100%;
   border: none;
   outline: none;
+  cursor: pointer;
+  padding: 0.3125rem;
   color: whitesmoke;
   text-align: center;
   border-radius: 3.4375rem;
   font: bolder 0.9375rem Roboto;
+  border: 5px solid rgba(0, 0, 0, 0.322);
+  box-shadow: 0.625rem 0.625rem 1rem -0.0625rem rgba(0, 0, 0, 0.75);
   background: linear-gradient(82.14deg, #494541 -3.88%, #c85032 64.89%);
-  padding: 5px;
+}
+
+.container-Publications-Profile .sectionPublications .containerNewPublications .optionsToPost .btnToPost:hover {
+  background: linear-gradient(141deg, #c85032 33%, #ec9443 64%);
 }
 
 .container-Publications-Profile .sectionPublications .stories {
   display: flex;
-  justify-content: center;
   align-content: center;
   flex-direction: column;
-  background: rgba(234, 226, 226, 0.473);
+  justify-content: center;
   border-radius: 11px;
+  background: rgba(234, 226, 226, 0.473);
 }
 
 .container-Publications-Profile .sectionPublications .stories .authorPublication {
-  display: flex;
-  align-items: center;
   width: 100%;
   height: 3rem;
-  background: #EAE2E2;
+  display: flex;
   padding: 0.5rem;
-  border-radius: 10px 10px 0 0;
+  align-items: center;
+  background: #EAE2E2;
   justify-content: space-between;
+  border-radius: 0.625rem 0.625rem 0 0;
 }
 
 .container-Publications-Profile .sectionPublications .stories .authorPublication .detailsAuthor {
@@ -713,31 +919,43 @@ body {
 .container-Publications-Profile .sectionPublications .stories .content {
   width: 90%;
   height: 10rem;
-  background: #FFF6EF;
   padding: 0.5rem;
   margin: 0.5rem auto;
+  background: #FFF6EF;
   border-radius: 11px;
 }
 
 .container-Publications-Profile .sectionPublications .stories .interactions {
   width: 90%;
   height: 3rem;
-  background: #FFFFFF;
   display: flex;
-  align-items: center;
-  padding: 0 10px 0 10px;
-  border-radius: 0 0 10px 10px;
-  border-radius: 11px;
   margin: 0.5rem auto;
+  align-items: center;
+  background: #FFFFFF;
+  padding: 0 0.625rem 0 0.625rem;
+  border-radius: 0 0 0.625rem 0.625rem;
 }
 
 .container-Publications-Profile .sectionPublications .stories .interactions img {
   width: 30px;
   height: 30px;
   cursor: pointer;
+  padding: 0.1875rem;
+  margin-left: 0.3125rem;
 }
 
-.logOut,
+.logOut {
+  width: 20px;
+  height: 20px;
+  border: none;
+  padding: 0.25rem;
+  border-radius: 50%;
+  position: absolute;
+  margin-top: 0.4375rem;
+  margin-left: -4.125rem;
+  background: rgba(115, 238, 141, 0.918);
+}
+
 .sendEmail {
   width: 80px;
   margin: auto;
@@ -745,16 +963,16 @@ body {
   display: flex;
   outline: none;
   color: white;
-  font-size: 12px;
+  cursor: pointer;
+  font-size: 0.75rem;
   text-align: center;
   align-items: center;
   font-weight: bolder;
-  border-radius: 12px;
+  border-radius: 4rem;
   justify-content: center;
-  cursor: pointer;
   font-family: "Poppins", sans-serif;
   border: 5px solid rgba(0, 0, 0, 0.322);
-  box-shadow: 10px 10px 16px -1px rgba(0, 0, 0, 0.75);
+  box-shadow: 0.625rem 0.625rem 1rem -0.0625rem rgba(0, 0, 0, 0.75);
   background: linear-gradient(82.14deg, #ec9443 -3.88%, #c85032 64.89%);
 }
 
@@ -762,17 +980,17 @@ body {
   background: linear-gradient(141deg, #c85032 33%, #ec9443 64%);
 }
 
-.logOutl:hover {
+.logOut:hover {
   background: linear-gradient(141deg, #c85032 33%, #ec9443 64%);
 }
 
 .displayUserName {
-  margin-bottom: 15px;
   display: flex;
-  justify-content: center;
-  font-size: 20px;
-  font-weight: bolder;
   color: #ce5c35;
+  font-size: 1.25rem;
+  font-weight: bolder;
+  justify-content: center;
+  margin-bottom: 0.9375rem;
   text-transform: capitalize;
   text-decoration-line: underline;
 }
@@ -858,4 +1076,16 @@ body {
 body {
   width: 100%;
   font-family: "Poppins", sans-serif;
+}
+
+/* Scroll Bar */
+::-webkit-scroll,
+::-webkit-scrollbar {
+  width: 0.3125rem;
+  background-color: rgba(233, 223, 223, 0.151);
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 0.375rem;
+  background: linear-gradient(rgba(204, 199, 199, 0.37), #ce5b3580);
 }

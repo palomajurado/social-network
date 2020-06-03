@@ -29,15 +29,20 @@ export default () => {
       .signUpEmailPassword(email, passwordAuth)
       .then(() => models.signUpModel.updateDisplayName(name))
       .then(() => {
+        console.log("funciono");
+
         messageElm.innerHTML = "Registro exitoso: redireccionando";
         setTimeout(() => (window.location.hash = "#/"), 1000);
       })
       .catch((error) => {
+        console.log(error);
+
         let message = "";
         if (error.code === "auth/invalid-email")
+          // falta colocar mensajito con setitiemout
           message = "Ingrese un correo válido";
         else if (error.code === "auth/weak-password") {
-          message = "Contraseña débil, mínimo 6 carácteres";
+          message = "Contraseña débil, mínimo 6 carácteres"; // falta colocar mensajito con setitiemout
         }
         setTimeout(() => (messageElm.innerHTML = message), 1000);
       });

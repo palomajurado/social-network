@@ -7,7 +7,7 @@ export default () => {
 			<div class="logo-principal">
 				<img src="./assets/logo-limatopia.png" />
 			</div>
-			<button class="content-about"><p>ABOUT US</p></button>
+			<a href="https://yeniferpaloma3773.github.io/social-network"/"><button class="content-about"><p>ABOUT US</p></button></a>
 		</header>
 		<section class="All-sections">
 			<section class="sectionFather">

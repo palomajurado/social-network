@@ -1,0 +1,169 @@
+#profile-container {
+	flex-flow: column;
+	background-size: cover;
+	background-attachment: fixed;
+	background-image: url("https://storage.googleapis.com/md-links/xtx.jpg");
+
+	.profile-user-avatar {
+		.portada {
+			width: 100vw;
+			height: 200px;
+			display: flex;
+			margin-top: -2rem;
+			justify-content: center;
+			// background-attachment: fixed;
+			background-size: cover;
+			background-image: url("https://storage.googleapis.com/md-links/portada1.jpg");
+
+			.user-img {
+				img {
+					width: 200px;
+					height: 200px;
+					object-fit: cover;
+					margin-top: 100px;
+					border-radius: 50%;
+					object-position: center;
+					border: 0.9375rem solid rgba(70, 68, 68, 0.308);
+				}
+			}
+		}
+
+		.user-img-info {
+			text-align: center;
+			margin-top: 7.99rem;
+
+			progress#uploader {
+				width: 100%;
+			}
+
+			progress {
+				display: none;
+			}
+
+			#file {
+				width: 20vh;
+				outline: none;
+				cursor: pointer;
+				color: $colorWhite;
+				text-align: center;
+				border-radius: 1.5rem;
+				letter-spacing: 0.1875rem;
+				font-family: $FFsecondary;
+				border: 0.625rem solid rgba(0, 0, 0, 0.336);
+				background: #f078089f;
+			}
+
+			#changeBg {
+				width: 20vh;
+				height: 40px;
+				outline: none;
+				cursor: pointer;
+				text-align: center;
+				color: whitesmoke;
+				background: yellow;
+				border-radius: 1.5rem;
+				letter-spacing: 0.1875rem;
+				font-family: "Poppins", sans-serif;
+				border: 0.625rem solid rgba(0, 0, 0, 0.336);
+				background: rgba(255, 255, 0, 0.377);
+
+			}
+		}
+	}
+
+	#profile-info {
+		padding: 30px;
+		margin-top: 30px;
+		color: $colorWhite;
+		border-radius: 15px;
+		background: rgba(0, 0, 0, 0.356);
+		box-shadow: 0.625rem 0.625rem 1.125rem 0.0625rem rgba(0, 0, 0, 0.75);
+
+		.profile-form-group {
+			display: flex;
+			align-items: center;
+
+			.profile-inputs input {
+				height: 43px;
+				width: 10rem;
+				outline: 0rem;
+				cursor: pointer;
+				color: $colorWhite;
+				text-align: center;
+				border-radius: 1.25rem;
+				text-transform: capitalize;
+				font-family: "Poppins", sans-serif;
+				border: 0.125rem solid #e6e6e631;
+				padding: 0.5625rem 0 0.4375rem 0.5rem;
+				background: rgba(78, 77, 77, 0.267);
+			}
+
+			.profile-inputs {
+				display: inline-flex;
+				margin: 0.4rem 1rem;
+
+				.inputName {
+					margin-left: 1.875rem;
+				}
+
+				#editInputName,
+				#editInputPass {
+					height: 45px;
+					width: 45px;
+					border-radius: 50%;
+					border: 0.1px solid rgba(255, 255, 255, 0.171);
+					cursor: pointer;
+					background: rgba(0, 0, 0, .1);
+					margin-left: 7px;
+					padding: 5px;
+				}
+
+				#editInputName:hover,
+				#editInputPass:hover {
+					background: #ce5b3573;
+				}
+			}
+		}
+	}
+
+	#submit {
+		width: 20vh;
+		height: 8vh;
+		outline: none;
+		cursor: pointer;
+		text-align: center;
+		color: whitesmoke;
+		border-radius: 1.5rem;
+		margin: 2.5rem 4.375rem 0;
+		letter-spacing: 0.1875rem;
+		font-family: $FFsecondary;
+		border: 0.625rem solid rgba(0, 0, 0, 0.5);
+		background: linear-gradient(82.14deg, #ec9443 -3.88%, #c85032 64.89%);
+
+		#submit:hover {
+			color: $colorWhite;
+			background: linear-gradient(141deg, #c85032 33%, #ec9443 64%);
+		}
+	}
+}
+
+.regresar {
+	width: 20vh;
+	outline: none;
+	cursor: pointer;
+	margin-top: 60px;
+	text-align: center;
+	color: whitesmoke;
+	border-radius: 1.5rem;
+	background: #f078089f;
+	letter-spacing: 0.1875rem;
+	font-family: "Poppins", sans-serif;
+	border: 0.625rem solid rgba(0, 0, 0, 0.336);
+
+}
+
+#password:hover,
+.inputName:hover {
+	border: 1px solid rgb(224, 88, 64);
+	box-shadow: 0rem -0.0063rem 0.4375rem -0.0063rem rgb(231, 79, 8);
+}
