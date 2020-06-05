@@ -8,6 +8,7 @@ export default (viewProfile) => {
     const displayImage = viewProfile.querySelector('#displayImage');
     const loadingPanel = viewProfile.querySelector('#idLoading');
     const messajePostEmpty = viewProfile.querySelector('#messajePostEmpty');
+    const user = models.profileModel.getCurrentNameUser();
 
     btnShare.addEventListener('click', () => {
         const textAreaComentary = viewProfile.querySelector('#textAreaComentary').value;
@@ -28,7 +29,7 @@ export default (viewProfile) => {
         
         if(imageViewer.files[0] === undefined)
         {
-            createNewPublication({
+            models.publicationsModel.createNewPublication({
                 userId : user.uid,
                 content : textAreaComentary,
                 image: null,
@@ -45,7 +46,7 @@ export default (viewProfile) => {
             });
         } else {
             uploadImageUrl().then((url) => {
-                createNewPublication({
+                models.publicationsModel.createNewPublication({
                     userId : user.uid,
                     content : textAreaComentary,
                     image: url,
@@ -69,7 +70,7 @@ export default (viewProfile) => {
     });
 
     const stories = viewProfile.querySelector('.stories');
-    const dataPublications = getPublications();
+    const dataPublications = models.publicationsModel.getPublications();
     loadingPanel.classList.remove('clsLoadingHide');
     dataPublications.onSnapshot((collectionPost) => {
         loadingPanel.classList.add('clsLoadingHide');
@@ -101,7 +102,7 @@ export default (viewProfile) => {
             const metadata = {
                 contentType : file.type
             };
-            const imageAdd = getStorageRef().child(name).put(file, metadata);
+            const imageAdd = models.publicationsModel.getStorageRef().child(name).put(file, metadata);
             imageAdd.then(snapshot => snapshot.ref.getDownloadURL())
                 .then((url) => {
                     resolve(url);
