@@ -1,3 +1,4 @@
+@charset "UTF-8";
 #profile-container {
   flex-flow: column;
   background-size: cover;
@@ -10,9 +11,9 @@
   height: 200px;
   display: flex;
   margin-top: -2rem;
-  justify-content: center;
   background-size: cover;
-  background-image: url("https://storage.googleapis.com/md-links/portada1.jpg");
+  justify-content: center;
+  background-image: url("https://storage.googleapis.com/md-links/fondo.png");
 }
 
 #profile-container .profile-user-avatar .portada .user-img img {
@@ -22,7 +23,8 @@
   margin-top: 100px;
   border-radius: 50%;
   object-position: center;
-  border: 0.9375rem solid rgba(70, 68, 68, 0.308);
+  border: 0.9375rem solid rgba(22, 22, 22, 0.356);
+  box-shadow: 0.625rem 0.625rem 1.125rem 0.0625rem rgba(0, 0, 0, 0.75);
 }
 
 #profile-container .profile-user-avatar .user-img-info {
@@ -38,37 +40,27 @@
   display: none;
 }
 
-#profile-container .profile-user-avatar .user-img-info #file {
-  width: 20vh;
-  outline: none;
-  cursor: pointer;
-  color: whitesmoke;
-  text-align: center;
+#profile-container .profile-user-avatar .user-img-info #photoChng {
+  margin-left: -190px;
+  position: absolute;
+  background: #ce5b359f;
   border-radius: 1.5rem;
-  letter-spacing: 0.1875rem;
   font-family: "Poppins", sans-serif;
   border: 0.625rem solid rgba(0, 0, 0, 0.336);
-  background: #f078089f;
 }
 
-#profile-container .profile-user-avatar .user-img-info #changeBg {
-  width: 20vh;
-  height: 40px;
-  outline: none;
-  cursor: pointer;
-  text-align: center;
-  color: whitesmoke;
-  background: yellow;
+#profile-container .profile-user-avatar .user-img-info #labelChng {
+  margin-right: -20px;
+  background: rgba(24, 24, 24, 0.781);
+  position: absolute;
   border-radius: 1.5rem;
-  letter-spacing: 0.1875rem;
   font-family: "Poppins", sans-serif;
   border: 0.625rem solid rgba(0, 0, 0, 0.336);
-  background: rgba(255, 255, 0, 0.377);
 }
 
 #profile-container #profile-info {
   padding: 30px;
-  margin-top: 30px;
+  margin-top: 90px;
   color: whitesmoke;
   border-radius: 15px;
   background: rgba(0, 0, 0, 0.356);
@@ -145,20 +137,81 @@
   width: 20vh;
   outline: none;
   cursor: pointer;
-  margin-top: 60px;
+  margin-top: 17px;
   text-align: center;
   color: whitesmoke;
   border-radius: 1.5rem;
-  background: #f078089f;
-  letter-spacing: 0.1875rem;
+  background: #ce5b359f;
   font-family: "Poppins", sans-serif;
   border: 0.625rem solid rgba(0, 0, 0, 0.336);
 }
 
-#password:hover,
+#labelChng:hover {
+  color: #ce5c35;
+  text-shadow: 0.125rem 0.125rem 0.5rem #ff7300;
+}
+
+#photoChng:hover {
+  color: #050505c7;
+  text-shadow: 0.125rem 0.125rem 0.5rem #eb4310;
+}
+
+.regresar:hover {
+  color: #f55626;
+  background: rgba(0, 0, 0, 0.733);
+  text-shadow: 0.125rem 0.125rem 0.5rem #ff7403;
+}
+
+.password2:hover,
 .inputName:hover {
-  border: 1px solid #e05840;
-  box-shadow: 0rem -0.0063rem 0.4375rem -0.0063rem #e74f08;
+  border: 1px solid #f83a18;
+  box-shadow: 0rem -0.0063rem 0.4375rem -0.0063rem #f39367;
+}
+
+input[type=”file”]#changeBg {
+  opacity: 0;
+  z-index: -1;
+  width: 0.1px;
+  height: 0.1px;
+  overflow: hidden;
+  position: absolute;
+}
+
+label[for="changeBg"] {
+  color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+  font-weight: 600;
+  width: fit-content;
+  text-align: center;
+  transition: all .5s;
+  display: inline-block;
+  text-transform: uppercase;
+  background-color: #106BA0;
+  padding: 15px 40px !important;
+}
+
+input[type=”file”]#file {
+  opacity: 0;
+  z-index: -1;
+  width: 0.1px;
+  height: 0.1px;
+  overflow: hidden;
+  position: absolute;
+}
+
+label[for="file"] {
+  color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+  font-weight: 600;
+  width: fit-content;
+  text-align: center;
+  transition: all .5s;
+  display: inline-block;
+  text-transform: uppercase;
+  background-color: black;
+  padding: 15px 40px !important;
 }
 
 header {
@@ -206,7 +259,7 @@ h1 img span {
   color: whitesmoke;
   font-size: 0.9375rem;
   text-decoration: none;
-  font-family: "Roboto";
+  font-family: "Poppins", sans-serif;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
@@ -219,7 +272,7 @@ h1 img span {
 .sectionSubTitle h2 {
   color: whitesmoke;
   font-size: 1.875rem;
-  font-family: "Roboto";
+  font-family: "Poppins", sans-serif;
   letter-spacing: 0.125rem;
 }
 
@@ -309,11 +362,12 @@ h1 img span {
 
 .signIn {
   display: flex;
-  color: whitesmoke;
+  color: orange;
   font-size: 0.9375rem;
   margin-top: 1.125rem;
   justify-content: center;
-  font-family: "Roboto";
+  letter-spacing: 0.1875rem;
+  font-family: "Poppins", sans-serif;
 }
 
 .sectionNetworks {
@@ -361,12 +415,16 @@ h1 img span {
   text-align: center;
   border-radius: 3.4375rem;
   letter-spacing: 0.1875rem;
-  font: bolder 0.9375rem Roboto;
   background: linear-gradient(82.14deg, #ec9443 -3.88%, #c85032 64.89%);
 }
 
 .loginButton button:hover {
   background: linear-gradient(141deg, #c85032 33%, #ec9443 64%);
+}
+
+.disabled-button {
+  pointer-events: none;
+  opacity: 0.4;
 }
 
 .loginButtonSon:after,
@@ -396,11 +454,12 @@ h1 img span {
 
 p {
   display: flex;
-  color: grey;
   font-size: 1rem;
   margin-top: 4.5rem;
+  font-weight: bolder;
   justify-content: center;
-  font-family: "Roboto";
+  font-family: "Poppins", sans-serif;
+  color: rgba(32, 32, 32, 0.959);
 }
 
 p span a {
@@ -423,6 +482,7 @@ p span a:hover {
   justify-content: center;
   overflow: hidden;
   position: relative;
+  padding: 9% 0% 26%;
 }
 
 .sectionSon #containerLogIn h1 {
@@ -452,11 +512,6 @@ p span a:hover {
   background: radial-gradient(50% 50% at 50% 50%, #6c4237 76.04%, #c03510 100%);
 }
 
-.disabled-button {
-  pointer-events: none;
-  opacity: 0.4;
-}
-
 .forgotPass {
   height: 99.9vh;
   color: white;
@@ -478,7 +533,12 @@ p span a:hover {
   letter-spacing: 0.1875rem;
   font: bolder 1.3rem Roboto;
   border: 0.625rem solid rgba(0, 0, 0, 0.336);
+  box-shadow: 0.625rem 0.625rem 1rem -0.0625rem rgba(0, 0, 0, 0.75);
   background: linear-gradient(82.14deg, #ec9443 -3.88%, #c85032 64.89%);
+}
+
+.forgotPass button:hover {
+  background: linear-gradient(141deg, #c85032 33%, #ec9443 64%);
 }
 
 .forgotPass button:hover {
@@ -486,15 +546,14 @@ p span a:hover {
   background: linear-gradient(141deg, #c85032 33%, #ec9443 64%);
 }
 
-#forgotPass {
-  height: 95vh;
+.forgotPass #forgotPass {
   height: 100vh;
   padding-top: 0px;
   border-radius: 0.9375rem;
   background: rgba(0, 0, 0, 0.5);
 }
 
-.key {
+.forgotPass #forgotPass .key {
   height: 200px;
   position: absolute;
   margin-top: -169px;
@@ -561,25 +620,6 @@ p span a:hover {
 }
 
 @media (min-width: 1024px) and (min-height: 625px) and (max-height: 1024px) {
-  body {
-    margin: 0px;
-    background-image: url("https://storage.googleapis.com/md-links/capital-back.png");
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-color: none;
-    overflow: hidden;
-  }
-  body:before {
-    content: "";
-    background-color: #000;
-    opacity: 1;
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 40.1%, #000000 97.4%), linear-gradient(0deg, rgba(0, 0, 0, 0.08), rgba(0, 0, 0, 0.08));
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    z-index: -1;
-  }
   #container div .log_sign-header {
     display: flex;
     flex-direction: row;
@@ -649,36 +689,40 @@ p span a:hover {
   #container div .profile-header .logo-principal img {
     width: 60%;
   }
-  #container div .All-sections {
+  #container div .All-sectionsb {
     min-height: 87vh;
+    background-image: url("https://storage.googleapis.com/md-links/capital-back.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
   }
-  #container div .All-sections .sectionFather .sectionSon {
-    padding: 4.5% 0% 6.5%;
+  #container div .All-sectionsb .sectionFather .sectionSon {
+    padding: 10.5% 0% 6%;
+    z-index: 2;
   }
-  #container div .All-sections .sectionFather .sectionSon .logo-principalMobile {
+  #container div .All-sectionsb .sectionFather .sectionSon .logo-principalMobile {
     margin: 0px;
   }
-  #container div .All-sections .sectionFather .sectionSon .logo-principalMobile img {
+  #container div .All-sectionsb .sectionFather .sectionSon .logo-principalMobile img {
     display: none;
   }
-  #container div .All-sections .sectionFather .sectionSon #circle1 {
+  #container div .All-sectionsb .sectionFather .sectionSon #circle1 {
     width: 32vw;
     height: 37vw;
-    top: 3%;
+    top: 14%;
     left: 62.5%;
   }
-  #container div .All-sections .sectionFather .sectionSon #circle2 {
+  #container div .All-sectionsb .sectionFather .sectionSon #circle2 {
     width: 36vw;
     height: 42vw;
     border-radius: 50%;
-    top: 2%;
+    top: 13%;
     right: 5%;
   }
-  #container div .All-sections .sectionFather .sectionSon #containerLogIn {
+  #container div .All-sectionsb .sectionFather .sectionSon #containerLogIn {
     margin: 0% 67.6% 0%;
     width: 22%;
   }
-  #container div .All-sections .sectionFather .sectionSon #containerLogIn h1 {
+  #container div .All-sectionsb .sectionFather .sectionSon #containerLogIn h1 {
     display: block;
     margin: 0% 32% 6%;
     padding: 0px;
@@ -686,31 +730,34 @@ p span a:hover {
     font-family: Roboto;
     font-weight: bold;
   }
-  #container div .All-sections .sectionFather .sectionSon #containerLogIn .sectionSubTitle {
+  #container div .All-sectionsb .sectionFather .sectionSon #containerLogIn .sectionSubTitle {
     padding-bottom: 1rem;
   }
-  #container div .All-sections .sectionFather .sectionSon #containerLogIn .sectionSubTitle .LogIn {
+  #container div .All-sectionsb .sectionFather .sectionSon #containerLogIn .sectionSubTitle .LogIn {
     font-size: 1.2rem;
   }
-  #container div .All-sections .sectionFather .sectionSon #containerLogIn .sectionSubTitle .SignUp {
+  #container div .All-sectionsb .sectionFather .sectionSon #containerLogIn .sectionSubTitle .SignUp {
     font-size: 2rem;
   }
-  #container div .All-sections .sectionFather .sectionSon #containerLogIn .sectionSubTitle a {
+  #container div .All-sectionsb .sectionFather .sectionSon #containerLogIn .sectionSubTitle a {
     font-size: 0.85rem;
   }
-  #container div .All-sections .sectionFather .sectionSon #containerLogIn .sectionNetworks img {
+  #container div .All-sectionsb .sectionFather .sectionSon #containerLogIn .sectionNetworks img {
     width: 50px;
     height: 50px;
   }
-  #container div .All-sections .sectionFather .sectionSon #containerLogIn .container {
+  #container div .All-sectionsb .sectionFather .sectionSon #containerLogIn .container {
     padding: 1rem 1rem 2rem;
     width: 107%;
   }
-  #container div .All-sections .sectionFather .sectionSon #containerLogIn .signIn {
+  #container div .All-sectionsb .sectionFather .sectionSon #containerLogIn .signIn {
     margin-top: 0px;
   }
-  #container div .All-sections .sectionFather .sectionSon #containerLogIn p {
-    color: whitesmoke;
+  #container div .All-sectionsb .sectionFather .sectionSon #containerLogIn p {
+    color: black;
+    font-weight: bolder;
+    font-size: 15px;
+    text-shadow: 0.125rem 0.125rem 0.5rem white;
   }
 }
 
@@ -719,11 +766,10 @@ p span a:hover {
   text-transform: capitalize;
 }
 
-body {
-  margin: 0rem;
-  overflow-y: scroll;
+.All-sections {
+  background-size: cover;
   background-attachment: fixed;
-  background-image: url("../../../../assets/fodoProfile.png");
+  background-image: url("https://storage.googleapis.com/md-links/bg.png");
 }
 
 .container-Publications-Profile {
@@ -751,16 +797,14 @@ body {
   border-radius: 11px;
 }
 
-.container-Publications-Profile .sectionProfile .coverPage .imgMenu {
+.container-Publications-Profile .sectionProfile .coverPage a .imgMenu {
   width: 30px;
-  padding: 4px;
   height: 30px;
-  margin-top: 4px;
+  margin-left: 90%;
+  margin-top: 0.8%;
+  padding: 0.25rem;
   border-radius: 50%;
-  margin-left: -35px;
-  position: absolute;
   background: rgba(59, 58, 58, 0.575);
-  border-radius: 1px solid black;
   box-shadow: 0.625rem 0.625rem 1rem -0.0625rem rgba(0, 0, 0, 0.75);
 }
 
@@ -948,36 +992,13 @@ body {
   width: 20px;
   height: 20px;
   border: none;
+  outline: none;
   padding: 0.25rem;
   border-radius: 50%;
   position: absolute;
   margin-top: 0.4375rem;
   margin-left: -4.125rem;
   background: rgba(115, 238, 141, 0.918);
-}
-
-.sendEmail {
-  width: 80px;
-  margin: auto;
-  height: 40px;
-  display: flex;
-  outline: none;
-  color: white;
-  cursor: pointer;
-  font-size: 0.75rem;
-  text-align: center;
-  align-items: center;
-  font-weight: bolder;
-  border-radius: 4rem;
-  justify-content: center;
-  font-family: "Poppins", sans-serif;
-  border: 5px solid rgba(0, 0, 0, 0.322);
-  box-shadow: 0.625rem 0.625rem 1rem -0.0625rem rgba(0, 0, 0, 0.75);
-  background: linear-gradient(82.14deg, #ec9443 -3.88%, #c85032 64.89%);
-}
-
-.sendEmail:hover {
-  background: linear-gradient(141deg, #c85032 33%, #ec9443 64%);
 }
 
 .logOut:hover {
@@ -999,28 +1020,43 @@ body {
   text-transform: capitalize;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1024px) and (min-height: 625px) and (max-height: 1024px) {
   body {
     background-size: 100% 100%;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-color: none;
-    overflow-y: scroll;
+    overflow-y: auto;
+  }
+  header {
+    position: fixed;
+    width: 100%;
+    z-index: 3;
+  }
+  .All-sections {
+    background-image: url("../../../../assets/fodoProfile.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
   }
   .container-Publications-Profile {
     display: flex;
     align-content: center;
     flex-direction: row;
-    padding: 2rem 5rem 0 5rem;
+    padding: 3.5rem 4rem 5rem;
+    justify-content: space-between;
   }
   .container-Publications-Profile .sectionProfile {
-    width: 100%;
-    height: 16rem;
-    flex-basis: 30%;
+    width: 39%;
+    padding: 0%;
+    height: 20rem;
+    flex-basis: auto;
+    position: fixed;
+    margin-top: 4rem;
   }
   .container-Publications-Profile .sectionProfile .coverPage {
     width: 100%;
-    height: 10rem;
+    height: 13.5rem;
     background: #ce5c35;
   }
   .container-Publications-Profile .sectionProfile .coverPage img {
@@ -1033,25 +1069,47 @@ body {
     top: -4rem;
   }
   .container-Publications-Profile .sectionPublications {
-    flex-grow: 2;
-    margin-left: 1rem;
+    margin-top: 4rem;
+    margin-left: 40rem;
     padding: 0;
+    width: 55%;
+    justify-content: unset;
+  }
+  .container-Publications-Profile .sectionPublications .containerNewPublications {
+    top: 0px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+    border-radius: 12px;
+  }
+  .container-Publications-Profile .sectionPublications .containerNewPublications .textAreaPublication {
+    background: white;
   }
   .container-Publications-Profile .sectionPublications .containerNewPublications .commentary {
-    padding: 0 0 0 3rem;
+    padding: 0px 1.5rem;
+    border: 0px;
+    height: 2.5rem;
+    display: flex;
+    font-size: 0.8rem;
+    font-weight: 600;
+    align-items: center;
+    color: #606060;
+    font-family: Roboto;
   }
   .container-Publications-Profile .sectionPublications .containerNewPublications textarea {
-    height: 10rem;
+    height: 7rem;
   }
   .container-Publications-Profile .sectionPublications .containerNewPublications .optionsToPost {
-    padding: 0.5rem;
+    margin-bottom: 0px;
+    padding: 0.3rem 2rem 0.3rem 1rem;
+    background: white;
   }
   .container-Publications-Profile .sectionPublications .containerNewPublications .optionsToPost .btnToPost {
     border-radius: 4rem;
     line-height: 2;
-    padding: 6px;
+    padding: 4px;
+    width: 20%;
   }
   .container-Publications-Profile .sectionPublications .stories .authorPublication {
+    margin-top: 1.5rem;
     padding: 0 3rem 0 3rem;
   }
   .container-Publications-Profile .sectionPublications .stories .authorPublication .detailsAuthor img {
@@ -1063,7 +1121,13 @@ body {
   }
   .container-Publications-Profile .sectionPublications .stories .content {
     height: 10rem;
-    background: #FFF6EF;
+    background: #fff6ef;
+    margin: 1rem auto 0px;
+    border-radius: 6px;
+    width: 97%;
+  }
+  .container-Publications-Profile .sectionPublications .stories .interactions {
+    width: 97%;
   }
 }
 

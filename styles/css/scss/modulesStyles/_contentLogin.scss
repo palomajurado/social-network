@@ -6,7 +6,6 @@ header {
 .All-sections {
   min-height: 100vh;
   justify-content: center;
-  // padding: 0 15px 0 15px;
 }
 
 .logo-principalMobile {
@@ -45,7 +44,7 @@ h1 {
     color: $colorWhite;
     font-size: 0.9375rem;
     text-decoration: none;
-    font-family: $FFprimary;
+    font-family: $FFsecondary;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   }
 
@@ -58,7 +57,7 @@ h1 {
   h2 {
     color: $colorWhite;
     font-size: 1.875rem;
-    font-family: $FFprimary;
+    font-family: $FFsecondary;
     letter-spacing: 0.125rem;
   }
 }
@@ -151,11 +150,12 @@ h1 {
 // ------------------------ TEXTO antes DE GOOGLE Y FB
 .signIn {
   display: flex;
-  color: $colorWhite;
+  color: orange;
   font-size: 0.9375rem;
   margin-top: 1.125rem;
   justify-content: center;
-  font-family: $FFprimary;
+  letter-spacing: 0.1875rem;
+  font-family: $FFsecondary;
 }
 
 // ------------------------ Buttons DE GOOGLE Y FB
@@ -208,13 +208,17 @@ h1 {
     text-align: center;
     border-radius: 3.4375rem;
     letter-spacing: 0.1875rem;
-    font: bolder 0.9375rem Roboto;
     background: linear-gradient(82.14deg, #ec9443 -3.88%, #c85032 64.89%);
   }
 
   button:hover {
     background: linear-gradient(141deg, #c85032 33%, #ec9443 64%);
   }
+}
+
+.disabled-button {
+  pointer-events: none;
+  opacity: 0.4;
 }
 
 .loginButtonSon:after,
@@ -246,11 +250,12 @@ h1 {
 // ------------------------ TEXTO de enlace al SIGN up
 p {
   display: flex;
-  color: grey;
   font-size: 1rem;
   margin-top: 4.5rem;
+  font-weight: bolder;
   justify-content: center;
-  font-family: $FFprimary;
+  font-family: $FFsecondary;
+  color: rgba(32, 32, 32, 0.959);
 
   span a {
     font-size: 1rem;
@@ -273,6 +278,7 @@ p {
   justify-content: center;
   overflow: hidden;
   position: relative;
+  padding: 9% 0% 26%;
 
   #containerLogIn {
     h1 {
@@ -309,11 +315,7 @@ p {
   background: radial-gradient(50% 50% at 50% 50%, #6c4237 76.04%, #c03510 100%);
 }
 
-.disabled-button {
-  pointer-events: none;
-  opacity: 0.4;
-}
-
+// --------------------------------- Olvido su contrasena?
 .forgotPass {
   height: 99.9vh;
   color: white;
@@ -334,29 +336,33 @@ p {
     letter-spacing: 0.1875rem;
     font: bolder 1.3rem Roboto;
     border: 0.625rem solid rgba(0, 0, 0, 0.336);
+    box-shadow: 0.625rem 0.625rem 1rem -0.0625rem rgba(0, 0, 0, 0.75);
     background: linear-gradient(82.14deg, #ec9443 -3.88%, #c85032 64.89%)
+  }
+
+  button:hover {
+    background: linear-gradient(141deg, #c85032 33%, #ec9443 64%);
   }
 
   button:hover {
     color: yellow;
     background: linear-gradient(141deg, #c85032 33%, #ec9443 64%);
   }
-}
 
-#forgotPass {
-  height: 95vh;
-  height: 100vh;
-  padding-top: 0px;
-  border-radius: 0.9375rem;
-  background: rgba(0, 0, 0, 0.5);
-}
+  #forgotPass {
+    height: 100vh;
+    padding-top: 0px;
+    border-radius: 0.9375rem;
+    background: rgba(0, 0, 0, 0.5);
 
-.key {
-  height: 200px;
-  position: absolute;
-  margin-top: -169px;
-  border-radius: 50%;
-  box-shadow: 3.3125rem 3.5625rem 3.125rem -1.4375rem rgba(0, 0, 0, 0.29);
+    .key {
+      height: 200px;
+      position: absolute;
+      margin-top: -169px;
+      border-radius: 50%;
+      box-shadow: 3.3125rem 3.5625rem 3.125rem -1.4375rem rgba(0, 0, 0, 0.29);
+    }
+  }
 }
 
 // --------------------------------- 404 notFound

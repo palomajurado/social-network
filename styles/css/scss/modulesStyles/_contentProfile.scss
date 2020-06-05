@@ -1,283 +1,261 @@
-body {
-    margin: 0rem;
-    overflow-y: scroll;
-    background-attachment: fixed;
-    background-image: url("../../../../assets/fodoProfile.png");
+.All-sections {
+  // flex-flow: column;
+  background-size: cover;
+  background-attachment: fixed;
+  background-image: url("https://storage.googleapis.com/md-links/bg.png");
 }
 
 .container-Publications-Profile {
+  display: flex;
+  align-content: center;
+  flex-direction: column;
+  justify-content: center;
+
+  .sectionProfile {
+    border-radius: $borderContent;
+    background: rgba(234, 226, 226, 0.473);
+
+    .coverPage {
+      width: 100%;
+      height: 10em;
+      background: $colorOrng;
+      border-radius: $borderContent;
+
+      img {
+        width: 100%;
+        height: 100%;
+        border-radius: $borderContent;
+      }
+
+      a {
+
+        .imgMenu {
+          width: 30px;
+          height: 30px;
+          margin-left: 90%;
+          margin-top: 0.8%;
+          padding: 0.25rem;
+          border-radius: 50%;
+          background: rgba(59, 58, 58, 0.575);
+          box-shadow: 0.625rem 0.625rem 1rem -0.0625rem rgba(0, 0, 0, 0.75);
+        }
+      }
+
+
+      .imgMenu:hover {
+        border: 1px solid rgb(224, 88, 64);
+        box-shadow: 0rem -0.0063rem 0.4375rem -0.0063rem rgb(231, 79, 8);
+      }
+    }
+
+    .profilePicture {
+      display: flex;
+      align-items: center;
+      margin-bottom: -3rem;
+      flex-direction: column;
+      justify-content: center;
+
+      a {
+        position: absolute;
+        z-index: 100;
+      }
+
+      #userPhoto {
+        top: -4rem;
+        width: 8rem;
+        height: 8rem;
+        object-fit: cover;
+        border-radius: 50%;
+        position: relative;
+        object-position: center;
+        border: 0.9375rem solid rgba(126, 124, 124, 0.308);
+      }
+
+      #userPhoto:hover {
+        background: #ec954379;
+      }
+
+      h5 {
+        top: -3.5rem;
+        position: relative;
+        font-weight: bolder;
+        text-transform: capitalize;
+      }
+    }
+
+  }
+
+  .sectionPublications {
     display: flex;
+    padding: 0.5rem;
     align-content: center;
     flex-direction: column;
     justify-content: center;
 
-    .sectionProfile {
-        border-radius: $borderContent;
-        background: rgba(234, 226, 226, 0.473);
+    .containerNewPublications {
+      display: flex;
+      align-items: flex-end;
+      margin-bottom: 0.5rem;
+      flex-direction: column;
 
-        .coverPage {
-            width: 100%;
-            height: 10em;
-            background: $colorOrng;
-            border-radius: $borderContent;
+      .commentary {
+        width: 100%;
+        height: 2.3rem;
+        background: #EAE2E2;
+        border-radius: 10px 10px 0 0;
+        border: solid 2px rgba(255, 253, 253, 0.664);
+      }
 
-            img {
-                width: 100%;
-                height: 100%;
-                border-radius: $borderContent;
-            }
+      textarea {
+        width: 100%;
+        height: 5rem;
+        padding: 1rem;
+        background: #FFF6EF;
+        text-transform: capitalize;
+        font-family: $FFsecondary;
+        border: solid 0.125rem rgba(255, 253, 253, 0.664);
+      }
 
-            .imgMenu {
-                width: 30px;
-                padding: 4px;
-                height: 30px;
-                margin-top: 4px;
-                border-radius: 50%;
-                margin-left: -35px;
-                position: absolute;
-                background: rgba(59, 58, 58, 0.575);
-                border-radius: 1px solid black;
-                box-shadow: 0.625rem 0.625rem 1rem -0.0625rem rgba(0, 0, 0, 0.75);
-            }
+      #textAreaComentary::-webkit-input-placeholder {
+        color: gray;
+        font-size: 1em;
+        font-family: $FFsecondary;
+      }
 
-            .imgMenu:hover {
-                border: 1px solid rgb(224, 88, 64);
-                box-shadow: 0rem -0.0063rem 0.4375rem -0.0063rem rgb(231, 79, 8);
-            }
+      .optionsToPost {
+        width: 100%;
+        display: flex;
+        padding: 0.2rem;
+        align-items: center;
+        margin-bottom: 0.5rem;
+        background: #FFF6EF;
+        justify-content: space-between;
+        border-radius: 0 0 0.625rem 0.625rem;
+
+        img {
+          width: 30px;
+          height: 30px;
+          cursor: pointer;
         }
 
-        .profilePicture {
-            display: flex;
-            align-items: center;
-            margin-bottom: -3rem;
-            flex-direction: column;
-            justify-content: center;
-
-            a {
-                position: absolute;
-                z-index: 100;
-            }
-
-            #userPhoto {
-                top: -4rem;
-                width: 8rem;
-                height: 8rem;
-                object-fit: cover;
-                border-radius: 50%;
-                position: relative;
-                object-position: center;
-                border: 0.9375rem solid rgba(126, 124, 124, 0.308);
-            }
-
-            #userPhoto:hover {
-                background: #ec954379;
-            }
-
-            h5 {
-                top: -3.5rem;
-                position: relative;
-                font-weight: bolder;
-                text-transform: capitalize;
-            }
+        .btnToPost {
+          width: 30%;
+          height: 100%;
+          border: none;
+          outline: none;
+          cursor: pointer;
+          padding: 0.3125rem;
+          color: $colorWhite;
+          text-align: center;
+          border-radius: 3.4375rem;
+          font: bolder 0.9375rem Roboto;
+          border: 5px solid rgba(0, 0, 0, 0.322);
+          box-shadow: 0.625rem 0.625rem 1rem -0.0625rem rgba(0, 0, 0, 0.75);
+          background: linear-gradient(82.14deg, #494541 -3.88%, #c85032 64.89%);
         }
+
+        .btnToPost:hover {
+          background: linear-gradient(141deg, #c85032 33%, #ec9443 64%);
+        }
+      }
 
     }
 
-    .sectionPublications {
+    .stories {
+      display: flex;
+      align-content: center;
+      flex-direction: column;
+      justify-content: center;
+      border-radius: $borderContent;
+      background: rgba(234, 226, 226, 0.473);
+
+      .authorPublication {
+        width: 100%;
+        height: 3rem;
         display: flex;
         padding: 0.5rem;
-        align-content: center;
-        flex-direction: column;
-        justify-content: center;
+        align-items: center;
+        background: #EAE2E2;
+        justify-content: space-between;
+        border-radius: 0.625rem 0.625rem 0 0;
 
-        .containerNewPublications {
-            display: flex;
-            align-items: flex-end;
-            margin-bottom: 0.5rem;
-            flex-direction: column;
+        .detailsAuthor {
+          display: flex;
+          align-items: center;
 
-            .commentary {
-                width: 100%;
-                height: 2.3rem;
-                background: #EAE2E2;
-                border-radius: 10px 10px 0 0;
-                border: solid 2px rgba(255, 253, 253, 0.664);
-            }
-
-            textarea {
-                width: 100%;
-                height: 5rem;
-                padding: 1rem;
-                background: #FFF6EF;
-                text-transform: capitalize;
-                font-family: $FFsecondary;
-                border: solid 0.125rem rgba(255, 253, 253, 0.664);
-            }
-
-            #textAreaComentary::-webkit-input-placeholder {
-                color: gray;
-                font-size: 1em;
-                font-family: $FFsecondary;
-            }
-
-            .optionsToPost {
-                width: 100%;
-                display: flex;
-                padding: 0.2rem;
-                align-items: center;
-                margin-bottom: 0.5rem;
-                background: #FFF6EF;
-                justify-content: space-between;
-                border-radius: 0 0 0.625rem 0.625rem;
-
-                img {
-                    width: 30px;
-                    height: 30px;
-                    cursor: pointer;
-                }
-
-                .btnToPost {
-                    width: 30%;
-                    height: 100%;
-                    border: none;
-                    outline: none;
-                    cursor: pointer;
-                    padding: 0.3125rem;
-                    color: $colorWhite;
-                    text-align: center;
-                    border-radius: 3.4375rem;
-                    font: bolder 0.9375rem Roboto;
-                    border: 5px solid rgba(0, 0, 0, 0.322);
-                    box-shadow: 0.625rem 0.625rem 1rem -0.0625rem rgba(0, 0, 0, 0.75);
-                    background: linear-gradient(82.14deg, #494541 -3.88%, #c85032 64.89%);
-                }
-
-                .btnToPost:hover {
-                    background: linear-gradient(141deg, #c85032 33%, #ec9443 64%);
-                }
-            }
-
+          img {
+            width: 2rem;
+            height: 2rem;
+            border-radius: 50%;
+            border: solid rgb(243, 234, 234);
+          }
         }
 
-        .stories {
-            display: flex;
-            align-content: center;
-            flex-direction: column;
-            justify-content: center;
-            border-radius: $borderContent;
-            background: rgba(234, 226, 226, 0.473);
-
-            .authorPublication {
-                width: 100%;
-                height: 3rem;
-                display: flex;
-                padding: 0.5rem;
-                align-items: center;
-                background: #EAE2E2;
-                justify-content: space-between;
-                border-radius: 0.625rem 0.625rem 0 0;
-
-                .detailsAuthor {
-                    display: flex;
-                    align-items: center;
-
-                    img {
-                        width: 2rem;
-                        height: 2rem;
-                        border-radius: 50%;
-                        border: solid rgb(243, 234, 234);
-                    }
-                }
-
-                .toogleMenu {
-                    cursor: pointer;
-                }
-            }
-
-            .content {
-                width: 90%;
-                height: 10rem;
-                padding: 0.5rem;
-                margin: 0.5rem auto;
-                background: #FFF6EF;
-                border-radius: $borderContent;
-            }
-
-            .interactions {
-                width: 90%;
-                height: 3rem;
-                display: flex;
-                margin: 0.5rem auto;
-                align-items: center;
-                background: #FFFFFF;
-                padding: 0 0.625rem 0 0.625rem;
-                border-radius: 0 0 0.625rem 0.625rem;
-
-                img {
-                    width: 30px;
-                    height: 30px;
-                    cursor: pointer;
-                    padding: 0.1875rem;
-                    margin-left: 0.3125rem;
-
-                }
-            }
+        .toogleMenu {
+          cursor: pointer;
         }
+      }
+
+      .content {
+        width: 90%;
+        height: 10rem;
+        padding: 0.5rem;
+        margin: 0.5rem auto;
+        background: #FFF6EF;
+        border-radius: $borderContent;
+      }
+
+      .interactions {
+        width: 90%;
+        height: 3rem;
+        display: flex;
+        margin: 0.5rem auto;
+        align-items: center;
+        background: #FFFFFF;
+        padding: 0 0.625rem 0 0.625rem;
+        border-radius: 0 0 0.625rem 0.625rem;
+
+        img {
+          width: 30px;
+          height: 30px;
+          cursor: pointer;
+          padding: 0.1875rem;
+          margin-left: 0.3125rem;
+
+        }
+      }
     }
+  }
 }
 
 .logOut {
-    width: 20px;
-    height: 20px;
-    border: none;
-    padding: 0.25rem;
-    border-radius: 50%;
-    position: absolute;
-    margin-top: 0.4375rem;
-    margin-left: -4.125rem;
-    background: rgba(115, 238, 141, 0.918);
-}
-
-
-.sendEmail {
-    width: 80px;
-    margin: auto;
-    height: 40px;
-    display: flex;
-    outline: none;
-    color: white;
-    cursor: pointer;
-    font-size: 0.75rem;
-    text-align: center;
-    align-items: center;
-    font-weight: bolder;
-    border-radius: 4rem;
-    justify-content: center;
-    font-family: $FFsecondary;
-    border: 5px solid rgba(0, 0, 0, 0.322);
-    box-shadow: 0.625rem 0.625rem 1rem -0.0625rem rgba(0, 0, 0, 0.75);
-    background: linear-gradient(82.14deg, #ec9443 -3.88%, #c85032 64.89%);
-}
-
-.sendEmail:hover {
-    background: linear-gradient(141deg, #c85032 33%, #ec9443 64%);
+  width: 20px;
+  height: 20px;
+  border: none;
+  outline: none;
+  padding: 0.25rem;
+  border-radius: 50%;
+  position: absolute;
+  margin-top: 0.4375rem;
+  margin-left: -4.125rem;
+  background: rgba(115, 238, 141, 0.918);
 }
 
 .logOut:hover {
-    background: linear-gradient(141deg, #c85032 33%, #ec9443 64%);
+  background: linear-gradient(141deg, #c85032 33%, #ec9443 64%);
 }
 
 .displayUserName {
-    display: flex;
-    color: #ce5c35;
-    font-size: 1.25rem;
-    font-weight: bolder;
-    justify-content: center;
-    margin-bottom: 0.9375rem;
-    text-transform: capitalize;
-    text-decoration-line: underline;
+  display: flex;
+  color: #ce5c35;
+  font-size: 1.25rem;
+  font-weight: bolder;
+  justify-content: center;
+  margin-bottom: 0.9375rem;
+  text-transform: capitalize;
+  text-decoration-line: underline;
 }
 
 #name {
-    text-transform: capitalize;
+  text-transform: capitalize;
 }

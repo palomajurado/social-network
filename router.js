@@ -3,10 +3,9 @@ import { controllers } from "./controllers/index.controller.js";
 
 const changeView = (route) => {
   const container = document.querySelector("#container");
-  container.innerHTML = "";
-  const routesWithoutAuth = ["#/login", "#/register"]; // qu rutas no necesitan autorizacion las definimos aqui
+  const routesWithoutAuth = ["#/login", "#/register", "#/recovery-pass"];
 
-  let next; // guardaremos en un let a los controladores para ejecutarlos despues
+  let next;
   switch (route) {
     case "":
     case "#/logIn":
@@ -35,11 +34,11 @@ const changeView = (route) => {
     }
   }
 
-  // Midleware: Es una capa intermedia
+  // Midleware: Es una capa intermedia : falta asegurar!!
   auth.onAuthStateChanged((user) => {
     const noAuthNedeed = routesWithoutAuth.find((route) => route === route);
+    container.innerHTML = "";
     if (user) {
-      // if (noAuthNedeed) window.location.hash = "#/logIn";
       container.appendChild(next());
     } else if (noAuthNedeed) {
       container.appendChild(next());

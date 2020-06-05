@@ -1,30 +1,27 @@
 import { views } from "../view/index.js";
 import { models } from "../model/index.model.js";
 
-// tomamos la vista
 export default (viewProfile) => {
-  // le estamos pasando un div de la vsta profile
-  const btnShare = viewProfile.querySelector("#btnShare");
   const user = models.profileModel.getCurrentNameUser();
+  const btnShare = viewProfile.querySelector("#btnShare");
+  const textAreaComentary = viewProfile.querySelector("#textAreaComentary");
 
   btnShare.addEventListener("click", () => {
-    const textAreaComentary = viewProfile.querySelector("#textAreaComentary")
-      .value;
     models.publicationsModel
       .createNewPublication({
-        content: textAreaComentary,
-        userId: user.uid, // este valor es el ID real de un usuario para identificarlos en firebase, y asignarle nombre a cada quien que comente
-        punctuation: 0, //
+        content: textAreaComentary.value,
+        userId: user.uid, // ID unico de user
+        punctuation: 0,
       })
       .then(() => (viewProfile.querySelector("#textAreaComentary").value = "")) // limpia textarea
       .catch((err) => console.log(err));
   });
 
-  const dataPublications = models.publicationsModel.getPublications();
   const stories = viewProfile.querySelector(".stories");
+  const dataPublications = models.publicationsModel.getPublications();
+
   // snapchot: cuando cambie algo quiero hacer lo que este dentro de esta funcion
   dataPublications.onSnapshot((collectionPost) => {
-    // que es?
     stories.innerHTML = ""; // limpio la lista de publicaciones que ya se muestran en el html
     collectionPost.forEach((post) => {
       // y recorro las nuevas publicaciones uqe ya han llegado

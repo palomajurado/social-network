@@ -3,10 +3,11 @@ import { models } from "../model/index.model.js";
 
 export default () => {
   const view = views.signUp();
+  const email = view.querySelector("#email");
+  const password = view.querySelector("#lastItem");
   const signUpBtn = view.querySelector("#btnSignUp");
-  const password = view.querySelector("#password");
-  const confirmPassword = view.querySelector("#confirmPassword");
   const messageResult = view.querySelector("#messageResult");
+  const confirmPassword = view.querySelector("#confirmPassword");
 
   confirmPassword.addEventListener("keyup", (e) => {
     e.preventDefault();
@@ -19,32 +20,25 @@ export default () => {
       buttonRemoveClass.classList.remove("disabled-button");
     }
   });
-  signUpBtn.addEventListener("click", () => {
-    const email = view.querySelector("#email").value;
-    const name = view.querySelector("#name").value;
-    const passwordAuth = view.querySelector(".passwordAuth").value;
 
-    let messageElm = view.querySelector("#messageResult");
+  signUpBtn.addEventListener("click", () => {
+    const name = view.querySelector("#name").value;
     models.signUpModel
-      .signUpEmailPassword(email, passwordAuth)
+      .signUpEmailPassword(email.value, password.value)
       .then(() => models.signUpModel.updateDisplayName(name))
       .then(() => {
-        console.log("funciono");
-
-        messageElm.innerHTML = "Registro exitoso: redireccionando";
+        messageResult.innerHTML = "Registro exitoso: redireccionando";
         setTimeout(() => (window.location.hash = "#/"), 1000);
       })
       .catch((error) => {
-        console.log(error);
-
         let message = "";
         if (error.code === "auth/invalid-email")
-          // falta colocar mensajito con setitiemout
           message = "Ingrese un correo válido";
-        else if (error.code === "auth/weak-password") {
-          message = "Contraseña débil, mínimo 6 carácteres"; // falta colocar mensajito con setitiemout
-        }
-        setTimeout(() => (messageElm.innerHTML = message), 1000);
+        else if (error.code === "auth/weak-password")
+          message = "Contraseña débil, mínimo 6 carácteres";
+        else if (error.code === "auth/email-already-in-use")
+          message = "Usted ya esta registrado";
+        setTimeout(() => (messageResult.innerHTML = message), 1000);
       });
   });
 

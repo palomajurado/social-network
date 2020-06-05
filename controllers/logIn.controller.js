@@ -3,14 +3,15 @@ import { models } from "../model/index.model.js";
 
 export default () => {
   const view = views.logIn();
-  const authEmailWithPassword = () => {
-    const email = view.querySelector("#email").value;
-    const password = view.querySelector("#password").value;
+  const email = view.querySelector("#email");
+  const password = view.querySelector("#password");
 
+  const authEmailWithPassword = () => {
     models.logInModel
-      .authEmailPassword(email, password)
+      .authEmailPassword(email.value, password.value)
       .then(() => (window.location.hash = "#/profile"))
       .catch((error) => {
+        console.log(error);
         let message = "";
         if (error.code === "auth/invalid-email") message = "Correo inválido";
         else if (error.code === "auth/user-not-found")
@@ -27,7 +28,6 @@ export default () => {
         );
       });
   };
-
   const btnLogIn = view.querySelector("#logIn");
   btnLogIn.addEventListener("click", authEmailWithPassword);
 
@@ -64,5 +64,15 @@ export default () => {
         const credential = error.credential;
       });
   });
+
+  //--------------------------------------- Eye de password
+  const eye = view.querySelector("#eye");
+  eye.addEventListener("click", (e) => {
+    e.stopPropagation();
+    e.preventDefault();
+    if (password.type === "password") password.type = "text";
+    else password.type = "password";
+  });
+
   return view;
 };

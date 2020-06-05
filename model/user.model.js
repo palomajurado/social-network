@@ -1,19 +1,29 @@
-import { storageRef, auth } from "../firebase.js";
-const updateDisplayName = (name) => {
-  return auth.currentUser.updateProfile({
+import { storageRef, auth, db } from "../firebase.js";
+
+const updateDisplayName = (name) =>
+  auth.currentUser.updateProfile({
     displayName: name,
   });
-};
 
-const updatePhotoUser = (file) => {
-  return storageRef // subire a firestore la img capturada en la const file, por medio del atributo de target visto en la terminal del navegador
-    .child("photoUpload/" + file.name)
-    .put(file);
-};
-const updatePhotoBg = (file) => {
-  return storageRef // subire a firestore la img capturada en la const file, por medio del atributo de target visto en la terminal del navegador
-    .child("bgUpload/" + file.name)
-    .put(file);
-};
+const updatePhotoUser = (file) =>
+  storageRef.child("photoUpload/" + file.name).put(file);
 
-export default { updateDisplayName, updatePhotoUser, updatePhotoBg };
+const updatePhotoBg = (file) =>
+  storageRef.child("bgUpload/" + file.name).put(file);
+
+const saveBackgroundUser = (user, imgURL) =>
+  db.collection("settings").add({
+    userId: user.uid,
+    backgroundImg: imgURL,
+  });
+
+const getBackgroundUser = (userId) =>
+  db.collection("settings").where("userId", "==", userId).get(); // Dvuelve la config del usuario que tenga este userId
+
+export default {
+  updatePhotoBg,
+  updatePhotoUser,
+  getBackgroundUser,
+  updateDisplayName,
+  saveBackgroundUser,
+};
