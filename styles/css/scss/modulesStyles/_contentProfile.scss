@@ -1,8 +1,8 @@
-body {
-    margin: 0px;
-    background-image: url("../../../../assets/fodoProfile.png");
-    background-attachment: fixed;
-    overflow-y: scroll;
+.All-sections {
+  // flex-flow: column;
+  background-size: cover;
+  background-attachment: fixed;
+  background-image: url("https://storage.googleapis.com/md-links/bg.png");
 }
 
 #idLoading{
@@ -20,50 +20,86 @@ body {
 }
 
 .container-Publications-Profile {
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    flex-direction: column;
-    .sectionProfile {
-        background: rgba(234, 226, 226, 0.473);
+  display: flex;
+  align-content: center;
+  flex-direction: column;
+  justify-content: center;
+
+  .sectionProfile {
+    border-radius: $borderContent;
+    background: rgba(234, 226, 226, 0.473);
+
+    .coverPage {
+      width: 100%;
+      height: 10em;
+      background: $colorOrng;
+      border-radius: $borderContent;
+
+      img {
+        width: 100%;
+        height: 100%;
         border-radius: $borderContent;
-        .coverPage {
-            width: 100%;
-            height: 10em;
-            background: $colorOrng;
-            border-radius: $borderContent;
+      }
 
-            img {
-                width: 100%;
-                height: 100%;
-                border-radius: $borderContent;
-            }
+      a {
+
+        .imgMenu {
+          width: 30px;
+          height: 30px;
+          margin-left: 90%;
+          margin-top: 0.8%;
+          padding: 0.25rem;
+          border-radius: 50%;
+          background: rgba(59, 58, 58, 0.575);
+          box-shadow: 0.625rem 0.625rem 1rem -0.0625rem rgba(0, 0, 0, 0.75);
         }
+      }
 
-        .profilePicture {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            margin-bottom: -3rem;
 
-            img {
-                width: 8rem;
-                height: 8rem;
-                position: relative;
-                top: -4rem;
-                border-radius: 50%;
-                border: solid #EAE2E2;
-            }
-            h5{
-                position: relative;
-                top: -3.5rem;
-            }
-        }
-    
+      .imgMenu:hover {
+        border: 1px solid rgb(224, 88, 64);
+        box-shadow: 0rem -0.0063rem 0.4375rem -0.0063rem rgb(231, 79, 8);
+      }
     }
 
-    .sectionPublications {
+    .profilePicture {
+      display: flex;
+      align-items: center;
+      margin-bottom: -3rem;
+      flex-direction: column;
+      justify-content: center;
+
+      a {
+        position: absolute;
+        z-index: 100;
+      }
+
+      #userPhoto {
+        top: -4rem;
+        width: 8rem;
+        height: 8rem;
+        object-fit: cover;
+        border-radius: 50%;
+        position: relative;
+        object-position: center;
+        border: 0.9375rem solid rgba(126, 124, 124, 0.308);
+      }
+
+      #userPhoto:hover {
+        background: #ec954379;
+      }
+
+      h5 {
+        top: -3.5rem;
+        position: relative;
+        font-weight: bolder;
+        text-transform: capitalize;
+      }
+    }
+
+  }
+
+  .sectionPublications {
         display: flex;
         justify-content: center;
         align-content: center;
@@ -87,7 +123,9 @@ body {
                 height: 5rem;
                 background: #FFF6EF;
                 border: solid 2px rgba(255, 253, 253, 0.664);
-                padding: 1rem;   
+                padding: 1rem;
+                text-transform: capitalize;
+        		font-family: $FFsecondary;
             }
 
             #textAreaComentary::-webkit-input-placeholder {
@@ -158,17 +196,24 @@ body {
                 }
 
                 .btnToPost {
-                    width: 30%;
-                    height: 100%;
-                    border: none;
-                    outline: none;
-                    color: $colorWhite;
-                    text-align: center;
-                    border-radius: 3.4375rem;
-                    font: bolder 0.9375rem Roboto;
-                    background: linear-gradient(82.14deg, #494541 -3.88%, #c85032 64.89%);
-                    padding: 5px;
-                }
+		          width: 30%;
+		          height: 100%;
+		          border: none;
+		          outline: none;
+		          cursor: pointer;
+		          padding: 0.3125rem;
+		          color: $colorWhite;
+		          text-align: center;
+		          border-radius: 3.4375rem;
+		          font: bolder 0.9375rem Roboto;
+		          border: 5px solid rgba(0, 0, 0, 0.322);
+		          box-shadow: 0.625rem 0.625rem 1rem -0.0625rem rgba(0, 0, 0, 0.75);
+		          background: linear-gradient(82.14deg, #494541 -3.88%, #c85032 64.89%);
+		        }
+
+		        .btnToPost:hover {
+		          background: linear-gradient(141deg, #c85032 33%, #ec9443 64%);
+		        }
             }
 
         }
@@ -187,7 +232,7 @@ body {
                 height: 5rem;
                 background: #EAE2E2;
                 padding: 0.5rem;
-                border-radius: 10px 10px 0 0;
+                border-radius: 0.625rem 0.625rem 0 0;
                 justify-content: space-between;
                 .detailsAuthor{
                     display: flex;
@@ -255,8 +300,8 @@ body {
                 background: #FFFFFF;
                 display: flex;
                 align-items: center;
-                padding: 0 10px 0 10px;
-                border-radius: 0 0 10px 10px;
+                padding: 0 0.625rem 0 0.625rem;
+        		border-radius: 0 0 0.625rem 0.625rem;
                 border-radius: $borderContent;
                 margin: 0.5rem auto;
 
@@ -264,6 +309,8 @@ body {
                     width: 30px;
                     height: 30px;
                     cursor: pointer;
+                    padding: 0.1875rem;
+          			margin-left: 0.3125rem;
 
                 }
             }
@@ -272,20 +319,33 @@ body {
 }
 
 .logOut {
-    width: 80px;
-    margin: auto;
-    height: 40px;
-    display: flex;
-    outline: none;
-    color: white;
-    font-size: 12px;
-    text-align: center;
-    align-items: center;
-    font-weight: bolder;
-    border-radius: 12px;
-    justify-content: center;
-    font-family: $FFsecondary;
-    border: 5px solid rgba(0, 0, 0, 0.322);
-    box-shadow: 10px 10px 16px -1px rgba(0, 0, 0, 0.75);
-    background: linear-gradient(82.14deg, #ec9443 -3.88%, #c85032 64.89%);
+  width: 20px;
+  height: 20px;
+  border: none;
+  outline: none;
+  padding: 0.25rem;
+  border-radius: 50%;
+  position: absolute;
+  margin-top: 0.4375rem;
+  margin-left: -4.125rem;
+  background: rgba(115, 238, 141, 0.918);
+}
+
+.logOut:hover {
+  background: linear-gradient(141deg, #c85032 33%, #ec9443 64%);
+}
+
+.displayUserName {
+  display: flex;
+  color: #ce5c35;
+  font-size: 1.25rem;
+  font-weight: bolder;
+  justify-content: center;
+  margin-bottom: 0.9375rem;
+  text-transform: capitalize;
+  text-decoration-line: underline;
+}
+
+#name {
+  text-transform: capitalize;
 }

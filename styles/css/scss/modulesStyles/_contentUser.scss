@@ -1,0 +1,219 @@
+#profile-container {
+	flex-flow: column;
+	background-size: cover;
+	background-attachment: fixed;
+	background-image: url("https://storage.googleapis.com/md-links/xtx.jpg");
+
+	.profile-user-avatar {
+		.portada {
+			width: 100vw;
+			height: 200px;
+			display: flex;
+			margin-top: -2rem;
+			background-size: cover;
+			justify-content: center;
+			// background-attachment: fixed;
+			background-image: url("https://storage.googleapis.com/md-links/fondo.png");
+
+			.user-img {
+				img {
+					width: 200px;
+					height: 200px;
+					object-fit: cover;
+					margin-top: 100px;
+					border-radius: 50%;
+					object-position: center;
+					border: 0.9375rem solid rgba(22, 22, 22, 0.356);
+					box-shadow: 0.625rem 0.625rem 1.125rem 0.0625rem rgba(0, 0, 0, 0.75);
+				}
+			}
+		}
+
+		.user-img-info {
+			text-align: center;
+			margin-top: 7.99rem;
+
+			progress#uploader {
+				width: 100%;
+			}
+
+			progress {
+				display: none;
+			}
+
+			#photoChng {
+				margin-left: -190px;
+				position: absolute;
+				background: #ce5b359f;
+				border-radius: 1.5rem;
+				font-family: "Poppins", sans-serif;
+				border: 0.625rem solid rgba(0, 0, 0, 0.336);
+			}
+
+			#labelChng {
+				margin-right: -20px;
+				background: rgba(24, 24, 24, 0.781);
+				position: absolute;
+				border-radius: 1.5rem;
+				font-family: "Poppins", sans-serif;
+				border: 0.625rem solid rgba(0, 0, 0, 0.336);
+			}
+		}
+	}
+
+	#profile-info {
+		padding: 30px;
+		margin-top: 90px;
+		color: $colorWhite;
+		border-radius: 15px;
+		background: rgba(0, 0, 0, 0.356);
+		box-shadow: 0.625rem 0.625rem 1.125rem 0.0625rem rgba(0, 0, 0, 0.75);
+
+		.profile-form-group {
+			display: flex;
+			align-items: center;
+
+			.profile-inputs input {
+				height: 43px;
+				width: 10rem;
+				outline: 0rem;
+				cursor: pointer;
+				color: $colorWhite;
+				text-align: center;
+				border-radius: 1.25rem;
+				text-transform: capitalize;
+				font-family: "Poppins", sans-serif;
+				border: 0.125rem solid #e6e6e631;
+				padding: 0.5625rem 0 0.4375rem 0.5rem;
+				background: rgba(78, 77, 77, 0.267);
+			}
+
+			.profile-inputs {
+				display: inline-flex;
+				margin: 0.4rem 1rem;
+
+				.inputName {
+					margin-left: 1.875rem;
+				}
+
+				#editInputName,
+				#editInputPass {
+					height: 45px;
+					width: 45px;
+					border-radius: 50%;
+					border: 0.1px solid rgba(255, 255, 255, 0.171);
+					cursor: pointer;
+					background: rgba(0, 0, 0, .1);
+					margin-left: 7px;
+					padding: 5px;
+				}
+
+				#editInputName:hover,
+				#editInputPass:hover {
+					background: #ce5b3573;
+				}
+			}
+		}
+	}
+
+	#submit {
+		width: 20vh;
+		height: 8vh;
+		outline: none;
+		cursor: pointer;
+		text-align: center;
+		color: whitesmoke;
+		border-radius: 1.5rem;
+		margin: 2.5rem 4.375rem 0;
+		letter-spacing: 0.1875rem;
+		font-family: $FFsecondary;
+		border: 0.625rem solid rgba(0, 0, 0, 0.5);
+		background: linear-gradient(82.14deg, #ec9443 -3.88%, #c85032 64.89%);
+
+		#submit:hover {
+			color: $colorWhite;
+			background: linear-gradient(141deg, #c85032 33%, #ec9443 64%);
+		}
+	}
+}
+
+.regresar {
+	width: 20vh;
+	outline: none;
+	cursor: pointer;
+	margin-top: 17px;
+	text-align: center;
+	color: whitesmoke;
+	border-radius: 1.5rem;
+	background: #ce5b359f;
+	font-family: "Poppins", sans-serif;
+	border: 0.625rem solid rgba(0, 0, 0, 0.336);
+}
+
+#labelChng:hover {
+	color: #ce5c35;
+	text-shadow: 0.125rem 0.125rem 0.5rem rgb(255, 115, 0);
+}
+
+#photoChng:hover {
+	color: #050505c7;
+	text-shadow: 0.125rem 0.125rem 0.5rem rgb(235, 67, 16);
+}
+
+.regresar:hover {
+	color: #f55626;
+	background: rgba(0, 0, 0, 0.733);
+	text-shadow: 0.125rem 0.125rem 0.5rem rgb(255, 116, 3);
+}
+
+.password2:hover,
+.inputName:hover {
+	border: 1px solid rgb(248, 58, 24);
+	box-shadow: 0rem -0.0063rem 0.4375rem -0.0063rem rgb(243, 147, 103);
+}
+
+input[type=”file”]#changeBg {
+	opacity: 0;
+	z-index: -1;
+	width: 0.1px;
+	height: 0.1px;
+	overflow: hidden;
+	position: absolute;
+}
+
+label[for="changeBg"] {
+	color: #fff;
+	font-size: 14px;
+	cursor: pointer;
+	font-weight: 600;
+	width: fit-content;
+	text-align: center;
+	transition: all .5s;
+	display: inline-block;
+	text-transform: uppercase;
+	background-color: #106BA0;
+	padding: 15px 40px !important;
+}
+
+input[type=”file”]#file {
+	opacity: 0;
+	z-index: -1;
+	width: 0.1px;
+	height: 0.1px;
+	overflow: hidden;
+	position: absolute;
+}
+
+label[for="file"] {
+	color: #fff;
+	font-size: 14px;
+	cursor: pointer;
+	font-weight: 600;
+	width: fit-content;
+	text-align: center;
+	transition: all .5s;
+	display: inline-block;
+	text-transform: uppercase;
+	background-color: black;
+	padding: 15px 40px !important;
+}

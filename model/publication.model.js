@@ -1,7 +1,6 @@
 import { db, storageRef } from "../firebase.js";
-import { views } from "../view/index.js";
 
-export const createNewPublication = (objectReceived) => {
+const createNewPublication = (objectReceived) => {
     return new Promise ((resolve, reject) => {
         db.collection("publications").add({
             userId : objectReceived.userId,
@@ -18,10 +17,12 @@ export const createNewPublication = (objectReceived) => {
     }) 
 }
 
-export const getPublications = () => {
+const getPublications = () => {
     return db.collection("publications").orderBy('registrationDate', 'desc');
 }
 
-export const getStorageRef = () => {
+const getStorageRef = () => {
     return storageRef;
 }
+
+export default {createNewPublication, getPublications, getStorageRef}

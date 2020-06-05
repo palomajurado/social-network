@@ -13,12 +13,11 @@ export default () => {
 		<section class="All-sections">
     <section class="container-Publications-Profile">
       <section class="sectionProfile">
-        <div class="coverPage">
-          <img src="http://lorempixel.com/400/200/" alt=""/>
-        </div>
-        <div class="profilePicture">
-          <img src="http://lorempixel.com/200/200/" alt=""/>
-          <h5>Nombre </h5>
+        <div class="coverPage"><img id="background" src="" alt="" />
+          <a href="#/user"><img class="imgMenu" src="https://storage.googleapis.com/md-links/menu.png"/></a></div>
+        <div class="profilePicture"><img src="https://storage.googleapis.com/md-links/avatar.png" alt="Avatar" id="userPhoto" /><button
+            class="logOut"></button>
+          <h5 id="shownName">Nombre</h5>
         </div>
       </section>
       <section class="sectionPublications" >

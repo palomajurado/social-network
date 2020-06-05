@@ -1,5 +1,5 @@
 import { views } from "../view/index.js";
-import { createNewPublication, getPublications, getStorageRef } from "../model/publication.model.js";
+import { models } from "../model/index.model.js";
 
 export default (viewProfile) => {
     const btnShare = viewProfile.querySelector('#btnShare');
@@ -29,7 +29,7 @@ export default (viewProfile) => {
         if(imageViewer.files[0] === undefined)
         {
             createNewPublication({
-                userId : 'IdLoginUserTODO',
+                userId : user.uid,
                 content : textAreaComentary,
                 image: null,
                 privacyAction: optionPublicPrivate,
@@ -46,7 +46,7 @@ export default (viewProfile) => {
         } else {
             uploadImageUrl().then((url) => {
                 createNewPublication({
-                    userId : 'IdLoginUserTODO',
+                    userId : user.uid,
                     content : textAreaComentary,
                     image: url,
                     privacyAction: optionPublicPrivate,
@@ -115,12 +115,6 @@ export default (viewProfile) => {
         imageViewer.click();
     });
     
-    // const btnOption = viewProfile.querySelector('#btnOption');
-    // btnOption.addEventListener('click', () => {
-    //     const editDelete = viewProfile.querySelector('#editDelete');
-    //     editDelete.classList.remove('clsBtnOption');
-    // });
-
 
     return viewProfile;
 }

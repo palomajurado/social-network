@@ -8,7 +8,7 @@ export default (post) => {
           <h3>Nombre </h3>
             <div class="contentDeatilsRegistration">
               <img src="${post.privacyAction === 'publico' ? './assets/public.png'  : './assets/private.png'}" />
-              <p>Fecha de registro y hora</p>
+              <p>${(post.registrationDate.toDate()).toLocaleString()}</p>
             </div>
         </div>
       </div>
