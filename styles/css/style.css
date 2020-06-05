@@ -1,3 +1,4 @@
+@import url(@pnotify/core/dist/BrightTheme.css);
 header {
   display: none;
 }
@@ -439,6 +440,21 @@ body {
   overflow-y: scroll;
 }
 
+#idLoading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  background: rgba(43, 41, 41, 0.767);
+  position: fixed;
+  z-index: 100;
+}
+
+.clsLoadingHide {
+  display: none !important;
+}
+
 .container-Publications-Profile {
   display: flex;
   justify-content: center;
@@ -523,10 +539,21 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
-.container-Publications-Profile .sectionPublications .containerNewPublications .displayImage img {
-  width: 5%;
-  height: 5%;
+.container-Publications-Profile .sectionPublications .containerNewPublications #displayImage {
+  width: 100%;
+  background: #FFF6EF;
+  padding: 0.5rem;
+}
+
+.container-Publications-Profile .sectionPublications .containerNewPublications #displayImage img {
+  max-width: 80px;
+  max-height: 80px;
+  background: #FFF6EF;
   cursor: pointer;
+}
+
+.container-Publications-Profile .sectionPublications .containerNewPublications .clsDisplayImage {
+  display: none;
 }
 
 .container-Publications-Profile .sectionPublications .containerNewPublications .optionsToPost {
@@ -540,14 +567,43 @@ body {
   justify-content: space-between;
 }
 
-.container-Publications-Profile .sectionPublications .containerNewPublications .optionsToPost img {
+.container-Publications-Profile .sectionPublications .containerNewPublications .optionsToPost .accionPublication {
+  width: 30%;
+  display: flex;
+  align-content: center;
+  padding: 0.5rem;
+}
+
+.container-Publications-Profile .sectionPublications .containerNewPublications .optionsToPost .accionPublication img {
   width: 30px;
   height: 30px;
   cursor: pointer;
 }
 
-.container-Publications-Profile .sectionPublications .containerNewPublications .optionsToPost #addImg {
+.container-Publications-Profile .sectionPublications .containerNewPublications .optionsToPost .accionPublication #addImg {
   display: none;
+}
+
+.container-Publications-Profile .sectionPublications .containerNewPublications .optionsToPost .accionPublication .selectPublicPrivate {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 80%;
+  border-radius: 30%;
+  border: solid 1px;
+  margin-left: 0.5rem;
+}
+
+.container-Publications-Profile .sectionPublications .containerNewPublications .optionsToPost .accionPublication .selectPublicPrivate option {
+  size: 5rem;
+  display: flex;
+  align-content: center;
+  background-color: coral;
+}
+
+.container-Publications-Profile .sectionPublications .containerNewPublications .optionsToPost .clsMessajePostEmpty {
+  color: #5e0707;
 }
 
 .container-Publications-Profile .sectionPublications .containerNewPublications .optionsToPost .btnToPost {
@@ -602,12 +658,30 @@ body {
   padding: 0.5rem;
 }
 
-.container-Publications-Profile .sectionPublications .stories .authorPublication .detailsAuthor .dataProfile p {
+.container-Publications-Profile .sectionPublications .stories .authorPublication .detailsAuthor .dataProfile .contentDeatilsRegistration {
+  display: flex;
+  align-items: center;
+}
+
+.container-Publications-Profile .sectionPublications .stories .authorPublication .detailsAuthor .dataProfile .contentDeatilsRegistration p {
   margin-top: 0;
 }
 
-.container-Publications-Profile .sectionPublications .stories .authorPublication .toogleMenu {
+.container-Publications-Profile .sectionPublications .stories .authorPublication .detailsAuthor .dataProfile .contentDeatilsRegistration img {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.container-Publications-Profile .sectionPublications .stories .authorPublication .clsToogleMenu {
   cursor: pointer;
+}
+
+.container-Publications-Profile .sectionPublications .stories .authorPublication .clsToogleMenu ul li {
+  list-style: none;
+}
+
+.container-Publications-Profile .sectionPublications .stories .authorPublication .clsToogleMenu .clsBtnOption {
+  display: none;
 }
 
 .container-Publications-Profile .sectionPublications .stories .content {

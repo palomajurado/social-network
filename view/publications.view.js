@@ -6,18 +6,22 @@ export default (post) => {
         <img src="http://lorempixel.com/200/200/" alt=""/>
         <div class="dataProfile">
           <h3>Nombre </h3>
-            <div>
-              <p></p>
-              <p>${post.privacyAction}</p>
+            <div class="contentDeatilsRegistration">
+              <img src="${post.privacyAction === 'publico' ? './assets/public.png'  : './assets/private.png'}" />
+              <p>Fecha de registro y hora</p>
             </div>
         </div>
       </div>
-      <div id="toogleMenu">
-      <span class="menuEdit"> &#9776; </span>
-      <select name="selectEdit" id="selectEditDelete">
-        <option value="Edit">Edit</option>
-        <option value="Delete">Delete</option>
-      </select>
+      <div class="clsToogleMenu" >
+        <span class="menuEdit" id="btnOption"> &#9776; </span>
+        <ul class="dropdown-menu">
+          <li><i class="fa fa-pencil fa-fw"></i> Edit</a></li>
+          <li><i class="fa fa-trash-o fa-fw"></i> Delete</a></li>
+        </ul>
+        <select name="selectEdit" id="selectEditDelete">
+          <option value="Edit"><i class="fa fa-pencil fa-fw"></i>Edit</option>
+          <option value="Delete"><i class="fa fa-trash-o fa-fw"></i>Delete</option>
+        </select>
       </div>
     </div>
     <div class="content">

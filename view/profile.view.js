@@ -2,6 +2,9 @@
 /* eslint-disable semi */
 export default () => {
   const viewProfile = `
+    <div id="idLoading" class="clsLoadingHide">
+      <img src="./assets/loadingPublication.svg" alt="Carga Publication">
+    </div>
 		<header class="profile-header">
 			<div class="logo-principal">
 				<img src="./assets/logo-limatopia.png" />
@@ -22,16 +25,16 @@ export default () => {
         <div class="containerNewPublications">
           <div class="commentary">¿Que quieres compartir?</div>
           <textarea name="newCommentary" id="textAreaComentary" class="textAreaPublication" placeholder="Escribe" autofocus></textarea>
-          <div class="displayImage">
+          <div id="displayImage" class="clsDisplayImage">
             <img id="loadedImage" src="http://placehold.it/180" alt="your image" />
           </div>
           <div class="optionsToPost">
-            <div class="accionPublication">
+            <div id="actionPublicate"class="accionPublication">
               <img id="iconCamera" src="./assets/iconImage.png" alt="subirImagen" />
               <input type="file" id="addImg" name="addImg" accept="image/*">
-              <select name="selectPublicPrivate" id="optionPublicPrivate">
-                <option value="publico">Público</option>
-                <option value="privado">Privado</option>
+              <select name="selectPublicPrivate" class="selectPublicPrivate" id="optionPublicPrivate">
+                <option value="publico" class="fas fa-users"> &#xf0c0; Público</option>
+                <option value="privado" class="fas fa-user-lock"> &#xf502; Privado </option>
               </select>
             </div>
             <button class="btnToPost" id="btnShare"> Share </button>

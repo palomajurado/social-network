@@ -4,6 +4,21 @@ body {
     background-attachment: fixed;
     overflow-y: scroll;
 }
+
+#idLoading{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    background: rgba(43, 41, 41, 0.767);
+    position: fixed;
+    z-index: 100;
+}
+.clsLoadingHide{
+    display: none !important;
+}
+
 .container-Publications-Profile {
     display: flex;
     justify-content: center;
@@ -81,12 +96,20 @@ body {
                 font-family: $FFsecondary;
             }
 
-            .displayImage{
+            #displayImage{
+                width: 100%;
+                background: #FFF6EF;
+                padding: 0.5rem;
                 img{
-                    width: 5%;
-                    height: 5%;
+                    max-width: 80px;
+                    max-height: 80px;
+                    background: #FFF6EF;
                     cursor: pointer;
                 }
+            }
+
+            .clsDisplayImage{
+                display: none;
             }
 
             .optionsToPost{
@@ -98,14 +121,40 @@ body {
                 margin-bottom: 0.5rem;
                 border-radius: 0 0 10px 10px;
                 justify-content: space-between;
-                img{
-                    width: 30px;
-                    height: 30px;
-                    cursor: pointer;
-                }
 
-                #addImg{
-                    display: none;
+                .accionPublication{
+                    width: 30%;
+                    display: flex;
+                    align-content: center;
+                    padding: 0.5rem;
+                    img{
+                        width: 30px;
+                        height: 30px;
+                        cursor: pointer;
+                    }
+    
+                    #addImg{
+                        display: none;
+                    }
+                    .selectPublicPrivate{
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        text-align: center;
+                        width: 80%;
+                        border-radius: 30%;
+                        border: solid 1px;
+                        margin-left: 0.5rem;
+                        option{
+                            size: 5rem;
+                            display: flex;
+                            align-content: center;
+                            background-color: coral;
+                        }
+                    }
+                }
+                .clsMessajePostEmpty{
+                    color: rgb(94, 7, 7);
                 }
 
                 .btnToPost {
@@ -154,13 +203,29 @@ body {
                         align-items: center;
                         flex-direction: column;
                         padding: 0.5rem;
-                        p{
-                            margin-top: 0;
+                        .contentDeatilsRegistration{
+                            display: flex;
+                            align-items: center;
+                            p{
+                                margin-top: 0;
+                            }
+                            img{
+                                width: 1.5rem;
+                                height: 1.5rem;
+                            }
                         }
                     }
                 }
-                .toogleMenu{
+                .clsToogleMenu{
                     cursor: pointer;
+                    ul{
+                        li{
+                            list-style: none;
+                        }
+                    }
+                    .clsBtnOption{
+                        display: none;
+                    }
                 }
             }
 
