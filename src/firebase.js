@@ -1,14 +1,4 @@
 // Objeto de credenciales
-//DESCOMENTAR AL MOMENTO DE REALIZAR LOS TESTS -->>>>>>>
-/*import firebasemock from "firebase-mock";
-const mockauth = new firebasemock.MockAuthentication();
-mockauth.autoFlush();
-global.firebase = firebasemock.MockFirebaseSdk(
-  // use null if your code does not use RTDB
- () => null,
-  () => mockauth
-);*/
-//<<<<<<<<<<<<<----------------
 const firebaseConfig = {
   measurementId: "G-T5XZ91CCHV",
   messagingSenderId: "113004416024",
