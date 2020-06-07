@@ -1,230 +1,224 @@
-body {
-    margin: 0px;
-    background-image: url("../../../../assets/fodoProfile.png");
-    background-attachment: fixed;
-    overflow-y: scroll;
+.All-sections {
+  background-image: url("../../../../assets/fodoProfile.png");
 }
 
 .container-Publications-Profile {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+
+  .sectionProfile {
+    background: rgba(234, 226, 226, 0.473);
+	border-radius: $borderContent;
+
+    .coverPage {
+      width: 100%;
+      height: 10em;
+      background: $colorOrng;
+      border-radius: $borderContent;
+
+      img {
+        width: 100%;
+        height: 100%;
+        border-radius: $borderContent;
+      }
+    }
+
+    .profilePicture {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      margin-bottom: -3rem;
+
+      img {
+        width: 8rem;
+        height: 8rem;
+        position: relative;
+        top: -4rem;
+        border-radius: 50%;
+        border: solid #eae2e2;
+      }
+
+      h5 {
+        position: relative;
+        top: -3.5rem;
+      }
+    }
+  }
+
+  .sectionPublications {
     display: flex;
     justify-content: center;
     align-content: center;
     flex-direction: column;
+    padding: 0.5rem;
 
-    .sectionProfile {
-        background: rgba(234, 226, 226, 0.473);
-        border-radius: $borderContent;
+    .containerNewPublications {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      margin-bottom: 0.5rem;
 
-        .coverPage {
-            width: 100%;
-            height: 10em;
-            background: $colorOrng;
-            border-radius: $borderContent;
+      .commentary {
+        width: 100%;
+        height: 2.3rem;
+        background: #eae2e2;
+        border-radius: 10px 10px 0 0;
+        border: solid 2px rgba(255, 253, 253, 0.664);
+      }
 
-            img {
-                width: 100%;
-                height: 100%;
-                border-radius: $borderContent;
-            }
-        }
+      textarea {
+        width: 100%;
+        height: 5rem;
+        background: #fff6ef;
+        border: solid 2px rgba(255, 253, 253, 0.664);
+        padding: 1rem;
+      }
 
-        .profilePicture {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            margin-bottom: -3rem;
+      #textAreaComentary::-webkit-input-placeholder {
+        color: gray;
+        font-size: 1em;
+        font-family: $FFsecondary;
+      }
 
-            img {
-                width: 8rem;
-                height: 8rem;
-                position: relative;
-                top: -4rem;
-                border-radius: 50%;
-                border: solid #EAE2E2;
-            }
-
-            h5 {
-                position: relative;
-                top: -3.5rem;
-            }
-        }
-
-    }
-
-    .sectionPublications {
+      .optionsToPost {
+        width: 100%;
         display: flex;
-        justify-content: center;
-        align-content: center;
-        flex-direction: column;
-        padding: 0.5rem;
+        align-items: center;
+        background: #fff6ef;
+        padding: 0.2rem;
+        margin-bottom: 0.5rem;
+        border-radius: 0 0 10px 10px;
+        justify-content: space-between;
 
-        .containerNewPublications {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-end;
-            margin-bottom: 0.5rem;
-
-            .commentary {
-                width: 100%;
-                height: 2.3rem;
-                background: #EAE2E2;
-                border-radius: 10px 10px 0 0;
-                border: solid 2px rgba(255, 253, 253, 0.664);
-            }
-
-            textarea {
-                width: 100%;
-                height: 5rem;
-                background: #FFF6EF;
-                border: solid 2px rgba(255, 253, 253, 0.664);
-                padding: 1rem;
-            }
-
-            #textAreaComentary::-webkit-input-placeholder {
-                color: gray;
-                font-size: 1em;
-                font-family: $FFsecondary;
-            }
-
-            .optionsToPost {
-                width: 100%;
-                display: flex;
-                align-items: center;
-                background: #FFF6EF;
-                padding: 0.2rem;
-                margin-bottom: 0.5rem;
-                border-radius: 0 0 10px 10px;
-                justify-content: space-between;
-
-                img {
-                    width: 30px;
-                    height: 30px;
-                    cursor: pointer;
-                }
-
-                .btnToPost {
-                    width: 30%;
-                    height: 100%;
-                    border: none;
-                    outline: none;
-                    color: $colorWhite;
-                    text-align: center;
-                    border-radius: 3.4375rem;
-                    font: bolder 0.9375rem Roboto;
-                    background: linear-gradient(82.14deg, #494541 -3.88%, #c85032 64.89%);
-                    padding: 5px;
-                }
-            }
-
+        img {
+          width: 30px;
+          height: 30px;
+          cursor: pointer;
         }
 
-        .stories {
-            display: flex;
-            justify-content: center;
-            align-content: center;
-            flex-direction: column;
-            background: rgba(234, 226, 226, 0.473);
-            border-radius: $borderContent;
-
-            .authorPublication {
-                display: flex;
-                align-items: center;
-                width: 100%;
-                height: 3rem;
-                background: #EAE2E2;
-                padding: 0.5rem;
-                border-radius: 10px 10px 0 0;
-                justify-content: space-between;
-
-                .detailsAuthor {
-                    display: flex;
-                    align-items: center;
-
-                    img {
-                        width: 2rem;
-                        height: 2rem;
-                        border-radius: 50%;
-                        border: solid rgb(243, 234, 234);
-                    }
-                }
-
-                .toogleMenu {
-                    cursor: pointer;
-                }
-            }
-
-            .content {
-                width: 90%;
-                height: 10rem;
-                background: #FFF6EF;
-                padding: 0.5rem;
-                margin: 0.5rem auto;
-                border-radius: $borderContent;
-            }
-
-            .interactions {
-                width: 90%;
-                height: 3rem;
-                background: #FFFFFF;
-                display: flex;
-                align-items: center;
-                padding: 0 10px 0 10px;
-                border-radius: 0 0 10px 10px;
-                border-radius: $borderContent;
-                margin: 0.5rem auto;
-
-                img {
-                    width: 30px;
-                    height: 30px;
-                    cursor: pointer;
-
-                }
-            }
+        .btnToPost {
+          width: 30%;
+          height: 100%;
+          border: none;
+          outline: none;
+          color: $colorWhite;
+          text-align: center;
+          border-radius: 3.4375rem;
+          font: bolder 0.9375rem Roboto;
+          background: linear-gradient(82.14deg, #494541 -3.88%, #c85032 64.89%);
+          padding: 5px;
         }
+      }
     }
+
+    .stories {
+      display: flex;
+      justify-content: center;
+      align-content: center;
+      flex-direction: column;
+      background: rgba(234, 226, 226, 0.473);
+      border-radius: $borderContent;
+
+      .authorPublication {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: 3rem;
+        background: #eae2e2;
+        padding: 0.5rem;
+        border-radius: 10px 10px 0 0;
+        justify-content: space-between;
+
+        .detailsAuthor {
+          display: flex;
+          align-items: center;
+
+          img {
+            width: 2rem;
+            height: 2rem;
+            border-radius: 50%;
+            border: solid rgb(243, 234, 234);
+          }
+        }
+
+        .toogleMenu {
+          cursor: pointer;
+        }
+      }
+
+      .content {
+        width: 90%;
+        height: 10rem;
+        background: #fff6ef;
+        padding: 0.5rem;
+        margin: 0.5rem auto;
+        border-radius: $borderContent;
+      }
+
+      .interactions {
+        width: 90%;
+        height: 3rem;
+        background: #ffffff;
+        display: flex;
+        align-items: center;
+        padding: 0 10px 0 10px;
+        border-radius: 0 0 10px 10px;
+        border-radius: $borderContent;
+        margin: 0.5rem auto;
+
+        img {
+          width: 30px;
+          height: 30px;
+          cursor: pointer;
+        }
+      }
+    }
+  }
 }
 
 .logOut,
 .sendEmail {
-    width: 80px;
-    margin: auto;
-    height: 40px;
-    display: flex;
-    outline: none;
-    color: white;
-    font-size: 12px;
-    text-align: center;
-    align-items: center;
-    font-weight: bolder;
-    border-radius: 12px;
-    justify-content: center;
-    cursor: pointer;
-    font-family: $FFsecondary;
-    border: 5px solid rgba(0, 0, 0, 0.322);
-    box-shadow: 10px 10px 16px -1px rgba(0, 0, 0, 0.75);
-    background: linear-gradient(82.14deg, #ec9443 -3.88%, #c85032 64.89%);
+  width: 80px;
+  margin: auto;
+  height: 40px;
+  display: flex;
+  outline: none;
+  color: white;
+  font-size: 12px;
+  text-align: center;
+  align-items: center;
+  font-weight: bolder;
+  border-radius: 12px;
+  justify-content: center;
+  cursor: pointer;
+  font-family: $FFsecondary;
+  border: 5px solid rgba(0, 0, 0, 0.322);
+  box-shadow: 10px 10px 16px -1px rgba(0, 0, 0, 0.75);
+  background: linear-gradient(82.14deg, #ec9443 -3.88%, #c85032 64.89%);
 }
 
 .sendEmail:hover {
-    background: linear-gradient(141deg, #c85032 33%, #ec9443 64%);
+  background: linear-gradient(141deg, #c85032 33%, #ec9443 64%);
 }
 
 .logOutl:hover {
-    background: linear-gradient(141deg, #c85032 33%, #ec9443 64%);
+  background: linear-gradient(141deg, #c85032 33%, #ec9443 64%);
 }
 
 .displayUserName {
-    margin-bottom: 15px;
-    display: flex;
-    justify-content: center;
-    font-size: 20px;
-    font-weight: bolder;
-    color: #ce5c35;
-    text-transform: capitalize;
-    text-decoration-line: underline;
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: center;
+  font-size: 20px;
+  font-weight: bolder;
+  color: #ce5c35;
+  text-transform: capitalize;
+  text-decoration-line: underline;
 }
 
 #name {
-    text-transform: capitalize;
+  text-transform: capitalize;
 }
