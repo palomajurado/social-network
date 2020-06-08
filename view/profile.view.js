@@ -1,3 +1,4 @@
+/* eslint-disable no-tabs */
 /* eslint-disable quotes */
 /* eslint-disable semi */
 export default () => {
@@ -32,8 +33,8 @@ export default () => {
               <img id="iconCamera" src="./assets/iconImage.png" alt="subirImagen" />
               <input type="file" id="addImg" name="addImg" accept="image/*">
               <select name="selectPublicPrivate" class="selectPublicPrivate" id="optionPublicPrivate">
-                <option value="publico" class="fas fa-users"> &#xf0c0; Público</option>
-                <option value="privado" class="fas fa-user-lock"> &#xf502; Privado </option>
+                <option value="publico" class="fas fa-users"> 🌎 Público</option>
+                <option value="privado" class="fas fa-user-lock"> 🔐 Privado </option>
               </select>
             </div>
             <button class="btnToPost" id="btnShare"> Share </button>

@@ -13,7 +13,6 @@ export default () => {
   const editInputName = view.querySelector("#editInputName");
   const password = view.querySelector("#password");
   let messageElm = view.querySelector("#changed");
-
   const user = models.profileModel.getCurrentNameUser();
 
   if (user) {
@@ -65,6 +64,7 @@ export default () => {
           .then(() => {
             imgUpload.src = url;
             messageElm.innerHTML = "Imagen de perfil actualizada";
+            models.publicationsModel.updatePhotoPublication(user.uid, url);
             setTimeout(() => (messageElm.innerHTML = ""), 2000);
           })
           .catch((err) => {
@@ -82,6 +82,8 @@ export default () => {
       .then(() => {
         messageElm.innerHTML = "Actualizaste tu nombre";
         setTimeout(() => (messageElm.innerHTML = ""), 2000);
+        models.publicationsModel.updateNamePublication(user.uid, name.value);
+        console.log(name.value);
       })
       .catch((err) => {
         messageElm.innerHTML = "Error al cambiar nombre";

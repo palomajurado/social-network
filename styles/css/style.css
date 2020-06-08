@@ -863,254 +863,6 @@ p span a:hover {
   text-transform: capitalize;
 }
 
-.container-Publications-Profile .sectionPublications {
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  flex-direction: column;
-  padding: 0.5rem;
-}
-
-.container-Publications-Profile .sectionPublications .containerNewPublications {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  margin-bottom: 0.5rem;
-}
-
-.container-Publications-Profile .sectionPublications .containerNewPublications .commentary {
-  width: 100%;
-  height: 2.3rem;
-  background: #eae2e2;
-  border-radius: 10px 10px 0 0;
-  border: solid 2px rgba(255, 253, 253, 0.664);
-}
-
-.container-Publications-Profile .sectionPublications .containerNewPublications textarea {
-  width: 100%;
-  height: 5rem;
-  background: #fff6ef;
-  border: solid 2px rgba(255, 253, 253, 0.664);
-  padding: 1rem;
-  text-transform: capitalize;
-  font-family: "Poppins", sans-serif;
-}
-
-.container-Publications-Profile .sectionPublications .containerNewPublications #textAreaComentary::-webkit-input-placeholder {
-  color: gray;
-  font-size: 1em;
-  font-family: "Poppins", sans-serif;
-}
-
-.container-Publications-Profile .sectionPublications .containerNewPublications #displayImage {
-  width: 100%;
-  background: #fff6ef;
-  padding: 0.5rem;
-}
-
-.container-Publications-Profile .sectionPublications .containerNewPublications #displayImage img {
-  max-width: 80px;
-  max-height: 80px;
-  background: #fff6ef;
-  cursor: pointer;
-}
-
-.container-Publications-Profile .sectionPublications .containerNewPublications .clsDisplayImage {
-  display: none;
-}
-
-.container-Publications-Profile .sectionPublications .containerNewPublications .optionsToPost {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  background: #fff6ef;
-  padding: 0.2rem;
-  margin-bottom: 0.5rem;
-  border-radius: 0 0 10px 10px;
-  justify-content: space-between;
-}
-
-.container-Publications-Profile .sectionPublications .containerNewPublications .optionsToPost .accionPublication {
-  width: 30%;
-  display: flex;
-  align-content: center;
-  padding: 0.5rem;
-}
-
-.container-Publications-Profile .sectionPublications .containerNewPublications .optionsToPost .accionPublication img {
-  width: 30px;
-  height: 30px;
-  cursor: pointer;
-}
-
-.container-Publications-Profile .sectionPublications .containerNewPublications .optionsToPost .accionPublication #addImg {
-  display: none;
-}
-
-.container-Publications-Profile .sectionPublications .containerNewPublications .optionsToPost .accionPublication .selectPublicPrivate {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  width: 80%;
-  border-radius: 30%;
-  border: solid 1px;
-  margin-left: 0.5rem;
-}
-
-.container-Publications-Profile .sectionPublications .containerNewPublications .optionsToPost .accionPublication .selectPublicPrivate option {
-  size: 5rem;
-  display: flex;
-  align-content: center;
-  background-color: coral;
-}
-
-.container-Publications-Profile .sectionPublications .containerNewPublications .optionsToPost .clsMessajePostEmpty {
-  color: #5e0707;
-}
-
-.container-Publications-Profile .sectionPublications .containerNewPublications .optionsToPost .btnToPost {
-  width: 30%;
-  height: 100%;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  padding: 0.3125rem;
-  color: whitesmoke;
-  text-align: center;
-  border-radius: 3.4375rem;
-  font: bolder 0.9375rem Roboto;
-  border: 5px solid rgba(0, 0, 0, 0.322);
-  box-shadow: 0.625rem 0.625rem 1rem -0.0625rem rgba(0, 0, 0, 0.75);
-  background: linear-gradient(82.14deg, #494541 -3.88%, #c85032 64.89%);
-}
-
-.container-Publications-Profile .sectionPublications .containerNewPublications .optionsToPost .btnToPost:hover {
-  background: linear-gradient(141deg, #c85032 33%, #ec9443 64%);
-}
-
-.container-Publications-Profile .sectionPublications .stories {
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  flex-direction: column;
-  background: rgba(234, 226, 226, 0.473);
-  border-radius: 11px;
-}
-
-.container-Publications-Profile .sectionPublications .stories .authorPublication {
-  display: flex;
-  align-items: center;
-  width: 100%;
-  height: 3rem;
-  background: #eae2e2;
-  padding: 0.5rem;
-  border-radius: 0.625rem 0.625rem 0 0;
-  justify-content: space-between;
-}
-
-.container-Publications-Profile .sectionPublications .stories .authorPublication .detailsAuthor {
-  display: flex;
-  align-items: center;
-}
-
-.container-Publications-Profile .sectionPublications .stories .authorPublication .detailsAuthor img {
-  width: 3rem;
-  height: 3rem;
-  border-radius: 50%;
-  border: solid #f3eaea;
-}
-
-.container-Publications-Profile .sectionPublications .stories .authorPublication .detailsAuthor .dataProfile {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  padding: 0.5rem;
-}
-
-.container-Publications-Profile .sectionPublications .stories .authorPublication .detailsAuthor .dataProfile .contentDeatilsRegistration {
-  display: flex;
-  align-items: center;
-}
-
-.container-Publications-Profile .sectionPublications .stories .authorPublication .detailsAuthor .dataProfile .contentDeatilsRegistration p {
-  margin-top: 0;
-}
-
-.container-Publications-Profile .sectionPublications .stories .authorPublication .detailsAuthor .dataProfile .contentDeatilsRegistration img {
-  width: 1.5rem;
-  height: 1.5rem;
-}
-
-.container-Publications-Profile .sectionPublications .stories .authorPublication .clsToogleMenu {
-  cursor: pointer;
-}
-
-.container-Publications-Profile .sectionPublications .stories .authorPublication .clsToogleMenu ul li {
-  list-style: none;
-}
-
-.container-Publications-Profile .sectionPublications .stories .authorPublication .clsToogleMenu .clsBtnOption {
-  display: none;
-}
-
-.container-Publications-Profile .sectionPublications .stories .content {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  width: 90%;
-  background: #fff6ef;
-  padding: 0.5rem;
-  margin: 0.5rem auto;
-  border-radius: 11px;
-}
-
-.container-Publications-Profile .sectionPublications .stories .content p {
-  white-space: -moz-pre-wrap !important;
-  /* Mozilla, since 1999 */
-  white-space: -pre-wrap;
-  /* Opera 4-6 */
-  white-space: -o-pre-wrap;
-  /* Opera 7 */
-  white-space: pre-wrap;
-  /* css-3 */
-  word-wrap: break-word;
-  /* Internet Explorer 5.5+ */
-  white-space: -webkit-pre-wrap;
-  /* Newer versions of Chrome/Safari*/
-  word-break: break-all;
-  white-space: normal;
-  margin-top: 0;
-}
-
-.container-Publications-Profile .sectionPublications .stories .content .clsImg {
-  display: none;
-}
-
-.container-Publications-Profile .sectionPublications .stories .content img {
-  max-width: 100%;
-}
-
-.container-Publications-Profile .sectionPublications .stories .interactions {
-  width: 90%;
-  height: 3rem;
-  background: #ffffff;
-  display: flex;
-  align-items: center;
-  padding: 0 0.625rem 0 0.625rem;
-  border-radius: 0 0 0.625rem 0.625rem;
-  border-radius: 11px;
-  margin: 0.5rem auto;
-}
-
-.container-Publications-Profile .sectionPublications .stories .interactions img {
-  width: 30px;
-  height: 30px;
-  cursor: pointer;
-  padding: 0.1875rem;
-  margin-left: 0.3125rem;
-}
-
 .logOut {
   width: 20px;
   height: 20px;
@@ -1248,6 +1000,265 @@ p span a:hover {
   .container-Publications-Profile .sectionPublications .stories .interactions {
     width: 97%;
   }
+}
+
+.sectionPublications {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  padding: 0.5rem;
+}
+
+.sectionPublications .containerNewPublications {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-bottom: 0.5rem;
+}
+
+.sectionPublications .containerNewPublications .commentary {
+  width: 100%;
+  height: 2.3rem;
+  background: #eae2e2;
+  border-radius: 10px 10px 0 0;
+  border: solid 2px rgba(255, 253, 253, 0.664);
+}
+
+.sectionPublications .containerNewPublications textarea {
+  width: 100%;
+  height: 5rem;
+  background: #fff6ef;
+  border: solid 2px rgba(255, 253, 253, 0.664);
+  padding: 1rem;
+  text-transform: capitalize;
+  font-family: "Poppins", sans-serif;
+}
+
+.sectionPublications .containerNewPublications #textAreaComentary::-webkit-input-placeholder {
+  color: gray;
+  font-size: 1em;
+  font-family: "Poppins", sans-serif;
+}
+
+.sectionPublications .containerNewPublications #displayImage {
+  width: 100%;
+  background: #fff6ef;
+  padding: 0.5rem;
+}
+
+.sectionPublications .containerNewPublications #displayImage img {
+  max-width: 80px;
+  max-height: 80px;
+  background: #fff6ef;
+  cursor: pointer;
+}
+
+.sectionPublications .containerNewPublications .clsDisplayImage {
+  display: none;
+}
+
+.sectionPublications .containerNewPublications .optionsToPost {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background: #fff6ef;
+  padding: 0.2rem;
+  margin-bottom: 0.5rem;
+  border-radius: 0 0 10px 10px;
+  justify-content: space-between;
+}
+
+.sectionPublications .containerNewPublications .optionsToPost .accionPublication {
+  width: 30%;
+  display: flex;
+  align-content: center;
+  padding: 0.5rem;
+}
+
+.sectionPublications .containerNewPublications .optionsToPost .accionPublication img {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.sectionPublications .containerNewPublications .optionsToPost .accionPublication #addImg {
+  display: none;
+}
+
+.sectionPublications .containerNewPublications .optionsToPost .accionPublication .selectPublicPrivate {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 60%;
+  border: none;
+  margin-left: 0.5rem;
+  outline: none;
+  background-color: #fff6ef;
+}
+
+.sectionPublications .containerNewPublications .optionsToPost .accionPublication .selectPublicPrivate option {
+  size: 5rem;
+  display: flex;
+  align-content: center;
+  background-color: coral;
+}
+
+.sectionPublications .containerNewPublications .optionsToPost .clsMessajePostEmpty {
+  color: #5e0707;
+}
+
+.sectionPublications .containerNewPublications .optionsToPost .btnToPost {
+  width: 30%;
+  height: 100%;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 0.3125rem;
+  color: whitesmoke;
+  text-align: center;
+  border-radius: 3.4375rem;
+  font: bolder 0.9375rem Roboto;
+  border: 5px solid rgba(0, 0, 0, 0.322);
+  box-shadow: 0.625rem 0.625rem 1rem -0.0625rem rgba(0, 0, 0, 0.75);
+  background: linear-gradient(82.14deg, #494541 -3.88%, #c85032 64.89%);
+}
+
+.sectionPublications .containerNewPublications .optionsToPost .btnToPost:hover {
+  background: linear-gradient(141deg, #c85032 33%, #ec9443 64%);
+}
+
+.sectionPublications .stories {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  background: rgba(234, 226, 226, 0.473);
+  border-radius: 11px;
+}
+
+.sectionPublications .stories .authorPublication {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 3rem;
+  background: #eae2e2;
+  padding: 0.5rem;
+  border-radius: 0.625rem 0.625rem 0 0;
+  justify-content: space-between;
+}
+
+.sectionPublications .stories .authorPublication .detailsAuthor {
+  display: flex;
+  align-items: center;
+}
+
+.sectionPublications .stories .authorPublication .detailsAuthor img {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  border: solid #f3eaea;
+}
+
+.sectionPublications .stories .authorPublication .detailsAuthor .dataProfile {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 0.5rem;
+}
+
+.sectionPublications .stories .authorPublication .detailsAuthor .dataProfile .contentDeatilsRegistration {
+  display: flex;
+  align-items: center;
+}
+
+.sectionPublications .stories .authorPublication .detailsAuthor .dataProfile .contentDeatilsRegistration p {
+  margin-top: 0;
+}
+
+.sectionPublications .stories .authorPublication .detailsAuthor .dataProfile .contentDeatilsRegistration img {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.sectionPublications .stories .authorPublication .clsToogleMenu {
+  cursor: pointer;
+}
+
+.sectionPublications .stories .authorPublication .clsToogleMenu ul li {
+  list-style: none;
+}
+
+.sectionPublications .stories .authorPublication .clsToogleMenu .clsBtnOption {
+  display: none;
+}
+
+.sectionPublications .stories .content {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  background: #fff6ef;
+  padding: 0.5rem;
+  margin: 0.5rem auto;
+  border-radius: 11px;
+}
+
+.sectionPublications .stories .content p {
+  display: block;
+  white-space: -moz-pre-wrap !important;
+  /* Mozilla, since 1999 */
+  white-space: -pre-wrap;
+  /* Opera 4-6 */
+  white-space: -o-pre-wrap;
+  /* Opera 7 */
+  white-space: pre-wrap;
+  /* css-3 */
+  word-wrap: break-word;
+  /* Internet Explorer 5.5+ */
+  white-space: -webkit-pre-wrap;
+  /* Newer versions of Chrome/Safari*/
+  word-break: break-all;
+  white-space: normal;
+  margin-top: 0;
+}
+
+.sectionPublications .stories .content .clsGuardarUpdate {
+  display: flex;
+  justify-content: flex-end;
+  padding-bottom: 1rem;
+}
+
+.sectionPublications .stories .content .clsGuardarUpdate .btnGuardarUpdate {
+  border: none;
+}
+
+.sectionPublications .stories .content .clsImg {
+  display: none;
+}
+
+.sectionPublications .stories .content img {
+  max-width: 100%;
+}
+
+.sectionPublications .stories .interactions {
+  width: 90%;
+  height: 3rem;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  padding: 0 0.625rem 0 0.625rem;
+  border-radius: 0 0 0.625rem 0.625rem;
+  border-radius: 11px;
+  margin: 0.5rem auto;
+}
+
+.sectionPublications .stories .interactions img {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  padding: 0.1875rem;
+  margin-left: 0.3125rem;
 }
 
 * {

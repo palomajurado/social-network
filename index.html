@@ -8,7 +8,10 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+  <link href="/library/PNotify.css" rel="stylesheet" type="text/css" />
+  <link href="/library/PNotifyMobile.css" rel="stylesheet" type="text/css" />
+  <link href="/library/PNotifyConfirm.css" rel="stylesheet" type="text/css" />
+  <link href="/library/BrightTheme.css" rel="stylesheet" type="text/css" />
   <link rel="stylesheet" href="./styles/css/style.css" />
   <title>Lima|topia Social Network</title>
   <script src="https://kit.fontawesome.com/1a29c12ccc.js" crossorigin="anonymous"></script>
@@ -25,7 +28,12 @@
   <script src="https://www.gstatic.com/firebasejs/7.14.5/firebase-auth.js"></script>
   <script src="https://www.gstatic.com/firebasejs/7.14.5/firebase-firestore.js"></script>
   <script src="https://www.gstatic.com/firebasejs/7.14.5/firebase-storage.js"></script>
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+  <script type="text/javascript" src="/library/PNotify.js"></script>
+  <script type="text/javascript" src="/library/PNotifyMobile.js"></script>
+  <script type="text/javascript" src="/library/PNotifyConfirm.js"></script>
+  <script type="text/javascript">
+    PNotify.defaultModules.set(PNotifyMobile, {});
+  </script>
   
 
   <script type="module" src="index.js"></script>
