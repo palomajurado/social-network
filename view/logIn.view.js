@@ -20,10 +20,10 @@ export default () => {
           </section>
           <form class="container" id="logInForm">
             <div class="item"><input type="email" id="email" placeholder="Email" spellcheck="false" />
-              <img src="./assets/email.jpg" alt="email" /></div>
+              <img src="./assets/email.png" alt="email" /></div>
             <div class="item"><img src="./assets/passw.jpg" alt="password" />
               <input type="password" id="password" placeholder="Password" spellcheck="false" style="border:none" />
-              <button id="eye"> <img src="https://storage.googleapis.com/md-links/eye.png"></img> </button>
+              <button id="eye"> <img id="imgEye" src="https://storage.googleapis.com/md-links/closeye.png"></img> </button>
             </div>
           </form><span class="signIn" id="signInSpan">Log in con...</span>
           <section class="sectionNetworks"><img src="./assets/g.jpg" alt="Gmail" id="gmail" /><img src="./assets/fb.jpg"

@@ -1,5 +1,4 @@
 .All-sections {
-  // flex-flow: column;
   background-size: cover;
   background-attachment: fixed;
   background-image: url("https://storage.googleapis.com/md-links/bg.png");
@@ -15,6 +14,7 @@
   position: fixed;
   z-index: 100;
 }
+
 .clsLoadingHide {
   display: none !important;
 }
@@ -42,11 +42,12 @@
       }
 
       a {
+        position: absolute;
+        margin-left: -30px;
+
         .imgMenu {
           width: 30px;
           height: 30px;
-          margin-left: 90%;
-          margin-top: 0.8%;
           padding: 0.25rem;
           border-radius: 50%;
           background: rgba(59, 58, 58, 0.575);
@@ -108,6 +109,7 @@
       flex-direction: column;
       align-items: flex-end;
       margin-bottom: 0.5rem;
+
       .commentary {
         width: 100%;
         height: 2.3rem;
@@ -115,6 +117,7 @@
         border-radius: 10px 10px 0 0;
         border: solid 2px rgba(255, 253, 253, 0.664);
       }
+
       textarea {
         width: 100%;
         height: 5rem;
@@ -135,6 +138,7 @@
         width: 100%;
         background: #fff6ef;
         padding: 0.5rem;
+
         img {
           max-width: 80px;
           max-height: 80px;
@@ -162,6 +166,7 @@
           display: flex;
           align-content: center;
           padding: 0.5rem;
+
           img {
             width: 30px;
             height: 30px;
@@ -171,6 +176,7 @@
           #addImg {
             display: none;
           }
+
           .selectPublicPrivate {
             display: flex;
             align-items: center;
@@ -180,6 +186,7 @@
             border-radius: 30%;
             border: solid 1px;
             margin-left: 0.5rem;
+
             option {
               size: 5rem;
               display: flex;
@@ -188,6 +195,7 @@
             }
           }
         }
+
         .clsMessajePostEmpty {
           color: rgb(94, 7, 7);
         }
@@ -221,6 +229,7 @@
       flex-direction: column;
       background: rgba(234, 226, 226, 0.473);
       border-radius: $borderContent;
+
       .authorPublication {
         display: flex;
         align-items: center;
@@ -230,26 +239,33 @@
         padding: 0.5rem;
         border-radius: 0.625rem 0.625rem 0 0;
         justify-content: space-between;
+
         .detailsAuthor {
           display: flex;
           align-items: center;
+
           img {
             width: 3rem;
             height: 3rem;
+            object-fit: cover;
             border-radius: 50%;
             border: solid rgb(243, 234, 234);
           }
+
           .dataProfile {
             display: flex;
             align-items: center;
             flex-direction: column;
             padding: 0.5rem;
+
             .contentDeatilsRegistration {
               display: flex;
               align-items: center;
+
               p {
                 margin-top: 0;
               }
+
               img {
                 width: 1.5rem;
                 height: 1.5rem;
@@ -257,13 +273,16 @@
             }
           }
         }
+
         .clsToogleMenu {
           cursor: pointer;
+
           ul {
             li {
               list-style: none;
             }
           }
+
           .clsBtnOption {
             display: none;
           }
@@ -279,20 +298,29 @@
         padding: 0.5rem;
         margin: 0.5rem auto;
         border-radius: $borderContent;
+
         p {
-          white-space: -moz-pre-wrap !important;  /* Mozilla, since 1999 */
-          white-space: -pre-wrap;      /* Opera 4-6 */
-          white-space: -o-pre-wrap;    /* Opera 7 */
-          white-space: pre-wrap;       /* css-3 */
-          word-wrap: break-word;       /* Internet Explorer 5.5+ */
-          white-space: -webkit-pre-wrap; /* Newer versions of Chrome/Safari*/
+          white-space: -moz-pre-wrap !important;
+          /* Mozilla, since 1999 */
+          white-space: -pre-wrap;
+          /* Opera 4-6 */
+          white-space: -o-pre-wrap;
+          /* Opera 7 */
+          white-space: pre-wrap;
+          /* css-3 */
+          word-wrap: break-word;
+          /* Internet Explorer 5.5+ */
+          white-space: -webkit-pre-wrap;
+          /* Newer versions of Chrome/Safari*/
           word-break: break-all;
           white-space: normal;
           margin-top: 0;
         }
+
         .clsImg {
           display: none;
         }
+
         img {
           max-width: 100%;
         }

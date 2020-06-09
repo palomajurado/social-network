@@ -1,5 +1,6 @@
 import { views } from "../view/index.js";
 import { models } from "../model/index.model.js";
+import { closeEye } from "../utils/eye.js";
 
 export default () => {
   const view = views.logIn();
@@ -11,7 +12,6 @@ export default () => {
       .authEmailPassword(email.value, password.value)
       .then(() => (window.location.hash = "#/profile"))
       .catch((error) => {
-        console.log(error);
         let message = "";
         if (error.code === "auth/invalid-email") message = "Correo inválido";
         else if (error.code === "auth/user-not-found")
@@ -66,12 +66,13 @@ export default () => {
   });
 
   //--------------------------------------- Eye de password
+
   const eye = view.querySelector("#eye");
+  const imgEye = view.querySelector("#imgEye");
   eye.addEventListener("click", (e) => {
     e.stopPropagation();
     e.preventDefault();
-    if (password.type === "password") password.type = "text";
-    else password.type = "password";
+    closeEye(password, imgEye);
   });
 
   return view;

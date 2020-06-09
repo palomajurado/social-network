@@ -20,13 +20,14 @@ export default () => {
             <div class="item">
               <input type="text" id="name" placeholder="Name" spellcheck="false" /><img src="./assets/user.jpg"
                 alt="User" /></div>
-            <div class="item"><img src="./assets/email.jpg" alt="email" />
+            <div class="item"><img src="./assets/email.png" alt="email" />
               <input type="email" id="email" placeholder="Email" spellcheck="false" /></div>
             <div class="item">
               <input type="password" class="passwordAuth" placeholder="Password" id="lastItem"
                 spellcheck="false" />
               <img src="./assets/passw.jpg" alt="password" /></div>
             <div class="item"><img src="./assets/passw.jpg" alt="" />
+              <button id="eye"> <img id="imgEye" src="https://storage.googleapis.com/md-links/closeye.png"></img> </button>
               <input type="password" id="confirmPassword" placeholder="Confirm Password" spellcheck="false" /></div>
           </form>
           <span class="signIn" id="messageResult">Sign up con...</span>

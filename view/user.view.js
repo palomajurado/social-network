@@ -26,10 +26,10 @@ export default () => {
 	color: orange;"></div>
       </div>
       <div class="profile-form-group"><label for="password">Contraseña:</label>
-        <div class="profile-inputs"><input type="password" name="Password" id="password" class="password2">
+        <div class="profile-inputs"><input type="password" name="Password" id="password" class="password2" placeholder="••••••">
           <img src="https://storage.googleapis.com/md-links/pencil.png" alt="lapiz" id="editInputPass" id="submit" />
         </div>
-      </div>
+      </div>  
     </form>
     <span class="signIn" id="changed"></span>
     <a href="#/profile"><input class="regresar" type="button" value="Regresar" name="Regresar" spellcheck="false"></a>

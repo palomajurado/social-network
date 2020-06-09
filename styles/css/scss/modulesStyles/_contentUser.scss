@@ -2,7 +2,7 @@
 	flex-flow: column;
 	background-size: cover;
 	background-attachment: fixed;
-	background-image: url("https://storage.googleapis.com/md-links/xtx.jpg");
+	// background-image: url("https://storage.googleapis.com/md-links/xtx.jpg");
 
 	.profile-user-avatar {
 		.portada {
@@ -13,7 +13,7 @@
 			background-size: cover;
 			justify-content: center;
 			// background-attachment: fixed;
-			background-image: url("https://storage.googleapis.com/md-links/fondo.png");
+			// background-image: url("https://storage.googleapis.com/md-links/fondo.png");
 
 			.user-img {
 				img {
@@ -47,7 +47,7 @@
 				background: #ce5b359f;
 				border-radius: 1.5rem;
 				font-family: "Poppins", sans-serif;
-				border: 0.625rem solid rgba(0, 0, 0, 0.336);
+				border: 0.4rem solid rgba(0, 0, 0, 0.336);
 			}
 
 			#labelChng {
@@ -56,7 +56,7 @@
 				position: absolute;
 				border-radius: 1.5rem;
 				font-family: "Poppins", sans-serif;
-				border: 0.625rem solid rgba(0, 0, 0, 0.336);
+				border: 0.4rem solid rgba(0, 0, 0, 0.336);
 			}
 		}
 	}

@@ -1,5 +1,6 @@
 import { views } from "../view/index.js";
 import { models } from "../model/index.model.js";
+import { closeEye } from "../utils/eye.js";
 
 export default () => {
   const view = views.signUp();
@@ -28,7 +29,7 @@ export default () => {
       .then(() => models.signUpModel.updateDisplayName(name))
       .then(() => {
         messageResult.innerHTML = "Registro exitoso: redireccionando";
-        setTimeout(() => (window.location.hash = "#/"), 1000);
+        setTimeout(() => (window.location.hash = "#/logIn"), 1000);
       })
       .catch((error) => {
         let message = "";
@@ -43,10 +44,28 @@ export default () => {
   });
 
   const gmailButton = view.querySelector("#gmail");
-  gmailButton.addEventListener("click", models.logInModel.authGmail);
+  gmailButton.addEventListener("click", () => {
+    models.logInModel
+      .authGmail()
+      .then(() => (window.location.hash = "#/profile"))
+      .catch((err) => console.log(err));
+  });
 
   const facebookButton = view.querySelector("#facebook");
-  facebookButton.addEventListener("click", models.logInModel.authFacebook);
+  facebookButton.addEventListener("click", () => {
+    models.logInModel
+      .authFacebook()
+      .then(() => (window.location.hash = "#/profile"))
+      .catch((err) => console.log(err));
+  });
+
+  const eye = view.querySelector("#eye");
+  const imgEye = view.querySelector("#imgEye");
+  eye.addEventListener("click", (e) => {
+    e.stopPropagation();
+    e.preventDefault();
+    closeEye(confirmPassword, imgEye);
+  });
 
   return view;
 };

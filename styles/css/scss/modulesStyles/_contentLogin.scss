@@ -247,6 +247,20 @@ h1 {
   border-bottom-color: rgba(0, 0, 0, 0.15);
 }
 
+#eye {
+  position: absolute;
+  margin-top: 10px;
+  outline: none;
+  padding: 2px;
+  margin-left: 100%;
+  background: transparent;
+  border: none;
+
+  #imgEye {
+    transition: all .3s ease-in-out;
+  }
+}
+
 // ------------------------ TEXTO de enlace al SIGN up
 p {
   display: flex;

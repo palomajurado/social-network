@@ -1,12 +1,11 @@
 import { auth } from "./firebase.js";
 import { controllers } from "./controllers/index.controller.js";
 
-const changeView = (route) => {
+const changeView = (path) => {
   const container = document.querySelector("#container");
-  const routesWithoutAuth = ["#/login", "#/register", "#/recovery-pass"];
 
   let next;
-  switch (route) {
+  switch (path) {
     case "":
     case "#/logIn":
     case "#/": {
@@ -34,16 +33,23 @@ const changeView = (route) => {
     }
   }
 
-  // Midleware: Es una capa intermedia : falta asegurar!!
+  // Midleware
+  const publicAllowedRoutes = [
+    "#/",
+    "#/signUp",
+    "#/recovery-pass",
+    "#/notFound",
+  ];
   auth.onAuthStateChanged((user) => {
-    const noAuthNedeed = routesWithoutAuth.find((route) => route === route);
+    const allowedRoute = publicAllowedRoutes.find((route) => route === path);
     container.innerHTML = "";
     if (user) {
       container.appendChild(next());
-    } else if (noAuthNedeed) {
+    } else if (allowedRoute) {
       container.appendChild(next());
     } else {
-      window.location.hash = "#/logIn";
+      window.location.hash = "#/";
+      container.appendChild(next());
     }
   });
 };

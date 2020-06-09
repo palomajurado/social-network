@@ -24,6 +24,10 @@ export default () => {
       .getBackgroundUser(user.uid) // ID de user, hara match con el id objeto
       .then((querySnapshot) => {
         if (querySnapshot.docs.length > 0) {
+          querySnapshot.docs.forEach((doc) => {
+            console.log(doc.data());
+          });
+
           let settings = querySnapshot.docs[0].data(); // devuelve la config
           bg.style.backgroundImage = `url(${settings.backgroundImg})`;
         }
@@ -37,7 +41,6 @@ export default () => {
     if (!file) {
       return;
     }
-
     models.user.updatePhotoBg(file).then((snapshot) => {
       snapshot.ref.getDownloadURL().then((url) => {
         models.user
@@ -57,7 +60,7 @@ export default () => {
 
   //--------------------------------------- Evento cambio de fotoPerfil
   imgUpdate.addEventListener("change", (e) => {
-    const file = e.target.files[0]; // codigo de img
+    const file = e.target.files[0];
     models.user.updatePhotoUser(file).then((snapshot) => {
       snapshot.ref.getDownloadURL().then((url) => {
         user
@@ -80,6 +83,7 @@ export default () => {
     user
       .updateProfile({ displayName: name.value })
       .then(() => {
+        console.log(user);
         messageElm.innerHTML = "Actualizaste tu nombre";
         setTimeout(() => (messageElm.innerHTML = ""), 2000);
       })

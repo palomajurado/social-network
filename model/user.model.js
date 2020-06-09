@@ -1,4 +1,5 @@
 import { storageRef, auth, db } from "../firebase.js";
+import { generateRandomString } from "../utils/randomString.js";
 
 const updateDisplayName = (name) =>
   auth.currentUser.updateProfile({
@@ -8,11 +9,14 @@ const updateDisplayName = (name) =>
 const updatePhotoUser = (file) =>
   storageRef.child("photoUpload/" + file.name).put(file);
 
-const updatePhotoBg = (file) =>
-  storageRef.child("bgUpload/" + file.name).put(file);
+const updatePhotoBg = (file) => {
+  const extension = file.name.substr(file.name.lastIndexOf("."));
+  const newName = generateRandomString() + extension;
+  return storageRef.child("bgUpload/" + newName).put(file);
+};
 
 const saveBackgroundUser = (user, imgURL) =>
-  db.collection("settings").add({
+  db.collection("settings").doc(user.uid).set({
     userId: user.uid,
     backgroundImg: imgURL,
   });

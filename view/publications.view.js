@@ -3,12 +3,20 @@ export default (post) => {
   const viewPublications = `
     <div class="authorPublication">
       <div class="detailsAuthor">
-        <img src="http://lorempixel.com/200/200/" alt=""/>
+        <img src="${
+          post.photoURL
+            ? post.photoURL
+            : "https://storage.googleapis.com/md-links/avatar.png"
+        }"  alt=""/>
         <div class="dataProfile">
-          <h3>Nombre </h3>
+          <h3>${post.displayName}</h3>
             <div class="contentDeatilsRegistration">
-              <img src="${post.privacyAction === 'publico' ? './assets/public.png'  : './assets/private.png'}" />
-              <p>${(post.registrationDate.toDate()).toLocaleString()}</p>
+              <img src="${
+                post.privacyAction === "publico"
+                  ? "./assets/public.png"
+                  : "./assets/private.png"
+              }" />
+              <p>${post.registrationDate.toDate().toLocaleString()}</p>
             </div>
         </div>
       </div>
@@ -26,10 +34,16 @@ export default (post) => {
     </div>
     <div class="content">
       <p>${post.content}</p>
-      <img id="publishedImage" class="${typeof post.image !== 'undefined' && post.image !== null ? '' : 'clsImg'}" src="${typeof post.image !== 'undefined' && post.image !== null ? post.image : ''}" alt="imgShare" />
+      <img id="publishedImage" class="${
+        typeof post.image !== "undefined" && post.image !== null ? "" : "clsImg"
+      }" src="${
+    typeof post.image !== "undefined" && post.image !== null ? post.image : ""
+  }" alt="imgShare" />
     </div>
     <div class="interactions"> 
-      <img src="./assets/corazon.svg" alt="meGusta" />
+     ${post.punctuation} <img  id="heart" data-publication="${post.id}" src="${
+    post.punctuation > 0 ? "./assets/fullHeart.png" : "./assets/emptyHeart.png"
+  }" alt="meGusta" />
     </div> `;
 
   const divElement = document.createElement("div");
