@@ -10,13 +10,12 @@ export default () => {
   const background = view.querySelector("#background");
   const user = models.profileModel.getCurrentNameUser();
 
+  // QuerySnapshot es un obj de rspta de firebase, trae datos de ese user.uid
   if (user) {
     shownName.innerHTML = user.displayName;
     if (user.photoURL) userPhoto.src = user.photoURL;
-
     models.user
       .getBackgroundUser(user.uid)
-      // QuerySnapshot es un obj de rspta de firebase, trae datos de ese user.uid
       .then((querySnapshot) => {
         if (querySnapshot.docs.length > 0) {
           let settings = querySnapshot.docs[0].data();

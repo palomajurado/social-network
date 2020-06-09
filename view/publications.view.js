@@ -4,36 +4,41 @@ export default (post) => {
     <div class="authorPublication">
       <div class="detailsAuthor">
         <img src="${
-          post.photoURL
-            ? post.photoURL
+          post.userPhoto
+            ? post.userPhoto
             : "https://storage.googleapis.com/md-links/avatar.png"
-        }"  alt=""/>
+        }" alt=""/>
         <div class="dataProfile">
-          <h3>${post.displayName}</h3>
+          <h3>${post.userName} </h3>
             <div class="contentDeatilsRegistration">
               <img src="${
                 post.privacyAction === "publico"
                   ? "./assets/public.png"
                   : "./assets/private.png"
               }" />
-              <p>${post.registrationDate.toDate().toLocaleString()}</p>
-            </div>
+              <p>${(post.registrationDate
+                ? post.registrationDate.toDate()
+                : new Date()
+              ).toLocaleString()}</p>
+              <input type="text" class="idPublication" value="${post.id}">
+              </div>
         </div>
       </div>
       <div class="clsToogleMenu" >
-        <span class="menuEdit" id="btnOption"> &#9776; </span>
-        <ul class="dropdown-menu">
-          <li><i class="fa fa-pencil fa-fw"></i> Edit</a></li>
-          <li><i class="fa fa-trash-o fa-fw"></i> Delete</a></li>
+        <span class="menuEdit hvr-bounce-in" id="btnOption"><i class="fas fa-cogs"></i></span>
+        <ul class="ulToogleMenu dropdown-menu">
+          <li class="updatePublication"><i class="fa fa-pencil fa-fw"></i> Edit</li>
+          <li class="deletePublication"><i class="fa fa-trash-o fa-fw"></i> Delete</li>
         </ul>
-        <select name="selectEdit" id="selectEditDelete">
-          <option value="Edit"><i class="fa fa-pencil fa-fw"></i>Edit</option>
-          <option value="Delete"><i class="fa fa-trash-o fa-fw"></i>Delete</option>
-        </select>
       </div>
     </div>
     <div class="content">
-      <p>${post.content}</p>
+      <div>
+      <p class="currentContent">${post.content}</p>
+      <div class="clsGuardarUpdate clsHide">
+      <button class="btnGuardarUpdate">💾</button>
+      </div>
+      </div>
       <img id="publishedImage" class="${
         typeof post.image !== "undefined" && post.image !== null ? "" : "clsImg"
       }" src="${
@@ -41,12 +46,19 @@ export default (post) => {
   }" alt="imgShare" />
     </div>
     <div class="interactions"> 
-     ${post.punctuation} <img  id="heart" data-publication="${post.id}" src="${
-    post.punctuation > 0 ? "./assets/fullHeart.png" : "./assets/emptyHeart.png"
-  }" alt="meGusta" />
+      ${post.punctuation}<img id="heart" data-publication="${
+    post.id
+  }" class="hvr-pulse-grow" alt="meGusta" src="${
+    post.punctuation > 0 ? "./assets/fullHeart.png" : "./assets/corazon.svg"
+  }"/>
+      <img id="btnComment" src="./assets/coment.png" class="hvr-grow-rotate" alt="comentarios" />
+     <textarea id="textComment" cols="30" rows="2"></textarea>
+     <button id="sendComment" type="submit"><img src="./assets/send.png" alt="send"/> </button>
+     <div id="placeComments">${post.comment.content}</div>
     </div> `;
 
   const divElement = document.createElement("div");
+  divElement.classList.add("publication");
   divElement.innerHTML = viewPublications;
   return divElement;
 };
