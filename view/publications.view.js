@@ -14,8 +14,8 @@ export default (post) => {
         </div>
       </div>
       <div class="clsToogleMenu" >
-        <span class="menuEdit" id="btnOption"> &#9776; </span>
-        <ul class="dropdown-menu">
+        <span class="menuEdit hvr-bounce-in" id="btnOption"><i class="fas fa-cogs"></i></span>
+        <ul class="ulToogleMenu dropdown-menu">
           <li class="updatePublication"><i class="fa fa-pencil fa-fw"></i> Edit</li>
           <li class="deletePublication"><i class="fa fa-trash-o fa-fw"></i> Delete</li>
         </ul>
@@ -24,15 +24,15 @@ export default (post) => {
     <div class="content">
       <div>
       <p class="currentContent">${post.data().content}</p>
-      <div class="clsGuardarUpdate">
+      <div class="clsGuardarUpdate clsHide">
       <button class="btnGuardarUpdate">💾</button>
       </div>
       </div>
       <img id="publishedImage" class="${typeof post.data().image !== 'undefined' && post.data().image !== null ? '' : 'clsImg'}" src="${typeof post.data().image !== 'undefined' && post.data().image !== null ? post.data().image : ''}" alt="imgShare" />
     </div>
     <div class="interactions"> 
-      <img src="./assets/corazon.svg" alt="meGusta" />
-      <img src="./assets/coment.png" alt="comentarios" />
+      <img src="./assets/corazon.svg" class="hvr-pulse-grow" alt="meGusta" />
+      <img src="./assets/coment.png" class="hvr-grow-rotate" alt="comentarios" />
     </div> `;
 
   const divElement = document.createElement("div");

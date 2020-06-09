@@ -30,7 +30,7 @@ export default () => {
           </div>
           <div class="optionsToPost">
             <div id="actionPublicate"class="accionPublication">
-              <img id="iconCamera" src="./assets/iconImage.png" alt="subirImagen" />
+              <img id="iconCamera" class="hvr-bounce-in" src="./assets/iconImage.png" alt="subirImagen" />
               <input type="file" id="addImg" name="addImg" accept="image/*">
               <select name="selectPublicPrivate" class="selectPublicPrivate" id="optionPublicPrivate">
                 <option value="publico" class="fas fa-users"> 🌎 Público</option>

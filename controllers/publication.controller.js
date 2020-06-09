@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 /* eslint-disable import/extensions */
 import { views } from '../view/index.js';
 import { models } from '../model/index.model.js';
@@ -9,7 +10,6 @@ export default (viewProfile) => {
   const displayImage = viewProfile.querySelector('#displayImage');
   const loadingPanel = viewProfile.querySelector('#idLoading');
   const user = models.profileModel.getCurrentNameUser();
-  const menuEdit = viewProfile.querySelector('.menuEdit');
 
   btnShare.addEventListener('click', () => {
     const textAreaComentary = viewProfile.querySelector('#textAreaComentary').value;
@@ -117,8 +117,9 @@ export default (viewProfile) => {
         const idPublication = updatePost.closest('.authorPublication').querySelector('.idPublication').value;
         console.log(idPublication);
         updatePost.closest('.publication').querySelector('.currentContent').contentEditable = 'true';
+        const clsGuardarUpdate = updatePost.closest('.publication').querySelector('.clsGuardarUpdate');
+        clsGuardarUpdate.classList.remove('clsHide');
         const btnGuardarUpdate = updatePost.closest('.publication').querySelector('.btnGuardarUpdate');
-
         btnGuardarUpdate.addEventListener('click', () => {
           const newContent = updatePost.closest('.publication').querySelector('.currentContent').innerText;
           models.publicationsModel.updatePublication(idPublication, newContent);
@@ -142,6 +143,20 @@ export default (viewProfile) => {
       const view = views.publications(post);
       stories.appendChild(view);
     });
+    const menuEdit = viewProfile.querySelectorAll('.menuEdit');
+    menuEdit.forEach((menu) => {
+      menu.addEventListener('click', () => {
+        const ulToogleMenu = menu.closest('.authorPublication').querySelector('.ulToogleMenu');
+        if (ulToogleMenu.classList.contains('dropdown-menu') === true) {
+          ulToogleMenu.classList.remove('dropdown-menu');
+        } else {
+          ulToogleMenu.classList.add('dropdown-menu');
+        }
+      });
+    });
+
+
+
     eventDeletePublication();
     eventUpdatePublication();
   });
