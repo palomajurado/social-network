@@ -1,0 +1,47 @@
+#placeComments {
+  margin: 0 1.25rem;
+  padding-top: 10px;
+  background: #EAE2E2;
+  border-radius: 0.625rem;
+  border: 0.0313rem solid #8f8989;
+
+  .publication {
+    height: 120px;
+    color: black;
+    background: white;
+    margin: 2.3125rem 0 0;
+    min-height: fit-content;
+    border-radius: 0 0.625rem;
+
+
+    #userComment {
+      display: flex;
+
+      img {
+        height: 2rem;
+        object-fit: cover;
+        border-radius: 50%;
+        margin-top: -2.1875rem;
+        padding: 0 0 0.125rem 0.3438rem;
+      }
+
+      h3 {
+        font-size: 0.8125rem;
+        margin: -1.875rem 0 0 0.125rem;
+      }
+
+      span {
+        font-size: 0.5rem;
+        margin-top: -1.4375rem;
+        margin-left: 0.8125rem;
+      }
+
+      #dott {
+        width: 1.5rem;
+        padding: 0.3125rem;
+        margin: -42px 0 0.1875rem 50%;
+      }
+    }
+
+  }
+}

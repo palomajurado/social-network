@@ -22,7 +22,7 @@ const saveBackgroundUser = (user, imgURL) =>
   });
 
 const getBackgroundUser = (userId) =>
-  db.collection("settings").where("userId", "==", userId).get(); // Dvuelve la config del usuario que tenga este userId
+  db.collection("settings").where("userId", "==", userId).get(); // Devuelve la config del usuario que tenga este userId
 
 export default {
   updatePhotoBg,

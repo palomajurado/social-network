@@ -76,13 +76,17 @@ const incrementPunctuation = (id) => {
   publicationRef.update({ punctuation: increment });
 };
 
-const addComment = (idPublish, textComment) => {
+const addComment = (idPublish, comment) => {
   const publicationRef = db.collection("publications").doc(idPublish);
-  return publicationRef.update({ comment: textComment });
+  return publicationRef.collection("comments").add(comment);
 };
+
+const getComments = (postId) =>
+  db.collection("publications").doc(postId).collection("comments").get();
 
 export default {
   addComment,
+  getComments,
   getStorageRef,
   getPublications,
   updatePublication,

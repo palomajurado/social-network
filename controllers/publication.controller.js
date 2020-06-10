@@ -161,18 +161,34 @@ export default (viewProfile) => {
           postObj.userId !== user.uid
         )
           return;
+
         const view = views.publications(postObj);
+
+        const placeComments = view.querySelector("#placeComments");
+        const commentsView = views.comments;
+
+        models.publicationsModel
+          .getComments(post.id)
+          .then((querysnapshot) => {
+            querysnapshot.forEach((doc) => {
+              placeComments.appendChild(commentsView(doc.data())); //!!!!S!!metodo;
+            });
+          })
+          .catch((err) => console.log(err));
 
         // Trabajando en comentarios
         const heart = view.querySelector("#heart");
         const btnComment = view.querySelector("#btnComment");
         const sendComment = view.querySelector("#sendComment");
         const textComment = view.querySelector("#textComment");
-        const placeComments = view.querySelector("#placeComments");
+
         sendComment.addEventListener("click", () => {
           const captureComment = textComment.value;
           models.publicationsModel
-            .addComment(postObj.id, { content: captureComment })
+            .addComment(postObj.id, {
+              content: captureComment,
+              username: user.displayName,
+            })
             .then(() => console.log("comentario agregado"))
             .catch((err) => console.log(err));
         });

@@ -933,77 +933,7 @@ p span a:hover {
   display: none;
 }
 
-.container-Publications-Profile .sectionPublications .containerNewPublications .optionsToPost {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  background: #fff6ef;
-  padding: 0.2rem;
-  margin-bottom: 0.5rem;
-  border-radius: 0 0 10px 10px;
-  justify-content: space-between;
-}
-
-.container-Publications-Profile .sectionPublications .containerNewPublications .optionsToPost .accionPublication {
-  width: 30%;
-  display: flex;
-  align-content: center;
-  padding: 0.5rem;
-}
-
-.container-Publications-Profile .sectionPublications .containerNewPublications .optionsToPost .accionPublication img {
-  width: 30px;
-  height: 30px;
-  cursor: pointer;
-}
-
-.container-Publications-Profile .sectionPublications .containerNewPublications .optionsToPost .accionPublication #addImg {
-  display: none;
-}
-
-.container-Publications-Profile .sectionPublications .containerNewPublications .optionsToPost .accionPublication .selectPublicPrivate {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  width: 80%;
-  border-radius: 30%;
-  border: solid 1px;
-  margin-left: 0.5rem;
-}
-
-.container-Publications-Profile .sectionPublications .containerNewPublications .optionsToPost .accionPublication .selectPublicPrivate option {
-  size: 5rem;
-  display: flex;
-  align-content: center;
-  background-color: coral;
-}
-
-.container-Publications-Profile .sectionPublications .containerNewPublications .optionsToPost .clsMessajePostEmpty {
-  color: #5e0707;
-}
-
-.container-Publications-Profile .sectionPublications .containerNewPublications .optionsToPost .btnToPost {
-  width: 30%;
-  height: 100%;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  padding: 0.3125rem;
-  color: whitesmoke;
-  text-align: center;
-  border-radius: 3.4375rem;
-  font: bolder 0.9375rem Roboto;
-  border: 5px solid rgba(0, 0, 0, 0.322);
-  box-shadow: 0.625rem 0.625rem 1rem -0.0625rem rgba(0, 0, 0, 0.75);
-  background: linear-gradient(82.14deg, #494541 -3.88%, #c85032 64.89%);
-}
-
-.container-Publications-Profile .sectionPublications .containerNewPublications .optionsToPost .btnToPost:hover {
-  background: linear-gradient(141deg, #c85032 33%, #ec9443 64%);
-}
-
-.container-Publications-Profile .sectionPublications .stories {
+.container-Publications-Profile .sectionPublications .containerNewPublications .stories {
   display: flex;
   justify-content: center;
   align-content: center;
@@ -1012,7 +942,7 @@ p span a:hover {
   border-radius: 11px;
 }
 
-.container-Publications-Profile .sectionPublications .stories .authorPublication {
+.container-Publications-Profile .sectionPublications .containerNewPublications .stories .authorPublication {
   display: flex;
   align-items: center;
   width: 100%;
@@ -1023,12 +953,12 @@ p span a:hover {
   justify-content: space-between;
 }
 
-.container-Publications-Profile .sectionPublications .stories .authorPublication .detailsAuthor {
+.container-Publications-Profile .sectionPublications .containerNewPublications .stories .authorPublication .detailsAuthor {
   display: flex;
   align-items: center;
 }
 
-.container-Publications-Profile .sectionPublications .stories .authorPublication .detailsAuthor img {
+.container-Publications-Profile .sectionPublications .containerNewPublications .stories .authorPublication .detailsAuthor img {
   width: 3rem;
   height: 3rem;
   object-fit: cover;
@@ -1036,40 +966,40 @@ p span a:hover {
   border: solid #f3eaea;
 }
 
-.container-Publications-Profile .sectionPublications .stories .authorPublication .detailsAuthor .dataProfile {
+.container-Publications-Profile .sectionPublications .containerNewPublications .stories .authorPublication .detailsAuthor .dataProfile {
   display: flex;
   align-items: center;
   flex-direction: column;
   padding: 0.5rem;
 }
 
-.container-Publications-Profile .sectionPublications .stories .authorPublication .detailsAuthor .dataProfile .contentDeatilsRegistration {
+.container-Publications-Profile .sectionPublications .containerNewPublications .stories .authorPublication .detailsAuthor .dataProfile .contentDeatilsRegistration {
   display: flex;
   align-items: center;
 }
 
-.container-Publications-Profile .sectionPublications .stories .authorPublication .detailsAuthor .dataProfile .contentDeatilsRegistration p {
+.container-Publications-Profile .sectionPublications .containerNewPublications .stories .authorPublication .detailsAuthor .dataProfile .contentDeatilsRegistration p {
   margin-top: 0;
 }
 
-.container-Publications-Profile .sectionPublications .stories .authorPublication .detailsAuthor .dataProfile .contentDeatilsRegistration img {
+.container-Publications-Profile .sectionPublications .containerNewPublications .stories .authorPublication .detailsAuthor .dataProfile .contentDeatilsRegistration img {
   width: 1.5rem;
   height: 1.5rem;
 }
 
-.container-Publications-Profile .sectionPublications .stories .authorPublication .clsToogleMenu {
+.container-Publications-Profile .sectionPublications .containerNewPublications .stories .authorPublication .clsToogleMenu {
   cursor: pointer;
 }
 
-.container-Publications-Profile .sectionPublications .stories .authorPublication .clsToogleMenu ul li {
+.container-Publications-Profile .sectionPublications .containerNewPublications .stories .authorPublication .clsToogleMenu ul li {
   list-style: none;
 }
 
-.container-Publications-Profile .sectionPublications .stories .authorPublication .clsToogleMenu .clsBtnOption {
+.container-Publications-Profile .sectionPublications .containerNewPublications .stories .authorPublication .clsToogleMenu .clsBtnOption {
   display: none;
 }
 
-.container-Publications-Profile .sectionPublications .stories .content {
+.container-Publications-Profile .sectionPublications .containerNewPublications .stories .content {
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -1080,33 +1010,15 @@ p span a:hover {
   border-radius: 11px;
 }
 
-.container-Publications-Profile .sectionPublications .stories .content p {
-  white-space: -moz-pre-wrap !important;
-  /* Mozilla, since 1999 */
-  white-space: -pre-wrap;
-  /* Opera 4-6 */
-  white-space: -o-pre-wrap;
-  /* Opera 7 */
-  white-space: pre-wrap;
-  /* css-3 */
-  word-wrap: break-word;
-  /* Internet Explorer 5.5+ */
-  white-space: -webkit-pre-wrap;
-  /* Newer versions of Chrome/Safari*/
-  word-break: break-all;
-  white-space: normal;
-  margin-top: 0;
-}
-
-.container-Publications-Profile .sectionPublications .stories .content .clsImg {
+.container-Publications-Profile .sectionPublications .containerNewPublications .stories .content .clsImg {
   display: none;
 }
 
-.container-Publications-Profile .sectionPublications .stories .content img {
+.container-Publications-Profile .sectionPublications .containerNewPublications .stories .content img {
   max-width: 100%;
 }
 
-.container-Publications-Profile .sectionPublications .stories .interactions {
+.container-Publications-Profile .sectionPublications .containerNewPublications .stories .interactions {
   width: 90%;
   height: 3rem;
   background: #ffffff;
@@ -1118,7 +1030,7 @@ p span a:hover {
   margin: 0.5rem auto;
 }
 
-.container-Publications-Profile .sectionPublications .stories .interactions img {
+.container-Publications-Profile .sectionPublications .containerNewPublications .stories .interactions img {
   width: 30px;
   height: 30px;
   cursor: pointer;
@@ -1265,6 +1177,52 @@ p span a:hover {
   }
 }
 
+#placeComments {
+  margin: 0 1.25rem;
+  padding-top: 10px;
+  background: #EAE2E2;
+  border-radius: 0.625rem;
+  border: 0.0313rem solid #8f8989;
+}
+
+#placeComments .publication {
+  height: 120px;
+  color: black;
+  background: white;
+  margin: 2.3125rem 0 0;
+  min-height: fit-content;
+  border-radius: 0 0.625rem;
+}
+
+#placeComments .publication #userComment {
+  display: flex;
+}
+
+#placeComments .publication #userComment img {
+  height: 2rem;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-top: -2.1875rem;
+  padding: 0 0 0.125rem 0.3438rem;
+}
+
+#placeComments .publication #userComment h3 {
+  font-size: 0.8125rem;
+  margin: -1.875rem 0 0 0.125rem;
+}
+
+#placeComments .publication #userComment span {
+  font-size: 0.5rem;
+  margin-top: -1.4375rem;
+  margin-left: 0.8125rem;
+}
+
+#placeComments .publication #userComment #dott {
+  width: 1.5rem;
+  padding: 0.3125rem;
+  margin: -42px 0 0.1875rem 50%;
+}
+
 .sectionPublications {
   display: flex;
   justify-content: center;
@@ -1332,7 +1290,7 @@ p span a:hover {
 }
 
 .sectionPublications .containerNewPublications .optionsToPost .accionPublication {
-  width: 30%;
+  width: 45%;
   display: flex;
   align-content: center;
   padding: 0.5rem;
@@ -1365,6 +1323,12 @@ p span a:hover {
   display: flex;
   align-content: center;
   background-color: coral;
+  font-family: "Poppins";
+}
+
+.sectionPublications .containerNewPublications .optionsToPost .accionPublication .selectPublicPrivate option span {
+  padding: 20px;
+  height: 20px;
 }
 
 .sectionPublications .containerNewPublications .optionsToPost .clsMessajePostEmpty {
@@ -1381,7 +1345,7 @@ p span a:hover {
   color: whitesmoke;
   text-align: center;
   border-radius: 3.4375rem;
-  font: bolder 0.9375rem Roboto;
+  font-family: "Poppins";
   border: 5px solid rgba(0, 0, 0, 0.322);
   box-shadow: 0.625rem 0.625rem 1rem -0.0625rem rgba(0, 0, 0, 0.75);
   background: linear-gradient(82.14deg, #494541 -3.88%, #c85032 64.89%);

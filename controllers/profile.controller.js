@@ -18,7 +18,7 @@ export default () => {
       .getBackgroundUser(user.uid)
       .then((querySnapshot) => {
         if (querySnapshot.docs.length > 0) {
-          let settings = querySnapshot.docs[0].data();
+          const settings = querySnapshot.docs[0].data();
           background.src = settings.backgroundImg;
         }
       })

@@ -62,7 +62,7 @@
       justify-content: space-between;
 
       .accionPublication {
-        width: 30%;
+        width: 45%;
         display: flex;
         align-content: center;
         padding: 0.5rem;
@@ -93,6 +93,12 @@
             display: flex;
             align-content: center;
             background-color: coral;
+            font-family: "Poppins";
+
+            span {
+              padding: 20px;
+              height: 20px;
+            }
           }
         }
       }
@@ -111,7 +117,7 @@
         color: $colorWhite;
         text-align: center;
         border-radius: 3.4375rem;
-        font: bolder 0.9375rem Roboto;
+        font-family: "Poppins";
         border: 5px solid rgba(0, 0, 0, 0.322);
         box-shadow: 0.625rem 0.625rem 1rem -0.0625rem rgba(0, 0, 0, 0.75);
         background: linear-gradient(82.14deg, #494541 -3.88%, #c85032 64.89%);
@@ -286,7 +292,6 @@
     }
   }
 }
-
 
 /* Pulse Grow */
 @-webkit-keyframes hvr-pulse-grow {

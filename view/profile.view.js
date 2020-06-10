@@ -30,8 +30,8 @@ export default () => {
               <img id="iconCamera" class="hvr-bounce-in" src="./assets/iconImage.png" alt="subirImagen" />
               <input type="file" id="addImg" name="addImg" accept="image/*">
               <select name="selectPublicPrivate" class="selectPublicPrivate" id="optionPublicPrivate">
-                <option value="publico" class="fas fa-users"> 🌎 Público</option>
-                <option value="privado" class="fas fa-user-lock"> 🔐 Privado </option>
+                <option value="publico" class="fas fa-users"> 🌎 <span>Público</span></option>
+                <option value="privado" class="fas fa-user-lock"> 🔐 <span>Privado </span></option>
               </select>
             </div>
             <button class="btnToPost" id="btnShare"> Share </button>

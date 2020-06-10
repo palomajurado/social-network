@@ -34,6 +34,7 @@ export default () => {
   // --------------------------------------- Evento cambio de portada
   changeBG.addEventListener("change", (e) => {
     const file = e.target.files[0];
+    // si no es el file elegido (cuando por error le doy cancel)
     if (!file) {
       return;
     }

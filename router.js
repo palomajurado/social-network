@@ -34,12 +34,8 @@ const changeView = (path) => {
   }
 
   // Midleware
-  const publicAllowedRoutes = [
-    "#/",
-    "#/signUp",
-    "#/recovery-pass",
-    "#/notFound",
-  ];
+  const publicAllowedRoutes = ["#/", "#/signUp", "#/recovery-pass"];
+
   auth.onAuthStateChanged((user) => {
     const allowedRoute = publicAllowedRoutes.find((route) => route === path);
     container.innerHTML = "";

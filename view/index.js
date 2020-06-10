@@ -5,6 +5,7 @@ import profile from "./profile.view.js";
 import user from "./user.view.js";
 import publications from "./publications.view.js";
 import recoveryPass from "./recoveryPass.view.js";
+import comments from "./comments.view.js";
 
 export const views = {
   user,
@@ -12,6 +13,7 @@ export const views = {
   signUp,
   profile,
   notFound,
+  comments,
   publications,
   recoveryPass,
 };
