@@ -73,7 +73,7 @@ const updatePublication = (idPublication, newContent) => {
 const incrementPunctuation = (id) => {
   const publicationRef = db.collection("publications").doc(id);
   const increment = firebase.firestore.FieldValue.increment(1);
-  publicationRef.update({ punctuation: increment });
+  return publicationRef.update({ punctuation: increment });
 };
 
 const addComment = (idPublish, comment) => {
@@ -81,13 +81,48 @@ const addComment = (idPublish, comment) => {
   return publicationRef.collection("comments").add(comment);
 };
 
+const addLike = (idPublish, user) => {
+  const publicationRef = db.collection("publications").doc(idPublish);
+  return publicationRef.collection("likes").add(user);
+};
+
+const getlike = (idPublish, userId) => {
+  return db
+    .collection("publications")
+    .doc(idPublish)
+    .collection("likes")
+    .where("user", "==", userId)
+    .get();
+};
+
+const removeLike = (idPublish, userId) => {
+  const publicationRef = db.collection("publications").doc(idPublish);
+  return publicationRef
+    .collection("likes")
+    .where("user", "==", userId)
+    .delete();
+};
+
 const getComments = (postId) =>
-  db.collection("publications").doc(postId).collection("comments").get();
+  db
+    .collection("publications")
+    .doc(postId)
+    .collection("comments")
+    .orderBy("date", "desc")
+    .get();
+
+const getTotalLikes = (postId) => {
+  return db.collection("publications").doc(postId).collection("likes").get();
+};
 
 export default {
+  getlike,
+  addLike,
   addComment,
+  removeLike,
   getComments,
   getStorageRef,
+  getTotalLikes,
   getPublications,
   updatePublication,
   deletePublication,

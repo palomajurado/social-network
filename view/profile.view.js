@@ -21,7 +21,7 @@ export default () => {
       <section class="sectionPublications" >
         <div class="containerNewPublications">
           <div class="commentary">¿Que quieres compartir?</div>
-          <textarea name="newCommentary" id="textAreaComentary" class="textAreaPublication" placeholder="Escribe" autofocus></textarea>
+          <textarea name="newCommentary" id="textAreaComentary" class="textAreaPublication" placeholder="Escribe" autofocus spellcheck="false"></textarea>
           <div id="displayImage" class="clsDisplayImage">
             <img id="loadedImage" src="http://placehold.it/180" alt="your image" />
           </div>

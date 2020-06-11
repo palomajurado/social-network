@@ -3,10 +3,9 @@
   padding-top: 10px;
   background: #EAE2E2;
   border-radius: 0.625rem;
-  border: 0.0313rem solid #8f8989;
 
   .publication {
-    height: 120px;
+    height: 60px;
     color: black;
     background: white;
     margin: 2.3125rem 0 0;
@@ -19,10 +18,12 @@
 
       img {
         height: 2rem;
+        width: 2rem;
         object-fit: cover;
         border-radius: 50%;
+        margin-right: 2px;
+        margin-left: 4px;
         margin-top: -2.1875rem;
-        padding: 0 0 0.125rem 0.3438rem;
       }
 
       h3 {

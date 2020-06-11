@@ -12,7 +12,7 @@ export default (post) => {
         <h3>${post.userName} </h3>
         <div class="contentDeatilsRegistration">
           <img src="${
-            post.privacyAction === " publico"
+            post.privacyAction === "publico"
               ? "./assets/public.png"
               : "./assets/private.png"
           }" />
@@ -46,17 +46,14 @@ export default (post) => {
   }" alt="imgShare" />
   </div>
   <div class="interactions">
-    ${post.punctuation}<img id="heart" data-publication="${
+  <span id="likesCount"></span><img id="heart" data-publication="${
     post.id
-  }" class="hvr-pulse-grow" alt="meGusta" src="${
-    post.punctuation > 0 ? " ./assets/fullHeart.png" : "./assets/corazon.svg"
-  }" />
+  }" class="hvr-pulse-grow" alt="meGusta" src="./assets/corazon.svg" />
     <img id="btnComment" src="./assets/coment.png" class="hvr-grow-rotate" alt="comentarios" />
-    <textarea id="textComment" cols="30" rows="2" style="border:none"></textarea>
+    <textarea id="textComment" cols="30" rows="2" spellcheck="false"></textarea>
     <button id="sendComment" type="submit"><img src="./assets/send.png" alt="send" /></button>
   </div>
   <div id="placeComments"></div>`;
-
   const divElement = document.createElement("div");
   divElement.classList.add("publication");
   divElement.innerHTML = viewPublications;

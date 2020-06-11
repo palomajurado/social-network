@@ -32,12 +32,12 @@
     .coverPage {
       width: 100%;
       height: 10em;
-      // background: $colorOrng;
       border-radius: $borderContent;
 
       img {
         width: 100%;
         height: 100%;
+        object-fit: cover;
         border-radius: $borderContent;
       }
 
@@ -93,169 +93,6 @@
         position: relative;
         font-weight: bolder;
         text-transform: capitalize;
-      }
-    }
-  }
-
-  .sectionPublications {
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    flex-direction: column;
-    padding: 0.5rem;
-
-    .containerNewPublications {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-end;
-      margin-bottom: 0.5rem;
-
-      .commentary {
-        width: 100%;
-        height: 2.3rem;
-        background: #eae2e2;
-        border-radius: 10px 10px 0 0;
-        border: solid 2px rgba(255, 253, 253, 0.664);
-      }
-
-      textarea {
-        width: 100%;
-        height: 5rem;
-        background: #fff6ef;
-        border: solid 2px rgba(255, 253, 253, 0.664);
-        padding: 1rem;
-        text-transform: capitalize;
-        font-family: $FFsecondary;
-      }
-
-      #textAreaComentary::-webkit-input-placeholder {
-        color: gray;
-        font-size: 1em;
-        font-family: $FFsecondary;
-      }
-
-      #displayImage {
-        width: 100%;
-        background: #fff6ef;
-        padding: 0.5rem;
-
-        img {
-          max-width: 80px;
-          max-height: 80px;
-          background: #fff6ef;
-          cursor: pointer;
-        }
-      }
-
-      .clsDisplayImage {
-        display: none;
-      }
-
-      .stories {
-        display: flex;
-        justify-content: center;
-        align-content: center;
-        flex-direction: column;
-        background: rgba(234, 226, 226, 0.473);
-        border-radius: $borderContent;
-
-        .authorPublication {
-          display: flex;
-          align-items: center;
-          width: 100%;
-          height: 3rem;
-          background: #eae2e2;
-          padding: 0.5rem;
-          border-radius: 0.625rem 0.625rem 0 0;
-          justify-content: space-between;
-
-          .detailsAuthor {
-            display: flex;
-            align-items: center;
-
-            img {
-              width: 3rem;
-              height: 3rem;
-              object-fit: cover;
-              border-radius: 50%;
-              border: solid rgb(243, 234, 234);
-            }
-
-            .dataProfile {
-              display: flex;
-              align-items: center;
-              flex-direction: column;
-              padding: 0.5rem;
-
-              .contentDeatilsRegistration {
-                display: flex;
-                align-items: center;
-
-                p {
-                  margin-top: 0;
-                }
-
-                img {
-                  width: 1.5rem;
-                  height: 1.5rem;
-                }
-              }
-            }
-          }
-
-          .clsToogleMenu {
-            cursor: pointer;
-
-            ul {
-              li {
-                list-style: none;
-              }
-            }
-
-            .clsBtnOption {
-              display: none;
-            }
-          }
-        }
-
-        .content {
-          display: flex;
-          align-items: center;
-          flex-direction: column;
-          width: 90%;
-          background: #fff6ef;
-          padding: 0.5rem;
-          margin: 0.5rem auto;
-          border-radius: $borderContent;
-
-          .clsImg {
-            display: none;
-          }
-
-          img {
-            max-width: 100%;
-          }
-        }
-
-        .interactions {
-          width: 90%;
-          height: 3rem;
-          background: #ffffff;
-          display: flex;
-          align-items: center;
-          padding: 0 0.625rem 0 0.625rem;
-          border-radius: 0 0 0.625rem 0.625rem;
-          border-radius: $borderContent;
-          margin: 0.5rem auto;
-
-          img {
-            width: 30px;
-            height: 30px;
-            cursor: pointer;
-            padding: 0.1875rem;
-            margin-left: 0.3125rem;
-          }
-        }
       }
     }
   }
