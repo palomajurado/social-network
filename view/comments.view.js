@@ -9,7 +9,7 @@ export default (comment) => {
     </h3><span>${(comment.date
       ? comment.date.toDate()
       : new Date()
-    ).toLocaleString()}</span> <img id="dott" src="/assets/dott.png" alt="menu" />
+    ).toLocaleString()}</span><i class="fa fa-ellipsis-v" id="dott"></i>
   </div>
   <div style="margin-top: 15px;
   margin-left: 15px;">

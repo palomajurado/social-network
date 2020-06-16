@@ -1,5 +1,6 @@
 import { views } from "../view/index.js";
 import { models } from "../model/index.model.js";
+import { notice, successMessage, noticeMessage } from "../utils/pnotify.js";
 
 export default (viewProfile) => {
   const stories = viewProfile.querySelector(".stories");
@@ -21,15 +22,12 @@ export default (viewProfile) => {
 
     // si el comentario esta vacio y sin texto se lanzara un mensaje que diga que no ingreso nada
     if (imageViewer.files[0] === undefined && textAreaComentary === "") {
-      PNotify.notice({
-        title: "Notice",
-        text: "No hay nada para compartir.",
-        delay: 1500,
-      });
+      noticeMessage();
       return false;
     }
 
-    loadingPanel.classList.remove("clsLoadingHide"); // mostrando en pacman
+    loadingPanel.classList.remove("clsLoadingHide"); // mostrando el pacman
+
     if (imageViewer.files[0] === undefined) {
       models.publicationsModel
         .createNewPublication({
@@ -84,31 +82,7 @@ export default (viewProfile) => {
         const idPublication = delet
           .closest(".authorPublication")
           .querySelector(".idPublication").value;
-        const notice = PNotify.notice({
-          title: "Eliminar publicación",
-          text: "¿Estas segur@?",
-          icon: "fas fa-question-circle",
-          hide: false,
-          closer: false,
-          sticker: false,
-          destroy: true,
-          stack: new PNotify.Stack({
-            dir1: "down",
-            modal: true,
-            firstpos1: 25,
-            overlayClose: false,
-          }),
-          modules: new Map([
-            ...PNotify.defaultModules,
-            [
-              PNotifyConfirm,
-              {
-                confirm: true,
-              },
-            ],
-          ]),
-        });
-        notice.on("pnotify:confirm", () =>
+        notice().on("pnotify:confirm", () =>
           models.publicationsModel.deletePublication(idPublication)
         );
       });
@@ -141,11 +115,7 @@ export default (viewProfile) => {
             .closest(".publication")
             .querySelector(".currentContent").innerText;
           models.publicationsModel.updatePublication(idPublication, newContent);
-          PNotify.success({
-            title: "Éxito!",
-            text: "Actualizaste tu publicación.",
-            delay: 500,
-          });
+          successMessage();
         });
       });
     });
@@ -153,28 +123,33 @@ export default (viewProfile) => {
 
   loadingPanel.classList.remove("clsLoadingHide");
 
-  //
+  // ----------------------------------------- Pinta las publicaciones cada vez que cambian
   dataPublications.onSnapshot((collectionPost) => {
     loadingPanel.classList.add("clsLoadingHide");
     stories.innerHTML = "";
     collectionPost.forEach((post) => {
       const postObj = post.data();
+      postObj.id = post.id; //-------------- Guardamos el id del post en un objeto
 
-      // postObj contiene todos los datos de texto y archivos del user
+      //------------------------------------ Valida si el post es privado o publico
       if (postObj.userId) {
-        postObj.id = post.id;
         if (
           postObj.privacyAction !== "publico" &&
           user &&
           postObj.userId !== user.uid
         )
-          return; // si las publicaciones no son privadas no las pintes en interfaz
+          return; //---------------------- Si las publicaciones son privadas NO SE PINTA EN LA INTERFAZ
 
-        // Trabajando en comentarios
         const view = views.publications(postObj);
         const placeComments = view.querySelector("#placeComments");
+        const likesCount = view.querySelector("#likesCount");
+        const heart = view.querySelector("#heart");
+        const btnComment = view.querySelector("#btnComment"); // por usar para iniciar cursor
+        const sendComment = view.querySelector("#sendComment");
+        const textComment = view.querySelector("#textComment");
         const commentsView = views.comments;
 
+        //------------------------------------ Section de comentarios en publicationes
         models.publicationsModel
           .getComments(post.id)
           .then((querysnapshot) => {
@@ -183,31 +158,6 @@ export default (viewProfile) => {
             });
           })
           .catch((err) => console.log(err));
-
-        const likesCount = view.querySelector("#likesCount");
-        models.publicationsModel
-          .getTotalLikes(post.id)
-          .then((querysnapshot) => {
-            likesCount.innerHTML = querysnapshot.size;
-          })
-          .catch((err) => console.log(err));
-
-        if (user) {
-          // despinta el corazon si ya hizo like
-          models.publicationsModel
-            .getlike(postObj.id, user.uid)
-            .then((querysnapshot) => {
-              if (querysnapshot.docs.length > 0) {
-                heart.src = "./assets/fullHeart.png";
-              } else heart.src = "./assets/corazon.svg";
-            })
-            .catch((err) => console.log(err));
-        }
-
-        const heart = view.querySelector("#heart");
-        const btnComment = view.querySelector("#btnComment"); // por usar para iniciar cursor
-        const sendComment = view.querySelector("#sendComment");
-        const textComment = view.querySelector("#textComment");
 
         sendComment.addEventListener("click", () => {
           const captureComment = textComment.value;
@@ -227,6 +177,32 @@ export default (viewProfile) => {
             })
             .catch((err) => console.log(err));
         });
+
+        // -----------------------------------Boton de comments esconde coments y muestra al click
+        placeComments.classList.add("hideComments");
+        btnComment.addEventListener("click", () => {
+          placeComments.classList.toggle("hideComments");
+        });
+
+        //------------------------------------ Seccion like en posts
+        models.publicationsModel
+          .getTotalLikes(post.id)
+          .then((querysnapshot) => {
+            likesCount.innerHTML = querysnapshot.size;
+          })
+          .catch((err) => console.log(err));
+
+        // despinta el corazon si ya hizo like
+        if (user) {
+          models.publicationsModel
+            .getlike(postObj.id, user.uid)
+            .then((querysnapshot) => {
+              if (querysnapshot.docs.length > 0) {
+                heart.src = "./assets/fullHeart.png";
+              } else heart.src = "./assets/corazon.svg";
+            })
+            .catch((err) => console.log(err));
+        }
 
         // Likes incrementer
         heart.addEventListener("click", (e) => {
@@ -259,6 +235,7 @@ export default (viewProfile) => {
       }
     });
 
+    //------------------------------------ Menu de editar y eliminar post
     const menuEdit = viewProfile.querySelectorAll(".menuEdit");
     menuEdit.forEach((menu) => {
       menu.addEventListener("click", () => {
@@ -274,10 +251,10 @@ export default (viewProfile) => {
     eventUpdatePublication();
   });
 
-  //------------------------------------ Previsualizacion de img en comments
+  //------------------------------------ Previsualizacion de img en post para publicar
   imageViewer.addEventListener("change", () => {
     if (imageViewer.files && imageViewer.files[0]) {
-      displayImage.classList.remove("clsDisplayImage");
+      displayImage.classList.remove("clsDisplayImage"); // pacman
       const reader = new FileReader();
       reader.onload = (e) => {
         const idViewProfile = viewProfile.querySelector("#loadedImage");

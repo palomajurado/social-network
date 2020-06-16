@@ -1017,6 +1017,10 @@ p span a:hover {
   }
 }
 
+.hideComments {
+  display: none;
+}
+
 #placeComments {
   margin: 0 1.25rem;
   padding-top: 10px;
@@ -1061,7 +1065,7 @@ p span a:hover {
 #placeComments .publication #userComment #dott {
   width: 1.5rem;
   padding: 0.3125rem;
-  margin: -42px 0 0.1875rem 50%;
+  margin: -38px 0 0.1875rem 50%;
 }
 
 .sectionPublications {
@@ -1343,6 +1347,7 @@ p span a:hover {
 .sectionPublications .stories .interactions img {
   width: 30px;
   height: 30px;
+  outline: none;
   cursor: pointer;
   padding: 0.1875rem;
   margin-left: 0.3125rem;
