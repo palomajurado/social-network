@@ -94,12 +94,24 @@
   margin: 0.4rem 1rem;
 }
 
-#profile-container #profile-info .profile-form-group .profile-inputs .inputName {
+#profile-container
+  #profile-info
+  .profile-form-group
+  .profile-inputs
+  .inputName {
   margin-left: 1.875rem;
 }
 
-#profile-container #profile-info .profile-form-group .profile-inputs #editInputName,
-#profile-container #profile-info .profile-form-group .profile-inputs #editInputPass {
+#profile-container
+  #profile-info
+  .profile-form-group
+  .profile-inputs
+  #editInputName,
+#profile-container
+  #profile-info
+  .profile-form-group
+  .profile-inputs
+  #editInputPass {
   width: 45px;
   height: 45px;
   padding: 5px;
@@ -111,8 +123,16 @@
   border: 0.1px solid rgba(255, 255, 255, 0.171);
 }
 
-#profile-container #profile-info .profile-form-group .profile-inputs #editInputName:hover,
-#profile-container #profile-info .profile-form-group .profile-inputs #editInputPass:hover {
+#profile-container
+  #profile-info
+  .profile-form-group
+  .profile-inputs
+  #editInputName:hover,
+#profile-container
+  #profile-info
+  .profile-form-group
+  .profile-inputs
+  #editInputPass:hover {
   background: #ce5b3573;
 }
 
@@ -177,7 +197,7 @@ a .regresar {
   box-shadow: 0rem -0.0063rem 0.4375rem -0.0063rem #f39367;
 }
 
-input[type=”file”]#changeBg {
+input[type="”file”"]#changeBg {
   opacity: 0;
   z-index: -1;
   width: 0.1px;
@@ -193,14 +213,14 @@ label[for="changeBg"] {
   font-weight: 600;
   width: fit-content;
   text-align: center;
-  transition: all .5s;
+  transition: all 0.5s;
   display: inline-block;
   text-transform: uppercase;
-  background-color: #106BA0;
+  background-color: #106ba0;
   padding: 15px 40px !important;
 }
 
-input[type=”file”]#file {
+input[type="”file”"]#file {
   opacity: 0;
   z-index: -1;
   width: 0.1px;
@@ -216,7 +236,7 @@ label[for="file"] {
   font-weight: 600;
   width: fit-content;
   text-align: center;
-  transition: all .5s;
+  transition: all 0.5s;
   display: inline-block;
   text-transform: uppercase;
   background-color: black;
@@ -471,7 +491,7 @@ h1 img span {
 }
 
 #eye #imgEye {
-  transition: all .3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 p {
@@ -519,7 +539,14 @@ p span a:hover {
   left: -40%;
   z-index: -5;
   border-radius: 50%;
-  background-image: linear-gradient(180deg, rgba(19, 19, 19, 0.8) 19.79%, rgba(204, 83, 51, 0.8) 53.13%, rgba(200, 80, 50, 0.8) 82.29%, rgba(194, 141, 125, 0.8) 100%), url("/assets/burbuja.png");
+  background-image: linear-gradient(
+      180deg,
+      rgba(19, 19, 19, 0.8) 19.79%,
+      rgba(204, 83, 51, 0.8) 53.13%,
+      rgba(200, 80, 50, 0.8) 82.29%,
+      rgba(194, 141, 125, 0.8) 100%
+    ),
+    url("./assets/burbuja.png");
   background-size: contain;
 }
 
@@ -722,10 +749,21 @@ p span a:hover {
     padding: 10.5% 0% 6%;
     z-index: 2;
   }
-  #container div .All-sectionsb .sectionFather .sectionSon .logo-principalMobile {
+  #container
+    div
+    .All-sectionsb
+    .sectionFather
+    .sectionSon
+    .logo-principalMobile {
     margin: 0px;
   }
-  #container div .All-sectionsb .sectionFather .sectionSon .logo-principalMobile img {
+  #container
+    div
+    .All-sectionsb
+    .sectionFather
+    .sectionSon
+    .logo-principalMobile
+    img {
     display: none;
   }
   #container div .All-sectionsb .sectionFather .sectionSon #circle1 {
@@ -750,30 +788,76 @@ p span a:hover {
     margin: 0% 32% 6%;
     padding: 0px;
     font-size: 226%;
-    font-family: 'Poppins';
+    font-family: "Poppins";
     font-weight: bold;
   }
-  #container div .All-sectionsb .sectionFather .sectionSon #containerLogIn .sectionSubTitle {
+  #container
+    div
+    .All-sectionsb
+    .sectionFather
+    .sectionSon
+    #containerLogIn
+    .sectionSubTitle {
     padding-bottom: 1rem;
   }
-  #container div .All-sectionsb .sectionFather .sectionSon #containerLogIn .sectionSubTitle .LogIn {
+  #container
+    div
+    .All-sectionsb
+    .sectionFather
+    .sectionSon
+    #containerLogIn
+    .sectionSubTitle
+    .LogIn {
     font-size: 1.2rem;
   }
-  #container div .All-sectionsb .sectionFather .sectionSon #containerLogIn .sectionSubTitle .SignUp {
+  #container
+    div
+    .All-sectionsb
+    .sectionFather
+    .sectionSon
+    #containerLogIn
+    .sectionSubTitle
+    .SignUp {
     font-size: 2rem;
   }
-  #container div .All-sectionsb .sectionFather .sectionSon #containerLogIn .sectionSubTitle a {
+  #container
+    div
+    .All-sectionsb
+    .sectionFather
+    .sectionSon
+    #containerLogIn
+    .sectionSubTitle
+    a {
     font-size: 0.85rem;
   }
-  #container div .All-sectionsb .sectionFather .sectionSon #containerLogIn .sectionNetworks img {
+  #container
+    div
+    .All-sectionsb
+    .sectionFather
+    .sectionSon
+    #containerLogIn
+    .sectionNetworks
+    img {
     width: 50px;
     height: 50px;
   }
-  #container div .All-sectionsb .sectionFather .sectionSon #containerLogIn .container {
+  #container
+    div
+    .All-sectionsb
+    .sectionFather
+    .sectionSon
+    #containerLogIn
+    .container {
     padding: 1rem 1rem 2rem;
     width: 107%;
   }
-  #container div .All-sectionsb .sectionFather .sectionSon #containerLogIn .signIn {
+  #container
+    div
+    .All-sectionsb
+    .sectionFather
+    .sectionSon
+    #containerLogIn
+    .signIn {
     margin-top: 0px;
   }
   #container div .All-sectionsb .sectionFather .sectionSon #containerLogIn p {
@@ -884,7 +968,10 @@ p span a:hover {
   border: 0.9375rem solid rgba(126, 124, 124, 0.308);
 }
 
-.container-Publications-Profile .sectionProfile .profilePicture #userPhoto:hover {
+.container-Publications-Profile
+  .sectionProfile
+  .profilePicture
+  #userPhoto:hover {
   background: #ec954379;
 }
 
@@ -981,12 +1068,17 @@ p span a:hover {
     margin-top: 4rem;
     align-self: flex-end;
   }
-  .container-Publications-Profile .sectionPublications .containerNewPublications {
+  .container-Publications-Profile
+    .sectionPublications
+    .containerNewPublications {
     top: 0px;
     box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
     border-radius: 12px;
   }
-  .container-Publications-Profile .sectionPublications .containerNewPublications .commentary {
+  .container-Publications-Profile
+    .sectionPublications
+    .containerNewPublications
+    .commentary {
     padding: 0px 1.5rem;
     border: 0px;
     height: 2.5rem;
@@ -997,29 +1089,52 @@ p span a:hover {
     color: #606060;
     font-family: Roboto;
   }
-  .container-Publications-Profile .sectionPublications .containerNewPublications textarea {
+  .container-Publications-Profile
+    .sectionPublications
+    .containerNewPublications
+    textarea {
     height: 7rem;
   }
-  .container-Publications-Profile .sectionPublications .containerNewPublications .optionsToPost {
+  .container-Publications-Profile
+    .sectionPublications
+    .containerNewPublications
+    .optionsToPost {
     margin-bottom: 0px;
     padding: 0.3rem 2rem 0.3rem 1rem;
     background: white;
   }
-  .container-Publications-Profile .sectionPublications .containerNewPublications .optionsToPost .btnToPost {
+  .container-Publications-Profile
+    .sectionPublications
+    .containerNewPublications
+    .optionsToPost
+    .btnToPost {
     border-radius: 4rem;
     line-height: 2;
     padding: 4px;
     width: 20%;
   }
-  .container-Publications-Profile .sectionPublications .stories .authorPublication {
+  .container-Publications-Profile
+    .sectionPublications
+    .stories
+    .authorPublication {
     margin-top: 1.5rem;
     padding: 0 3rem 0 1rem;
   }
-  .container-Publications-Profile .sectionPublications .stories .authorPublication .detailsAuthor img {
+  .container-Publications-Profile
+    .sectionPublications
+    .stories
+    .authorPublication
+    .detailsAuthor
+    img {
     width: 3rem;
     height: 3rem;
   }
-  .container-Publications-Profile .sectionPublications .stories .authorPublication .detailsAuthor h5 {
+  .container-Publications-Profile
+    .sectionPublications
+    .stories
+    .authorPublication
+    .detailsAuthor
+    h5 {
     padding: 0 0 0 1rem;
   }
   .container-Publications-Profile .sectionPublications .stories .content {
@@ -1034,7 +1149,11 @@ p span a:hover {
   .container-Publications-Profile .sectionPublications .stories .interactions {
     width: 97%;
   }
-  .container-Publications-Profile .sectionPublications .stories .interactions textarea {
+  .container-Publications-Profile
+    .sectionPublications
+    .stories
+    .interactions
+    textarea {
     border: none;
     flex-grow: 1;
     resize: none;
@@ -1043,7 +1162,7 @@ p span a:hover {
     min-height: 40px;
     margin-left: 2px;
     padding: 15px 6px 0;
-    border-left: 0.1px solid #E6C486;
+    border-left: 0.1px solid #e6c486;
   }
 }
 
@@ -1054,7 +1173,7 @@ p span a:hover {
 #placeComments {
   margin: 0 1.25rem;
   padding-top: 10px;
-  background: #EAE2E2;
+  background: #eae2e2;
   border-radius: 0.625rem;
 }
 
@@ -1144,7 +1263,9 @@ p span a:hover {
   font-family: "Poppins", sans-serif;
 }
 
-.sectionPublications .containerNewPublications #textAreaComentary::-webkit-input-placeholder {
+.sectionPublications
+  .containerNewPublications
+  #textAreaComentary::-webkit-input-placeholder {
   color: gray;
   font-size: 1em;
   font-family: "Poppins", sans-serif;
@@ -1178,25 +1299,40 @@ p span a:hover {
   justify-content: space-between;
 }
 
-.sectionPublications .containerNewPublications .optionsToPost .accionPublication {
+.sectionPublications
+  .containerNewPublications
+  .optionsToPost
+  .accionPublication {
   width: 45%;
   display: flex;
   padding: 0.5rem;
   align-content: center;
 }
 
-.sectionPublications .containerNewPublications .optionsToPost .accionPublication img {
+.sectionPublications
+  .containerNewPublications
+  .optionsToPost
+  .accionPublication
+  img {
   width: 30px;
   height: 30px;
   cursor: pointer;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
-.sectionPublications .containerNewPublications .optionsToPost .accionPublication #addImg {
+.sectionPublications
+  .containerNewPublications
+  .optionsToPost
+  .accionPublication
+  #addImg {
   display: none;
 }
 
-.sectionPublications .containerNewPublications .optionsToPost .accionPublication .selectPublicPrivate {
+.sectionPublications
+  .containerNewPublications
+  .optionsToPost
+  .accionPublication
+  .selectPublicPrivate {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1208,7 +1344,12 @@ p span a:hover {
   background-color: #fff6ef;
 }
 
-.sectionPublications .containerNewPublications .optionsToPost .accionPublication .selectPublicPrivate option {
+.sectionPublications
+  .containerNewPublications
+  .optionsToPost
+  .accionPublication
+  .selectPublicPrivate
+  option {
   size: 5rem;
   display: flex;
   align-content: center;
@@ -1216,12 +1357,21 @@ p span a:hover {
   font-family: "Poppins";
 }
 
-.sectionPublications .containerNewPublications .optionsToPost .accionPublication .selectPublicPrivate option span {
+.sectionPublications
+  .containerNewPublications
+  .optionsToPost
+  .accionPublication
+  .selectPublicPrivate
+  option
+  span {
   padding: 20px;
   height: 20px;
 }
 
-.sectionPublications .containerNewPublications .optionsToPost .clsMessajePostEmpty {
+.sectionPublications
+  .containerNewPublications
+  .optionsToPost
+  .clsMessajePostEmpty {
   color: #5e0707;
 }
 
@@ -1260,7 +1410,7 @@ p span a:hover {
   align-items: center;
   width: 100%;
   height: 3.5rem;
-  background: #E6C486;
+  background: #e6c486;
   padding: 0.5rem;
   border-radius: 0.625rem 0.625rem 0 0;
   justify-content: space-between;
@@ -1286,18 +1436,35 @@ p span a:hover {
   padding: 0.5rem;
 }
 
-.sectionPublications .stories .authorPublication .detailsAuthor .dataProfile .contentDeatilsRegistration {
+.sectionPublications
+  .stories
+  .authorPublication
+  .detailsAuthor
+  .dataProfile
+  .contentDeatilsRegistration {
   display: flex;
   align-items: center;
 }
 
-.sectionPublications .stories .authorPublication .detailsAuthor .dataProfile .contentDeatilsRegistration p {
+.sectionPublications
+  .stories
+  .authorPublication
+  .detailsAuthor
+  .dataProfile
+  .contentDeatilsRegistration
+  p {
   margin-top: 0;
   padding-left: 4px;
   padding-bottom: 3px;
 }
 
-.sectionPublications .stories .authorPublication .detailsAuthor .dataProfile .contentDeatilsRegistration img {
+.sectionPublications
+  .stories
+  .authorPublication
+  .detailsAuthor
+  .dataProfile
+  .contentDeatilsRegistration
+  img {
   border: none;
   width: 1.3rem;
   height: 1.3rem;
@@ -1305,7 +1472,13 @@ p span a:hover {
   object-fit: contain;
 }
 
-.sectionPublications .stories .authorPublication .detailsAuthor .dataProfile .contentDeatilsRegistration .idPublication {
+.sectionPublications
+  .stories
+  .authorPublication
+  .detailsAuthor
+  .dataProfile
+  .contentDeatilsRegistration
+  .idPublication {
   display: none;
 }
 
