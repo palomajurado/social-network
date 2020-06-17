@@ -1,0 +1,49 @@
+{
+  "name": "social-network",
+  "version": "1.0.0",
+  "description": "Social Network @ Laboratoria",
+  "main": "index.html",
+  "keywords": [
+    "javascript",
+    "firebase",
+    "jest"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "htmlhint": "htmlhint dist/*.html ",
+    "test": "jest --coverage",
+    "start": "serve -l 5000 -C",
+    "start-sass": "concurrently \"npm:sass-watch\" \"npm:start\"",
+    "sass-build": "node-sass --output-style content styles/css/scss/style.scss styles/css/style.css",
+    "sass-watch": "node-sass --watch --output-style expanded styles/css/scss/style.scss styles/css/style.css"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "@babel/plugin-transform-modules-commonjs": "^7.2.0",
+    "@pnotify/confirm": "^5.1.2",
+    "@pnotify/core": "^5.1.2",
+    "@pnotify/desktop": "^5.1.2",
+    "@pnotify/mobile": "^5.1.2",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-jest": "^24.8.0",
+    "concurrently": "5.2.0",
+    "eslint": "^6.0.1",
+    "eslint-config-airbnb-base": "^13.2.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jest": "^22.1.2",
+    "firebase-mock": "2.3.2",
+    "gh-pages": "3.0.0",
+    "htmlhint": "^0.11.0",
+    "jest": "^24.8.0",
+    "regenerator-runtime": "^0.13.1",
+    "serve": "^11.0.2",
+    "stylelint": "13.5.0",
+    "stylelint-config-recommended": "^2.2.0"
+  },
+  "dependencies": {
+    "@babel/cli": "7.8.4",
+    "firebase": "7.15.0",
+    "node-sass": "4.14.1",
+    "sass": "1.26.5"
+  }
+}
