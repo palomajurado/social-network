@@ -22,12 +22,13 @@ export default () => {
           background.src = settings.backgroundImg;
         }
       })
-      .catch((err) => console.log(err));
+      .catch((err) => console.error(err));
   }
 
   logOut.addEventListener("click", () =>
     models.profileModel.signOut().then(() => (window.location.hash = "#/logIn"))
   );
+
   view = controllers.publicationController(view);
   return view;
 };

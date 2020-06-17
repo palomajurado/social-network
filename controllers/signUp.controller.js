@@ -48,7 +48,7 @@ export default () => {
     models.logInModel
       .authGmail()
       .then(() => (window.location.hash = "#/profile"))
-      .catch((err) => console.log(err));
+      .catch((err) => console.error(err));
   });
 
   const facebookButton = view.querySelector("#facebook");
@@ -56,7 +56,7 @@ export default () => {
     models.logInModel
       .authFacebook()
       .then(() => (window.location.hash = "#/profile"))
-      .catch((err) => console.log(err));
+      .catch((err) => console.error(err));
   });
 
   const eye = view.querySelector("#eye");

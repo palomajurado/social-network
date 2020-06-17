@@ -27,8 +27,9 @@ export default () => {
                 spellcheck="false" />
               <img src="./assets/passw.jpg" alt="password" /></div>
             <div class="item"><img src="./assets/passw.jpg" alt="" />
+              <input type="password" id="confirmPassword" placeholder="Confirm Password" spellcheck="false" /> 
               <button id="eye"> <img id="imgEye" src="https://storage.googleapis.com/md-links/closeye.png"></img> </button>
-              <input type="password" id="confirmPassword" placeholder="Confirm Password" spellcheck="false" /></div>
+            </div>
           </form>
           <span class="signIn" id="messageResult">Sign up con...</span>
           <section class="sectionNetworks">

@@ -23,12 +23,11 @@ export default () => {
       .getBackgroundUser(user.uid) // ID de user, hara match con el id objeto que devuelva querysnapshot
       .then((querySnapshot) => {
         if (querySnapshot.docs.length > 0) {
-          querySnapshot.docs.forEach((doc) => console.log(doc.data()));
           const settings = querySnapshot.docs[0].data(); // objeto devuelto
           bg.style.backgroundImage = `url(${settings.backgroundImg})`;
         }
       })
-      .catch((err) => console.log(err));
+      .catch((err) => console.error(err));
   }
 
   // --------------------------------------- Evento cambio de portada
@@ -50,13 +49,11 @@ export default () => {
               setTimeout(() => (messageElm.innerHTML = ""), 2000);
             })
             .catch((err) => {
-              console.log(err);
-
               messageElm.innerHTML = "Error al cargar imagen de portada";
               setTimeout(() => (messageElm.innerHTML = ""), 2000);
             });
         })
-        .catch((err) => console.log(err));
+        .catch((err) => console.error(err));
     });
   });
 

@@ -75,8 +75,7 @@ h1 {
   overflow: hidden;
   align-items: center;
   flex-direction: column;
-  justify-content: center;
-  padding: 2rem 1rem;
+  padding: 2rem 1rem 0;
 
   .item {
     display: flex;
@@ -85,7 +84,7 @@ h1 {
     color: $colorWhite;
     position: relative;
     align-items: center;
-    margin-top: -0.1062rem;
+    margin-top: -0.08rem;
     text-transform: uppercase;
     border: 0.0625rem solid $colorWhite;
 
@@ -350,6 +349,7 @@ p {
     border-radius: 1.5rem;
     background: #ce5b359f;
     font-family: "Poppins", sans-serif;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     border: 0.625rem solid rgba(0, 0, 0, 0.336);
   }
 
@@ -369,9 +369,9 @@ p {
     background: rgba(0, 0, 0, 0.5);
 
     .key {
+      top: 250px;
       height: 200px;
       position: absolute;
-      margin-top: -169px;
       border-radius: 50%;
       box-shadow: 3.3125rem 3.5625rem 3.125rem -1.4375rem rgba(0, 0, 0, 0.29);
     }
@@ -387,6 +387,7 @@ p {
   font-family: "Poppins", sans-serif;
   margin: 5rem 1.875rem 3.125rem 1.875rem;
   background: rgba(244, 179, 126, 0.267);
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   box-shadow: 3.3125rem 3.5625rem 3.125rem -1.4375rem rgba(0, 0, 0, 0.29);
 
   h1 {
@@ -419,15 +420,17 @@ p {
   }
 
   button {
-    width: 40vw;
-    height: 50px;
+    width: 20vh;
+    height: 8.5vh;
     outline: none;
     cursor: pointer;
-    color: $colorWhite;
+    margin-top: 17px;
     text-align: center;
+    color: whitesmoke;
     border-radius: 1.5rem;
-    letter-spacing: 0.1875rem;
-    background: linear-gradient(82.14deg, #ec9443 -3.88%, #c85032 64.89%)
+    background: #ce5b359f;
+    font-family: "Poppins", sans-serif;
+    border: 0.625rem solid rgba(0, 0, 0, 0.336);
   }
 
   button:hover {

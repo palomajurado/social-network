@@ -1,7 +1,9 @@
 .All-sections {
   background-size: cover;
   background-attachment: fixed;
+  // background: linear-gradient(141deg, #e65c00 50%, #F9D423 50%);
   background-image: url("https://storage.googleapis.com/md-links/bg.png");
+  // background-color: rgba(184, 184, 184, 0.788);
 }
 
 #idLoading {
@@ -26,24 +28,28 @@
   justify-content: center;
 
   .sectionProfile {
+    height: 20rem;
     border-radius: $borderContent;
     background: rgba(234, 226, 226, 0.473);
 
     .coverPage {
       width: 100%;
-      height: 10em;
+      position: relative;
+      min-height: 160px;
       border-radius: $borderContent;
 
       img {
         width: 100%;
-        height: 100%;
+        height: 180px;
         object-fit: cover;
-        border-radius: $borderContent;
+        border-radius: 0 0 11px 11px;
       }
 
       a {
         position: absolute;
         margin-left: -30px;
+        top: 0.3rem;
+        right: 0.5rem;
 
         .imgMenu {
           width: 30px;
@@ -63,10 +69,12 @@
 
     .profilePicture {
       display: flex;
+      height: 33%;
+      padding: 0.5rem;
+      position: relative;
       align-items: center;
-      margin-bottom: -3rem;
       flex-direction: column;
-      justify-content: center;
+      justify-content: flex-end;
 
       a {
         position: absolute;
@@ -79,7 +87,7 @@
         height: 8rem;
         object-fit: cover;
         border-radius: 50%;
-        position: relative;
+        position: absolute;
         object-position: center;
         border: 0.9375rem solid rgba(126, 124, 124, 0.308);
       }
@@ -89,8 +97,7 @@
       }
 
       h5 {
-        top: -3.5rem;
-        position: relative;
+        margin-left: 0.5rem;
         font-weight: bolder;
         text-transform: capitalize;
       }
@@ -105,9 +112,6 @@
   outline: none;
   padding: 0.25rem;
   border-radius: 50%;
-  position: absolute;
-  margin-top: 0.4375rem;
-  margin-left: -4.125rem;
   background: rgba(115, 238, 141, 0.918);
 }
 
@@ -128,4 +132,9 @@
 
 #name {
   text-transform: capitalize;
+}
+
+.logoutbtnSection {
+  display: flex;
+
 }

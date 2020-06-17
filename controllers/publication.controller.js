@@ -27,7 +27,6 @@ export default (viewProfile) => {
     }
 
     loadingPanel.classList.remove("clsLoadingHide"); // mostrando el pacman
-
     if (imageViewer.files[0] === undefined) {
       models.publicationsModel
         .createNewPublication({
@@ -122,17 +121,19 @@ export default (viewProfile) => {
   };
 
   loadingPanel.classList.remove("clsLoadingHide");
-
-  // ----------------------------------------- Pinta las publicaciones cada vez que cambian
+  // ----------------------------------------- FUNCION PRINCIPAL QUE PINTA TODA LA ZONA DE PUBLICATION,COMMENTS,LIKES,UPLOAD IMG
   dataPublications.onSnapshot((collectionPost) => {
+    // recibe el quersnapshot (obj con info)
     loadingPanel.classList.add("clsLoadingHide");
     stories.innerHTML = "";
+
     collectionPost.forEach((post) => {
-      const postObj = post.data();
-      postObj.id = post.id; //-------------- Guardamos el id del post en un objeto
+      // collectionpost equivale a querynapshot que contiene objetos con datos por cada publicacion e iterare uno por uno pintando todos sus datos
+      const postObj = post.data(); // post,data() me devuelve un objeto de datos que me da firebase
+      postObj.id = post.id; //-------------- aqui tomo el id por separado que me da firebase
 
       //------------------------------------ Valida si el post es privado o publico
-      if (postObj.userId) {
+      if (postObj.userId && user) {
         if (
           postObj.privacyAction !== "publico" &&
           user &&
@@ -149,17 +150,17 @@ export default (viewProfile) => {
         const textComment = view.querySelector("#textComment");
         const totalComments = view.querySelector("#totalComments");
         const commentImg = view.querySelector("#commentImg");
-        const commentImgPreview = view.querySelector('#commentImgPreview');
+        const commentImgPreview = view.querySelector("#commentImgPreview");
         const commentsView = views.comments;
 
         // Seleccionar una imagen para subir como comentario
-        commentImg.addEventListener('change', e => {
+        commentImg.addEventListener("change", (e) => {
           // Objeto del navegador para leer cualquier archivo
           const reader = new FileReader();
-          // cuando termine de cargar el archivo asignalo al src del elemento img 
+          // cuando termine de cargar el archivo asignarlo al src del elemento img
           reader.onload = (e) => {
             commentImgPreview.src = e.target.result;
-          }
+          };
           // esto ejecuta la lectura del archivo
           reader.readAsDataURL(e.target.files[0]);
         });
@@ -192,15 +193,12 @@ export default (viewProfile) => {
                 });
               });
             })
-            .catch((err) => console.log(err));
+            .catch((err) => console.error(err));
         };
-
-        // Se ejecuta la funcion cada vez que que se refresca la pagina
-        getComments();
 
         sendComment.addEventListener("click", () => {
           const captureComment = textComment.value;
-         
+
           const newComment = {
             content: captureComment,
             username: user.displayName,
@@ -212,13 +210,31 @@ export default (viewProfile) => {
 
           if (!newComment.content) return;
 
-          models.publicationsModel
-            .addComment(newComment)
-            .then(() => {
-              textComment.value = "";
-              getComments();
-            })
-            .catch((err) => console.log(err));
+          if (commentImg.files[0]) {
+            models.publicationsModel
+              .uploadCommentImage(commentImg.files[0])
+              .then((snapShot) => snapShot.ref.getDownloadURL())
+              .then((url) => {
+                newComment.imageURL = url;
+                models.publicationsModel
+                  .addComment(newComment)
+                  .then((docRef) => {
+                    textComment.value = "";
+                    commentImgPreview.src = "";
+                    getComments();
+                  });
+              })
+              .catch((err) => console.error(err));
+          } else {
+            models.publicationsModel
+              .addComment(newComment)
+              .then((docRef) => {
+                textComment.value = "";
+                totalComments.innerHTML = parseInt(totalComments.innerHTML) + 1;
+                getComments();
+              })
+              .catch((err) => console.error(err));
+          }
         });
 
         // -----------------------------------Boton de comments esconde coments y muestra al click
@@ -227,17 +243,19 @@ export default (viewProfile) => {
           placeComments.classList.toggle("hideComments");
         });
 
-        //------------------------------------ Seccion like en posts
-        models.publicationsModel
-          .getTotalLikes(post.id)
-          .then((querysnapshot) => {
-            likesCount.innerHTML = querysnapshot.size;
-          })
-          .catch((err) => console.log(err));
-
         // despinta el corazon si ya hizo like
         if (user) {
+          // Se ejecuta la funcion cada vez que que se refresca la pagina
+          getComments();
+          //------------------------------------ Seccion like en posts
           models.publicationsModel
+            .getTotalLikes(post.id)
+            .then((querysnapshot) => {
+              likesCount.innerHTML = querysnapshot.size;
+            })
+            .catch((err) => console.error(err));
+
+          models.publicationsModel // pra revisar si el usuario tiene un like y pueda pintarlo una vez al click
             .getlike(postObj.id, user.uid)
             .then((querysnapshot) => {
               if (querysnapshot.docs.length > 0) {
@@ -270,8 +288,8 @@ export default (viewProfile) => {
                     likesCount.innerHTML = currentLikeCount + 1;
                   });
               }
-            });
-          //   .catch((err) => console.log(err));
+            })
+            .catch((err) => console.error(err));
         });
         stories.appendChild(view);
       }

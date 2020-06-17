@@ -9,17 +9,18 @@ export default (comment, user) => {
     </h3><span>${(comment.date
       ? comment.date.toDate()
       : new Date()
-    ).toLocaleString()}</span><i class="fa fa-ellipsis-v" id="dott"></i>
+    ).toLocaleString()}</span>
       ${
         comment.userId === user.uid
-          ? `<i class="fa fa-trash deleteComment" data-id-comment="${comment.id}"></i>`
+          ? `<i class="fa fa-trash deleteComment" id="dott" data-id-comment="${comment.id}"></i>`
           : ""
       }
-
   </div>
-  <div style="margin-top: 15px;
-  margin-left: 15px;">
+  <div style="margin-top: 15px">
     <div>${comment.content} </div>
+    <img src="${
+      comment.imageURL ? comment.imageURL : ""
+    }" alt="" style="width: 30%"/>
   </div>`;
   const divElement = document.createElement("div");
   divElement.className = "publication animate__animated animate__fadeInUp";
