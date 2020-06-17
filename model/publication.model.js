@@ -82,19 +82,20 @@ const getComments = (postId) =>
   db
     .collection("comments")
     .where("postId", "==", postId)
-    //.orderBy("date", "desc")
+    // .orderBy("date")
     .get();
 
-const addLike = (idPublish, user) => {
-  return publicationRef.collection("likes").add(user, idPublish);
-};
+const deleteComment = (commentId) =>
+  db.collection("comments").doc(commentId).delete();
 
-const getlike = (idPublish, userId) => {
+const addLike = (postId, userId) =>
+  db.collection("likes").add({ userId, postId });
+
+const getlike = (postId, userId) => {
   return db
-    .collection("publications")
-    .doc(idPublish)
     .collection("likes")
-    .where("user", "==", userId)
+    .where("userId", "==", userId)
+    .where("postId", "==", postId)
     .get();
 };
 
@@ -106,14 +107,14 @@ const removeLike = (idPublish, userId) => {
     .delete();
 };
 
-const getTotalLikes = (postId) => {
-  return db.collection("publications").doc(postId).collection("likes").get();
-};
+const getTotalLikes = (postId) =>
+  db.collection("likes").where("postId", "==", postId).get();
 
 export default {
   getlike,
   addLike,
   addComment,
+  deleteComment,
   removeLike,
   getComments,
   getStorageRef,

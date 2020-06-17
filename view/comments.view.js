@@ -1,4 +1,4 @@
-export default (comment) => {
+export default (comment, user) => {
   const viewComments = `
   <div id="userComment"><img src="${
     comment.userPhoto
@@ -10,6 +10,12 @@ export default (comment) => {
       ? comment.date.toDate()
       : new Date()
     ).toLocaleString()}</span><i class="fa fa-ellipsis-v" id="dott"></i>
+      ${
+        comment.userId === user.uid
+          ? `<i class="fa fa-trash deleteComment" data-id-comment="${comment.id}"></i>`
+          : ""
+      }
+
   </div>
   <div style="margin-top: 15px;
   margin-left: 15px;">
