@@ -1,5 +1,4 @@
-/* eslint-disable quotes */
-export default (post) => {
+export default (post, user) => {
   const viewPublications = `
    <div class="authorPublication">
     <div class="detailsAuthor">
@@ -24,13 +23,17 @@ export default (post) => {
         </div>
       </div>
     </div>
-    <div class="clsToogleMenu">
+    ${
+      post.userId === user.uid
+        ? `<div class="clsToogleMenu">
       <span class="menuEdit hvr-bounce-in" id="btnOption"><i class="fa fa-ellipsis-v"></i></span>
       <ul class="ulToogleMenu dropdown-menu">
         <li class="updatePublication"><i class="fa fa-pencil fa-fw"></i> Edit</li>
         <li class="deletePublication"><i class="fa fa-trash-o fa-fw"></i> Delete</li>
       </ul>
-    </div>
+    </div>`
+        : " "
+    }
   </div>
   <div class="content">
     <div>

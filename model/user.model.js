@@ -9,6 +9,9 @@ const updateDisplayName = (name) =>
 const updatePhotoUser = (file) =>
   storageRef.child("photoUpload/" + file.name).put(file);
 
+// La func generateRandomString(genera un string aleatorio) en caso subamos una foto por ejm,
+// con nombre foto.png y otro usuario sube otra img pero con el mismo nombre, habria conflicto
+// lo que hace la func es renombrar estas subidas con id aleatorios y unicos para que NUNCA haya conflicto
 const updatePhotoBg = (file) => {
   const extension = file.name.substr(file.name.lastIndexOf("."));
   const newName = generateRandomString() + extension;

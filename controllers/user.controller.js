@@ -39,19 +39,24 @@ export default () => {
       return;
     }
     models.user.updatePhotoBg(file).then((snapshot) => {
-      snapshot.ref.getDownloadURL().then((url) => {
-        models.user
-          .saveBackgroundUser(user, url)
-          .then(() => {
-            bg.style.backgroundImage = `url(${url})`;
-            messageElm.innerHTML = "Imagen de background actualizada";
-            setTimeout(() => (messageElm.innerHTML = ""), 2000);
-          })
-          .catch((err) => {
-            messageElm.innerHTML = "Error al cargar imagen de portada";
-            setTimeout(() => (messageElm.innerHTML = ""), 2000);
-          });
-      });
+      snapshot.ref
+        .getDownloadURL()
+        .then((url) => {
+          models.user
+            .saveBackgroundUser(user, url)
+            .then(() => {
+              bg.style.backgroundImage = `url(${url})`;
+              messageElm.innerHTML = "Imagen de background actualizada";
+              setTimeout(() => (messageElm.innerHTML = ""), 2000);
+            })
+            .catch((err) => {
+              console.log(err);
+
+              messageElm.innerHTML = "Error al cargar imagen de portada";
+              setTimeout(() => (messageElm.innerHTML = ""), 2000);
+            });
+        })
+        .catch((err) => console.log(err));
     });
   });
 

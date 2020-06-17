@@ -340,18 +340,17 @@ p {
   }
 
   button {
-    width: 40vw;
-    height: 50px;
+    width: 20vh;
+    height: 100%;
     outline: none;
     cursor: pointer;
-    color: $colorWhite;
+    margin-top: 17px;
     text-align: center;
+    color: whitesmoke;
     border-radius: 1.5rem;
-    letter-spacing: 0.1875rem;
-    font: bolder 1.3rem Roboto;
+    background: #ce5b359f;
+    font-family: "Poppins", sans-serif;
     border: 0.625rem solid rgba(0, 0, 0, 0.336);
-    box-shadow: 0.625rem 0.625rem 1rem -0.0625rem rgba(0, 0, 0, 0.75);
-    background: linear-gradient(82.14deg, #ec9443 -3.88%, #c85032 64.89%)
   }
 
   button:hover {
@@ -428,8 +427,6 @@ p {
     text-align: center;
     border-radius: 1.5rem;
     letter-spacing: 0.1875rem;
-    font: bolder 1.3rem Roboto;
-    border: 0.625rem solid rgba(0, 0, 0, 0.336);
     background: linear-gradient(82.14deg, #ec9443 -3.88%, #c85032 64.89%)
   }
 

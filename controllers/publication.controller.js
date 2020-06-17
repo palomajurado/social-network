@@ -140,7 +140,7 @@ export default (viewProfile) => {
         )
           return; //---------------------- Si las publicaciones son privadas NO SE PINTA EN LA INTERFAZ
 
-        const view = views.publications(postObj);
+        const view = views.publications(postObj, user);
         const placeComments = view.querySelector("#placeComments");
         const likesCount = view.querySelector("#likesCount");
         const heart = view.querySelector("#heart");
@@ -166,9 +166,11 @@ export default (viewProfile) => {
             username: user.displayName,
             userPhoto: user.photoURL,
             date: firebase.firestore.FieldValue.serverTimestamp(),
+            userId: user.uid,
+            postId: postObj.id,
           };
           models.publicationsModel
-            .addComment(postObj.id, newComment)
+            .addComment(newComment)
             .then(() => {
               textComment.value = "";
               delete newComment.date;
@@ -242,9 +244,9 @@ export default (viewProfile) => {
         const ulToogleMenu = menu
           .closest(".authorPublication")
           .querySelector(".ulToogleMenu");
-        if (ulToogleMenu.classList.contains("dropdown-menu") === true)
+        if (ulToogleMenu.classList.contains("dropdown-menu") === true) {
           ulToogleMenu.classList.remove("dropdown-menu");
-        else ulToogleMenu.classList.add("dropdown-menu");
+        } else ulToogleMenu.classList.add("dropdown-menu");
       });
     });
     eventDeletePublication();

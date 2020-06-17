@@ -141,8 +141,8 @@
       display: flex;
       align-items: center;
       width: 100%;
-      height: 3rem;
-      background: #eae2e2;
+      height: 3.5rem;
+      background: #E6C486;
       padding: 0.5rem;
       border-radius: 0.625rem 0.625rem 0 0;
       justify-content: space-between;
@@ -157,11 +157,12 @@
           object-fit: cover;
           border-radius: 50%;
           border: solid rgb(243, 234, 234);
+          border: 0.3rem solid rgba(126, 124, 124, 0.308);
         }
 
         .dataProfile {
           display: flex;
-          align-items: center;
+
           flex-direction: column;
           padding: 0.5rem;
 
@@ -171,11 +172,16 @@
 
             p {
               margin-top: 0;
+              padding-left: 4px;
+              padding-bottom: 3px;
             }
 
             img {
-              width: 1.5rem;
-              height: 1.5rem;
+              border: none;
+              width: 1.3rem;
+              height: 1.3rem;
+              padding: 0 0 2px;
+              object-fit: contain;
             }
 
             .idPublication {
