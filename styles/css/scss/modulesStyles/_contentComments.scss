@@ -22,30 +22,30 @@
       display: flex;
 
       img {
-        height: 2rem;
-        width: 2rem;
+        width: 1.5rem;
+        height: 1.5rem;
         object-fit: cover;
         border-radius: 50%;
-        margin-right: 2px;
-        margin-left: 4px;
-        margin-top: -2.1875rem;
+        margin: -2.1875rem 2px 0 1px;
+        border: 0.15rem solid rgba(126, 124, 124, 0.308);
+
       }
 
       h3 {
-        font-size: 0.8125rem;
+        font-size: 0.75rem;
         margin: -1.875rem 0 0 0.125rem;
       }
 
       span {
         font-size: 0.5rem;
-        margin-top: -1.4375rem;
-        margin-left: 0.8125rem;
+        margin-top: -1.6rem;
+        margin-left: 0.4rem;
       }
 
       #dott {
         width: 1.5rem;
         padding: 0.3125rem;
-        margin: -38px 0 0.1875rem 50%;
+        margin: -31px 0.1875rem 0.1875rem 27%;
       }
     }
 

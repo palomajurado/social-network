@@ -22,8 +22,7 @@ export default () => {
       </div>
       <div class="profile-form-group">
         <label for="Email" class="profile-form-label">Email:</label>
-        <div class="profile-inputs" id="emailUser" style="margin-left: 68px;
-	color: orange;"></div>
+        <div class="profile-inputs" id="emailUser"></div>
       </div>
       <div class="profile-form-group"><label for="password">Contraseña:</label>
         <div class="profile-inputs"><input type="password" name="Password" id="password" class="password2" placeholder="••••••">

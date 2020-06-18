@@ -35,7 +35,7 @@ export default () => {
                 <option value="privado" class="fas fa-user-lock"> 🔐 <span>Privado </span></option>
               </select>
             </div>
-            <button class="btnToPost" id="btnShare"> Share </button>
+            <button class="btnToPost hvr-bounce-in" id="btnShare" > Share </button>
           </div>
         </div>
         <section id="containerStories" class="stories">
