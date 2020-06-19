@@ -141,6 +141,9 @@ export default (viewProfile) => {
         )
           return; //---------------------- Si las publicaciones son privadas NO SE PINTA EN LA INTERFAZ
 
+        postObj.registrationDate = timeago.format(
+          postObj.registrationDate.toDate()
+        );
         const view = views.publications(postObj, user);
         const placeComments = view.querySelector("#placeComments");
         const likesCount = view.querySelector("#likesCount");
@@ -150,7 +153,7 @@ export default (viewProfile) => {
         const textComment = view.querySelector("#textComment");
         const totalComments = view.querySelector("#totalComments");
         const commentImg = view.querySelector("#commentImg");
-        const commentImgPreview = view.querySelector("#commentImgPreview");
+        const imgPreview = view.querySelector("#commentImgPreview");
         const commentsView = views.comments;
 
         // Seleccionar una imagen para subir como comentario
@@ -159,7 +162,7 @@ export default (viewProfile) => {
           const reader = new FileReader();
           // cuando termine de cargar el archivo asignarlo al src del elemento img
           reader.onload = (e) => {
-            commentImgPreview.src = e.target.result;
+            imgPreview.src = e.target.result;
           };
           // esto ejecuta la lectura del archivo
           reader.readAsDataURL(e.target.files[0]);
@@ -175,6 +178,7 @@ export default (viewProfile) => {
               totalComments.innerHTML = querysnapshot.size;
               querysnapshot.forEach((doc) => {
                 const comment = doc.data();
+                comment.date = timeago.format(comment.date.toDate());
                 comment.id = doc.id;
                 placeComments.appendChild(commentsView(comment, user));
               });
@@ -196,7 +200,7 @@ export default (viewProfile) => {
             .catch((err) => console.error(err));
         };
 
-        sendComment.addEventListener("click", () => {
+        sendComment.addEventListener("click", (e) => {
           const captureComment = textComment.value;
 
           const newComment = {
