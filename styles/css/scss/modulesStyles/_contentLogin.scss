@@ -18,7 +18,7 @@ h1 {
   display: flex;
   color: $colorWhite;
   padding-top: 2.5rem;
-  font-size: 3.4375rem;
+  font-size: 2rem;
   justify-content: center;
   margin-bottom: 2.1875rem;
 
@@ -149,11 +149,11 @@ h1 {
 // ------------------------ TEXTO antes DE GOOGLE Y FB
 .signIn {
   display: flex;
-  color: orange;
-  font-size: 0.9375rem;
-  margin-top: 1.125rem;
+  color: darkslategrey;
+  font-size: 1.25rem;
+  margin-top: 2rem;
   justify-content: center;
-  letter-spacing: 0.1875rem;
+  font-weight: bolder;
   font-family: $FFsecondary;
 }
 
@@ -268,7 +268,7 @@ p {
   font-weight: bolder;
   justify-content: center;
   font-family: $FFsecondary;
-  color: rgba(32, 32, 32, 0.959);
+  color: black;
 
   span a {
     font-size: 1rem;
@@ -330,34 +330,56 @@ p {
 
 // --------------------------------- Olvido su contrasena?
 .forgotPass {
+  width: 100%;
+  display: flex;
+  overflow: hidden;
+  align-items: center;
+  flex-direction: column;
+  padding: 1rem;
   height: 99.9vh;
   color: white;
   text-align: center;
 
-  h1 {
-    position: absolute;
+  video {
+    height: 48%;
   }
 
-  button {
-    width: 20vh;
-    height: 100%;
+  h1 {
+    position: absolute;
+    font-size: 23px;
+  }
+
+  .item:nth-child(odd) {
+    border-radius: 0 3rem 3rem 0;
+    margin-left: 0;
+    border-left: 0.0625rem solid transparent;
+
+    input {
+      margin-left: 15px;
+    }
+  }
+
+  .sendEmail {
+    width: 143px;
     outline: none;
+    font-size: 18px;
     cursor: pointer;
-    margin-top: 17px;
+    padding: 10px 20px;
     text-align: center;
+    font-weight: bolder;
     color: whitesmoke;
     border-radius: 1.5rem;
     background: #ce5b359f;
     font-family: "Poppins", sans-serif;
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     border: 0.625rem solid rgba(0, 0, 0, 0.336);
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   }
 
-  button:hover {
+  .sendEmail:hover {
     background: linear-gradient(141deg, #c85032 33%, #ec9443 64%);
   }
 
-  button:hover {
+  .sendEmail:hover {
     color: yellow;
     background: linear-gradient(141deg, #c85032 33%, #ec9443 64%);
   }
@@ -369,14 +391,16 @@ p {
     background: rgba(0, 0, 0, 0.5);
 
     .key {
-      top: 250px;
-      height: 200px;
+      top: 100px;
+      height: 150px;
       position: absolute;
       border-radius: 50%;
       box-shadow: 3.3125rem 3.5625rem 3.125rem -1.4375rem rgba(0, 0, 0, 0.29);
     }
   }
 }
+
+
 
 // --------------------------------- 404 notFound
 
