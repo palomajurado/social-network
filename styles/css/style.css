@@ -1079,12 +1079,12 @@ p span a:hover {
 }
 
 #placeComments .publication #userComment h3 {
-  font-size: 0.75rem;
+  font-size: 0.65rem;
   margin: -1.875rem 0 0 0.125rem;
 }
 
 #placeComments .publication #userComment span {
-  font-size: 0.5rem;
+  font-size: 0.35rem;
   margin-top: -1.6rem;
   margin-left: 0.4rem;
 }
@@ -1100,6 +1100,7 @@ p span a:hover {
   padding-left: 15px;
   border-radius: 0 35px;
   background: white;
+  font-size: 11px;
 }
 
 #placeComments .publication div img {
@@ -1518,7 +1519,7 @@ body {
 /* Scroll Bar */
 ::-webkit-scroll,
 ::-webkit-scrollbar {
-  width: 0.3125rem;
+  width: 8px;
   background-color: rgba(233, 223, 223, 0.151);
 }
 

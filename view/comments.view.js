@@ -16,7 +16,7 @@ export default (comment, user) => {
           : ""
       }
   </div>
-  <div style="margin-top: 15px">
+  <div>
     <div>${comment.content} </div>
     <img src="${
       comment.imageURL ? comment.imageURL : ""
