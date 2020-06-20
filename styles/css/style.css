@@ -1459,8 +1459,8 @@ p span a:hover {
 }
 
 #textComment {
-  font-size: 9px;
-  color: grey;
+  font-size: 11px;
+  color: #292929;
   font-family: "Poppins", sans-serif;
 }
 
