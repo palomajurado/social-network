@@ -1325,7 +1325,8 @@ p span a:hover {
   margin-top: 0;
   padding-left: 2px;
   padding-bottom: 3px;
-  font-size: 0.7rem;
+  font-size: 0.5rem;
+  color: #525151;
 }
 
 .sectionPublications .stories .authorPublication .detailsAuthor .dataProfile .contentDeatilsRegistration img {
@@ -1458,6 +1459,12 @@ p span a:hover {
 }
 
 #textComment {
+  font-size: 9px;
+  color: grey;
+  font-family: "Poppins", sans-serif;
+}
+
+#textComment::placeholder {
   color: grey;
   font-size: 9px;
   font-family: "Poppins", sans-serif;
