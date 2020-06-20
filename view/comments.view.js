@@ -12,7 +12,7 @@ export default (comment, user) => {
     ).toLocaleString()}</span>
       ${
         comment.userId === user.uid
-          ? `<i class="fa fa-trash deleteComment" id="dott" data-id-comment="${comment.id}"></i>`
+          ? `<i class="fa fa-trash deleteComment hvr-bounce-in" id="dott" data-id-comment="${comment.id}"></i>`
           : ""
       }
   </div>

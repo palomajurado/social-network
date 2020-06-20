@@ -1,6 +1,8 @@
 import { views } from "../view/index.js";
 import { models } from "../model/index.model.js";
 import { notice, successMessage, noticeMessage } from "../utils/pnotify.js";
+import localTime from "../utils/timeago.js";
+timeago.register("es_ES", localTime);
 
 export default (viewProfile) => {
   const stories = viewProfile.querySelector(".stories");
@@ -142,7 +144,8 @@ export default (viewProfile) => {
           return; //---------------------- Si las publicaciones son privadas NO SE PINTA EN LA INTERFAZ
 
         postObj.registrationDate = timeago.format(
-          postObj.registrationDate.toDate()
+          postObj.registrationDate.toDate(),
+          "es_ES"
         );
         const view = views.publications(postObj, user);
         const placeComments = view.querySelector("#placeComments");
@@ -178,7 +181,7 @@ export default (viewProfile) => {
               totalComments.innerHTML = querysnapshot.size;
               querysnapshot.forEach((doc) => {
                 const comment = doc.data();
-                comment.date = timeago.format(comment.date.toDate());
+                comment.date = timeago.format(comment.date.toDate(), "es_ES");
                 comment.id = doc.id;
                 placeComments.appendChild(commentsView(comment, user));
               });
