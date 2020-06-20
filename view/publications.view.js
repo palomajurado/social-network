@@ -59,7 +59,7 @@ export default (post, user) => {
     </label>
     <input type="file" id="commentImg" accept="image/*" style="display:none;">
     <img id="commentImgPreview" src="" alt=""/> 
-    <textarea id="textComment" cols="30" rows="2" spellcheck="false"></textarea>
+    <textarea id="textComment" cols="30" rows="2" spellcheck="false">Comenta aquí</textarea>
     <button id="sendComment" type="submit"><img src="./assets/send.png" alt="send" /></button>
 
   </div>

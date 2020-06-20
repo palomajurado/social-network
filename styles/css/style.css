@@ -818,7 +818,7 @@ p span a:hover {
 .All-sections {
   background-size: cover;
   background-attachment: fixed;
-  background-image: url("https://storage.googleapis.com/md-links/bg.png");
+  background-color: rgba(184, 184, 184, 0.788);
 }
 
 #idLoading {
@@ -1113,7 +1113,7 @@ p span a:hover {
 
 #placeComments .publication #userComment span {
   font-size: 0.45rem;
-  margin-top: -1.6rem;
+  margin-top: -1.62rem;
   margin-left: 0.4rem;
 }
 
