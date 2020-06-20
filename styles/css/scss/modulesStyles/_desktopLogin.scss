@@ -138,7 +138,7 @@
                 display: block;
                 margin: 0% 32% 6%;
                 padding: 0px;
-                font-size: 28.5px;
+                font-size: 28px;
                 font-family: 'Poppins';
                 font-weight: bold;
               }
@@ -178,7 +178,12 @@
               p {
                 color: black;
                 font-weight: bolder;
-                font-size: 15px;
+                font-size: 12.2px;
+
+                span a {
+                  color: white;
+                  font-size: 1em;
+                }
               }
             }
           }

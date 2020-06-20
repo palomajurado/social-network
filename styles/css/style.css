@@ -146,7 +146,7 @@ a {
 
 a .regresar {
   outline: none;
-  font-size: 18px;
+  font-size: 15px;
   cursor: pointer;
   margin-top: 7px;
   padding: 10px 20px;
@@ -567,9 +567,9 @@ p span a:hover {
 }
 
 .forgotPass .sendEmail {
-  width: 143px;
+  width: 132px;
   outline: none;
-  font-size: 18px;
+  font-size: 15px;
   cursor: pointer;
   padding: 10px 20px;
   text-align: center;
@@ -772,7 +772,7 @@ p span a:hover {
     display: block;
     margin: 0% 32% 6%;
     padding: 0px;
-    font-size: 28.5px;
+    font-size: 28px;
     font-family: 'Poppins';
     font-weight: bold;
   }
@@ -802,7 +802,11 @@ p span a:hover {
   #container div .All-sectionsb .sectionFather .sectionSon #containerLogIn p {
     color: black;
     font-weight: bolder;
-    font-size: 15px;
+    font-size: 12.2px;
+  }
+  #container div .All-sectionsb .sectionFather .sectionSon #containerLogIn p span a {
+    color: white;
+    font-size: 1em;
   }
 }
 
@@ -1094,8 +1098,8 @@ p span a:hover {
 }
 
 #placeComments .publication #userComment img {
-  width: 1.5rem;
-  height: 1.5rem;
+  width: 1.9rem;
+  height: 1.9rem;
   object-fit: cover;
   border-radius: 50%;
   margin: -2.1875rem 2px 0 1px;
@@ -1108,15 +1112,16 @@ p span a:hover {
 }
 
 #placeComments .publication #userComment span {
-  font-size: 0.35rem;
+  font-size: 0.45rem;
   margin-top: -1.6rem;
   margin-left: 0.4rem;
 }
 
 #placeComments .publication #userComment #dott {
-  width: 1.5rem;
-  padding: 0.3125rem;
-  margin: -31px 0.1875rem 0.1875rem 27%;
+  position: absolute;
+  margin-top: -27px;
+  margin-right: 15px;
+  right: 0;
 }
 
 #placeComments .publication div {
@@ -1318,7 +1323,7 @@ p span a:hover {
 
 .sectionPublications .stories .authorPublication .detailsAuthor .dataProfile .contentDeatilsRegistration p {
   margin-top: 0;
-  padding-left: 4px;
+  padding-left: 2px;
   padding-bottom: 3px;
   font-size: 0.7rem;
 }
@@ -1329,6 +1334,7 @@ p span a:hover {
   height: 1.3rem;
   padding: 0 0 2px;
   object-fit: contain;
+  margin-left: -3px;
 }
 
 .sectionPublications .stories .authorPublication .detailsAuthor .dataProfile .contentDeatilsRegistration .idPublication {
@@ -1451,6 +1457,12 @@ p span a:hover {
   background: transparent;
 }
 
+#textComment {
+  color: grey;
+  font-size: 9px;
+  font-family: "Poppins", sans-serif;
+}
+
 /* Pulse Grow */
 @-webkit-keyframes hvr-pulse-grow {
   to {
@@ -1543,7 +1555,7 @@ body {
 /* Scroll Bar */
 ::-webkit-scroll,
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 0.3125rem;
   background-color: rgba(233, 223, 223, 0.151);
 }
 
