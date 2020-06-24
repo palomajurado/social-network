@@ -77,12 +77,16 @@ export default (viewProfile) => {
       ".deletePublication"
     );
     deletePublication.forEach((delet) => {
+      // el callback se llama por cada elemento
       delet.addEventListener("click", () => {
         const idPublication = delet
           .closest(".authorPublication")
           .querySelector(".idPublication").value;
         notice().on("pnotify:confirm", () =>
-          models.publicationsModel.deletePublication(idPublication)
+          models.publicationsModel
+            .deletePublication(idPublication)
+            .then(() => console.log("Borrado satisfactoriamente!"))
+            .catch((err) => console.error(err))
         );
       });
     });
@@ -141,10 +145,12 @@ export default (viewProfile) => {
         )
           return; //---------------------- Si las publicaciones son privadas NO SE PINTA EN LA INTERFAZ
 
-        postObj.registrationDate = timeago.format(
-          postObj.registrationDate.toDate()
-        );
-        const view = views.publications(postObj, user);
+        if (postObj.registrationDate) {
+          postObj.registrationDate = timeago.format(
+            postObj.registrationDate.toDate()
+          );
+        }
+        const view = views.publications(postObj, user); // publicacion actual y usuario actual
         const placeComments = view.querySelector("#placeComments");
         const likesCount = view.querySelector("#likesCount");
         const heart = view.querySelector("#heart");
@@ -190,6 +196,7 @@ export default (viewProfile) => {
 
               btnsDeleteComment.forEach((btn) => {
                 btn.addEventListener("click", (e) => {
+                  console.log(e);
                   models.publicationsModel
                     .deleteComment(e.target.dataset.idComment)
                     .then(() => getComments())
@@ -212,12 +219,12 @@ export default (viewProfile) => {
             postId: postObj.id,
           };
 
-          if (!newComment.content) return;
+          if (!newComment.content) return; // si el comentario no tiene nada retorna
 
           if (commentImg.files[0]) {
             models.publicationsModel
               .uploadCommentImage(commentImg.files[0])
-              .then((snapShot) => snapShot.ref.getDownloadURL())
+              .then((snapShot) => snapShot.ref.getDownloadURL()) // devuelve la url de la img
               .then((url) => {
                 newComment.imageURL = url;
                 models.publicationsModel
@@ -278,9 +285,9 @@ export default (viewProfile) => {
               if (querysnapshot.docs.length > 0) {
                 querysnapshot.docs[0].ref.delete();
                 heart.src = "./assets/corazon.svg";
-                const currentLikeCount = parseInt(likesCount.innerHTML || 0);
+                const currentLikeCount = parseInt(likesCount.innerHTML || 0); // para que no de nan ni negativo
                 likesCount.innerHTML =
-                  currentLikeCount > 0 ? currentLikeCount - 1 : 0;
+                  currentLikeCount > 0 ? currentLikeCount - 1 : 0; // si ya tiene like restale uno si no tiene nada colocale cero por defecto
               } else {
                 models.publicationsModel
                   .addLike(postObj.id, user.uid)
@@ -318,7 +325,7 @@ export default (viewProfile) => {
   //------------------------------------ Previsualizacion de img en post para publicar
   imageViewer.addEventListener("change", () => {
     if (imageViewer.files && imageViewer.files[0]) {
-      displayImage.classList.remove("clsDisplayImage"); // pacman
+      displayImage.classList.remove("clsDisplayImage");
       const reader = new FileReader();
       reader.onload = (e) => {
         const idViewProfile = viewProfile.querySelector("#loadedImage");
