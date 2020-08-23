@@ -15,6 +15,10 @@ A continuación te proporcionamos el layout (diseño) de la vista mobile y deskt
 - Vista mobile
 
   ![mobile](https://storage.googleapis.com/md-links/vistasMobile.png)
+  
+- Vista dos mobile 
+
+  ![mobile](https://storage.googleapis.com/paloma/2.png)
 
 - Vista Desktop
 
